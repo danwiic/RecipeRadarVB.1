@@ -1,4 +1,6 @@
 ﻿
+Imports Windows.Win32.System
+
 Public Class MainForm
 
     Dim currentUserRole As String = LoginForm.currentUserRole
@@ -46,9 +48,14 @@ Public Class MainForm
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        LoginForm.currentUserRole = ""
+        LoginForm.currentUserID = 0
+        LoginForm.currentUsername = ""
+        LoginForm.currentUserEmail = ""
         Me.Hide()
-        Dim login As New LoginForm
-        login.Show()
+        Dim login As New LoginForm()
+        login.ShowDialog()
+        Me.Dispose()
     End Sub
 
     Private Sub btnMeals_Click(sender As Object, e As EventArgs) Handles btnMeals.Click

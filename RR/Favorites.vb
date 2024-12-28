@@ -53,7 +53,6 @@ Public Class Favorites
     Public Sub LoadFavoriteMeals()
         Dim userId As Integer = LoginForm.currentUserID
 
-        ' First, get the total count of favorite meals
         Dim countQuery As String = "SELECT COUNT(*) FROM favorites WHERE user_id = @userId"
 
         Try
@@ -63,10 +62,8 @@ Public Class Favorites
                 totalMeals = Convert.ToInt32(countCmd.ExecuteScalar())
             End Using
 
-            ' Calculate the offset for pagination
             Dim offset As Integer = (currentPage - 1) * pageSize
 
-            ' Now, get the meals for the current page
             Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, AVG(r.rating) AS averageRating " &
                               "FROM favorites f " &
                               "JOIN meals m ON f.idMeal = m.idMeal " &
@@ -81,7 +78,7 @@ Public Class Favorites
                 cmd.Parameters.AddWithValue("@offset", offset)
 
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
-                    panelFav.Controls.Clear() ' Clear existing controls
+                    panelFav.Controls.Clear()
                     While reader.Read()
                         Dim mealID As Integer = reader.GetInt32("idMeal")
                         Dim mealName As String = reader.GetString("strMeal")
@@ -96,8 +93,7 @@ Public Class Favorites
                 End Using
             End Using
 
-            ' Update the page label
-            lblPage.Text = $"Page {currentPage} of {Math.Ceiling(totalMeals / pageSize)}"
+            lblPages.Text = $"Page {currentPage} of {Math.Ceiling(totalMeals / pageSize)}"
 
         Catch ex As Exception
             MessageBox.Show("Error loading favorite meals: " & ex.Message)
@@ -148,7 +144,9 @@ Public Class Favorites
             LoadFavoriteMeals()
             checkButton()
         End If
+    End Sub
 
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles lblPages.Click
 
     End Sub
 End Class

@@ -111,4 +111,8 @@ Public Class LoginForm
             isDragging = False
         End If
     End Sub
+
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

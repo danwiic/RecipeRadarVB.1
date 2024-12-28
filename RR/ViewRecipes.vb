@@ -179,4 +179,17 @@ Public Class ViewRecipe
         Me.Hide()
         flowPanelVideo.Controls.Clear()
     End Sub
+
+    Private Sub lblMealName_Click(sender As Object, e As EventArgs) Handles lblMealName.Click
+
+    End Sub
+
+    Private Sub ViewRecipe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        isFav()
+        GetMealRatings(mealID)
+        UpdateFavoriteButton()
+
+        Dim comments As New CommentLayout(mealID)
+        Me.CommentPanel.Controls.Add(comments)
+    End Sub
 End Class
