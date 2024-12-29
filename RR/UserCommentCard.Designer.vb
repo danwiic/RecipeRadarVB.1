@@ -82,7 +82,7 @@ Partial Class UserCommentCard
         txtComment.ReadOnly = True
         txtComment.SelectedText = ""
         txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges3
-        txtComment.Size = New Size(217, 36)
+        txtComment.Size = New Size(223, 36)
         txtComment.TabIndex = 2
         ' 
         ' lblDate
@@ -106,7 +106,7 @@ Partial Class UserCommentCard
         btnDelete.Font = New Font("Segoe UI", 9F)
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete
-        btnDelete.Location = New Point(267, 41)
+        btnDelete.Location = New Point(273, 41)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges5
         btnDelete.Size = New Size(37, 36)
@@ -123,7 +123,7 @@ Partial Class UserCommentCard
         btnReport.Font = New Font("Segoe UI", 9F)
         btnReport.ForeColor = Color.White
         btnReport.Image = My.Resources.Resources.problem_report
-        btnReport.Location = New Point(263, 41)
+        btnReport.Location = New Point(267, 41)
         btnReport.Name = "btnReport"
         btnReport.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         btnReport.Size = New Size(44, 36)
@@ -140,7 +140,7 @@ Partial Class UserCommentCard
         Controls.Add(picUser)
         Controls.Add(lblUser)
         Name = "UserCommentCard"
-        Size = New Size(307, 107)
+        Size = New Size(313, 107)
         CType(picUser, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
