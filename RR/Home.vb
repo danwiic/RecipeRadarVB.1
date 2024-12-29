@@ -257,4 +257,7 @@ Public Class Home
         flowPanelResults.Visible = False
         btnRemove.Visible = False
     End Sub
+
+    Private Sub lblHighRated_Click(sender As Object, e As EventArgs) Handles lblHighRated.Click
+    End Sub
 End Class

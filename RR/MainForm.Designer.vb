@@ -146,7 +146,7 @@ Partial Class MainForm
         ' 
         displayPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         displayPanel.AutoScroll = True
-        displayPanel.BackColor = SystemColors.Control
+        displayPanel.BackColor = Color.Transparent
         displayPanel.CustomizableEdges = CustomizableEdges9
         displayPanel.Location = New Point(230, 31)
         displayPanel.Name = "displayPanel"
