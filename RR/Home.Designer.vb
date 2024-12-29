@@ -74,7 +74,7 @@ Partial Class Home
         txtSearch.ShadowDecoration.BorderRadius = 28
         txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtSearch.ShadowDecoration.Depth = 15
-        txtSearch.ShadowDecoration.Enabled = True
+        txtSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         txtSearch.Size = New Size(334, 50)
         txtSearch.TabIndex = 1
         ' 
@@ -150,10 +150,10 @@ Partial Class Home
         btnRemove.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRemove.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnRemove.HoverState.FillColor = Color.Transparent
-        btnRemove.Location = New Point(603, 187)
+        btnRemove.Location = New Point(599, 187)
         btnRemove.Name = "btnRemove"
         btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnRemove.Size = New Size(36, 34)
+        btnRemove.Size = New Size(39, 34)
         btnRemove.TabIndex = 7
         btnRemove.Text = "×"
         btnRemove.Visible = False

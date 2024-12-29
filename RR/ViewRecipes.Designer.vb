@@ -52,6 +52,7 @@ Partial Class ViewRecipe
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CommentPanel = New FlowLayoutPanel()
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
+        lblCategory = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -76,7 +77,7 @@ Partial Class ViewRecipe
         btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
         btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(20, 14)
+        btnBack.Location = New Point(17, 12)
         btnBack.Name = "btnBack"
         btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnBack.Size = New Size(180, 45)
@@ -88,7 +89,7 @@ Partial Class ViewRecipe
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(20, 103)
+        lblMealName.Location = New Point(20, 99)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(146, 34)
         lblMealName.TabIndex = 16
@@ -122,7 +123,7 @@ Partial Class ViewRecipe
         Guna2Panel1.Controls.Add(lblRating)
         Guna2Panel1.Controls.Add(lblTotalUser)
         Guna2Panel1.CustomizableEdges = CustomizableEdges3
-        Guna2Panel1.Location = New Point(20, 154)
+        Guna2Panel1.Location = New Point(20, 194)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(243, 34)
@@ -154,7 +155,7 @@ Partial Class ViewRecipe
         btnFav.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnFav.ForeColor = Color.White
         btnFav.Image = My.Resources.Resources.favorite
-        btnFav.Location = New Point(17, 207)
+        btnFav.Location = New Point(20, 247)
         btnFav.Name = "btnFav"
         btnFav.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnFav.Size = New Size(180, 45)
@@ -175,7 +176,7 @@ Partial Class ViewRecipe
         btnRate.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRate.ForeColor = Color.White
         btnRate.Image = My.Resources.Resources.star
-        btnRate.Location = New Point(203, 207)
+        btnRate.Location = New Point(206, 247)
         btnRate.Name = "btnRate"
         btnRate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnRate.Size = New Size(180, 45)
@@ -299,18 +300,30 @@ Partial Class ViewRecipe
         btnDelete.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete_white
-        btnDelete.Location = New Point(389, 207)
+        btnDelete.Location = New Point(392, 247)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnDelete.Size = New Size(180, 45)
         btnDelete.TabIndex = 30
         btnDelete.Text = "Delete Meal"
         ' 
+        ' lblCategory
+        ' 
+        lblCategory.BackColor = Color.Transparent
+        lblCategory.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblCategory.Location = New Point(20, 151)
+        lblCategory.Name = "lblCategory"
+        lblCategory.Size = New Size(101, 26)
+        lblCategory.TabIndex = 31
+        lblCategory.Text = "Category: "
+        ' 
         ' ViewRecipe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
+        Controls.Add(lblCategory)
         Controls.Add(btnDelete)
         Controls.Add(CommentPanel)
         Controls.Add(Guna2HtmlLabel1)
@@ -349,6 +362,7 @@ Partial Class ViewRecipe
     Friend WithEvents CommentPanel As FlowLayoutPanel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblCategory As Guna.UI2.WinForms.Guna2HtmlLabel
 
 
 End Class

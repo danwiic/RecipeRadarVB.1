@@ -48,13 +48,14 @@ Public Class ViewRecipe
             Try
                 conn.Open()
 
-                Dim query As String = "SELECT * FROM meals WHERE idMeal = @mealID"
+                Dim query As String = "SELECT m.*, c.category_name FROM meals m JOIN categories c ON m.category_id = c.id WHERE m.idMeal = @mealID;"
                 Dim cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@mealID", mealID)
 
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 If reader.Read() Then
                     lblMealName.Text = reader("strMeal").ToString()
+                    lblCategory.Text = "Category: " & reader("category_name").ToString()
 
                     Dim youtubeUrl As String = reader("strYoutube").ToString()
                     If Not String.IsNullOrEmpty(youtubeUrl) Then

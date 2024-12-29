@@ -73,7 +73,7 @@ Partial Class MainForm
         ' 
         ' Guna2Panel1
         ' 
-        Guna2Panel1.BackColor = Color.FromArgb(CByte(150), CByte(201), CByte(244))
+        Guna2Panel1.BackColor = Color.WhiteSmoke
         Guna2Panel1.Controls.Add(Guna2Button2)
         Guna2Panel1.Controls.Add(Guna2Button1)
         Guna2Panel1.CustomizableEdges = CustomizableEdges5
@@ -93,8 +93,8 @@ Partial Class MainForm
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.Dock = DockStyle.Right
         Guna2Button2.FillColor = Color.Transparent
-        Guna2Button2.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button2.ForeColor = Color.White
+        Guna2Button2.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2Button2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2Button2.Location = New Point(910, 0)
         Guna2Button2.Name = "Guna2Button2"
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
@@ -112,7 +112,7 @@ Partial Class MainForm
         Guna2Button1.Dock = DockStyle.Right
         Guna2Button1.FillColor = Color.Transparent
         Guna2Button1.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button1.ForeColor = Color.WhiteSmoke
+        Guna2Button1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2Button1.Location = New Point(955, 0)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
