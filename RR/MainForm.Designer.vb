@@ -73,7 +73,7 @@ Partial Class MainForm
         ' 
         ' Guna2Panel1
         ' 
-        Guna2Panel1.BackColor = Color.WhiteSmoke
+        Guna2Panel1.BackColor = Color.FromArgb(CByte(150), CByte(201), CByte(244))
         Guna2Panel1.Controls.Add(Guna2Button2)
         Guna2Panel1.Controls.Add(Guna2Button1)
         Guna2Panel1.CustomizableEdges = CustomizableEdges5
@@ -81,7 +81,7 @@ Partial Class MainForm
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Panel1.Size = New Size(1000, 34)
+        Guna2Panel1.Size = New Size(1000, 25)
         Guna2Panel1.TabIndex = 0
         ' 
         ' Guna2Button2
@@ -93,12 +93,12 @@ Partial Class MainForm
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.Dock = DockStyle.Right
         Guna2Button2.FillColor = Color.Transparent
-        Guna2Button2.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2Button2.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2Button2.ForeColor = Color.White
         Guna2Button2.Location = New Point(910, 0)
         Guna2Button2.Name = "Guna2Button2"
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button2.Size = New Size(45, 34)
+        Guna2Button2.Size = New Size(45, 25)
         Guna2Button2.TabIndex = 12
         Guna2Button2.Text = "□"
         ' 
@@ -112,11 +112,11 @@ Partial Class MainForm
         Guna2Button1.Dock = DockStyle.Right
         Guna2Button1.FillColor = Color.Transparent
         Guna2Button1.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2Button1.ForeColor = Color.WhiteSmoke
         Guna2Button1.Location = New Point(955, 0)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button1.Size = New Size(45, 34)
+        Guna2Button1.Size = New Size(45, 25)
         Guna2Button1.TabIndex = 11
         Guna2Button1.Text = "✕"
         ' 
@@ -148,10 +148,10 @@ Partial Class MainForm
         displayPanel.AutoScroll = True
         displayPanel.BackColor = SystemColors.Control
         displayPanel.CustomizableEdges = CustomizableEdges9
-        displayPanel.Location = New Point(230, 34)
+        displayPanel.Location = New Point(230, 31)
         displayPanel.Name = "displayPanel"
         displayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        displayPanel.Size = New Size(767, 566)
+        displayPanel.Size = New Size(767, 569)
         displayPanel.TabIndex = 13
         ' 
         ' Guna2Panel3
@@ -302,14 +302,14 @@ Partial Class MainForm
         Guna2Panel2.Controls.Add(Guna2Panel3)
         Guna2Panel2.CustomizableEdges = CustomizableEdges27
         Guna2Panel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2Panel2.Location = New Point(0, 34)
+        Guna2Panel2.Location = New Point(0, 23)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.ShadowDecoration.BorderRadius = 10
         CustomizableEdges28.BottomLeft = False
         CustomizableEdges28.TopLeft = False
         Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2Panel2.ShadowDecoration.Enabled = True
-        Guna2Panel2.Size = New Size(224, 566)
+        Guna2Panel2.Size = New Size(224, 577)
         Guna2Panel2.TabIndex = 12
         ' 
         ' Guna2Panel4
@@ -318,7 +318,7 @@ Partial Class MainForm
         Guna2Panel4.Controls.Add(btnLogout)
         Guna2Panel4.CustomizableEdges = CustomizableEdges25
         Guna2Panel4.Dock = DockStyle.Bottom
-        Guna2Panel4.Location = New Point(0, 487)
+        Guna2Panel4.Location = New Point(0, 498)
         Guna2Panel4.Name = "Guna2Panel4"
         Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Panel4.Size = New Size(224, 79)

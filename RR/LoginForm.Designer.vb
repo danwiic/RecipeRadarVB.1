@@ -114,7 +114,7 @@ Partial Class LoginForm
         loginPanel.Name = "loginPanel"
         loginPanel.ShadowColor = Color.Black
         loginPanel.ShadowShift = 0
-        loginPanel.Size = New Size(577, 30)
+        loginPanel.Size = New Size(577, 25)
         loginPanel.TabIndex = 2
         ' 
         ' Guna2Button1
@@ -131,7 +131,7 @@ Partial Class LoginForm
         Guna2Button1.Location = New Point(532, 0)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button1.Size = New Size(45, 30)
+        Guna2Button1.Size = New Size(45, 25)
         Guna2Button1.TabIndex = 10
         Guna2Button1.Text = "✕"
         ' 
@@ -161,10 +161,10 @@ Partial Class LoginForm
         Guna2Panel1.CustomizableEdges = CustomizableEdges11
         Guna2Panel1.Dock = DockStyle.Left
         Guna2Panel1.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2Panel1.Location = New Point(0, 30)
+        Guna2Panel1.Location = New Point(0, 25)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2Panel1.Size = New Size(290, 420)
+        Guna2Panel1.Size = New Size(290, 425)
         Guna2Panel1.TabIndex = 5
         ' 
         ' Guna2PictureBox1

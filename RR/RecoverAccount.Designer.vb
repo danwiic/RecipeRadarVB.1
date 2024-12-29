@@ -39,12 +39,12 @@ Partial Class RecoverAccount
         recoverPanel.BackColor = Color.Transparent
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
-        recoverPanel.FillColor = Color.Red
+        recoverPanel.FillColor = Color.WhiteSmoke
         recoverPanel.Location = New Point(0, 0)
         recoverPanel.Name = "recoverPanel"
         recoverPanel.ShadowColor = Color.Black
         recoverPanel.ShadowShift = 0
-        recoverPanel.Size = New Size(589, 30)
+        recoverPanel.Size = New Size(589, 25)
         recoverPanel.TabIndex = 15
         ' 
         ' Guna2Button1
@@ -61,7 +61,7 @@ Partial Class RecoverAccount
         Guna2Button1.Location = New Point(544, 0)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button1.Size = New Size(45, 30)
+        Guna2Button1.Size = New Size(45, 25)
         Guna2Button1.TabIndex = 10
         Guna2Button1.Text = "✕"
         ' 
@@ -72,10 +72,11 @@ Partial Class RecoverAccount
         ' displayPanel
         ' 
         displayPanel.CustomizableEdges = CustomizableEdges3
-        displayPanel.Location = New Point(53, 63)
+        displayPanel.Dock = DockStyle.Fill
+        displayPanel.Location = New Point(0, 25)
         displayPanel.Name = "displayPanel"
         displayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        displayPanel.Size = New Size(442, 250)
+        displayPanel.Size = New Size(589, 425)
         displayPanel.TabIndex = 0
         ' 
         ' RecoverAccount
