@@ -34,6 +34,8 @@ Partial Class ViewRecipe
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         flowPanelVideo = New FlowLayoutPanel()
         btnBack = New Guna.UI2.WinForms.Guna2Button()
         lblMealName = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -49,6 +51,7 @@ Partial Class ViewRecipe
         txtIngredients = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CommentPanel = New FlowLayoutPanel()
+        btnDelete = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -62,10 +65,10 @@ Partial Class ViewRecipe
         ' 
         ' btnBack
         ' 
-        btnBack.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         btnBack.Animated = True
         btnBack.AutoRoundedCorners = True
         btnBack.BorderRadius = 21
+        btnBack.Cursor = Cursors.Hand
         btnBack.CustomizableEdges = CustomizableEdges1
         btnBack.DisabledState.BorderColor = Color.DarkGray
         btnBack.DisabledState.CustomBorderColor = Color.DarkGray
@@ -73,7 +76,7 @@ Partial Class ViewRecipe
         btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
         btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(12, 14)
+        btnBack.Location = New Point(20, 14)
         btnBack.Name = "btnBack"
         btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnBack.Size = New Size(180, 45)
@@ -85,7 +88,7 @@ Partial Class ViewRecipe
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(12, 103)
+        lblMealName.Location = New Point(20, 103)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(146, 34)
         lblMealName.TabIndex = 16
@@ -119,7 +122,7 @@ Partial Class ViewRecipe
         Guna2Panel1.Controls.Add(lblRating)
         Guna2Panel1.Controls.Add(lblTotalUser)
         Guna2Panel1.CustomizableEdges = CustomizableEdges3
-        Guna2Panel1.Location = New Point(12, 154)
+        Guna2Panel1.Location = New Point(20, 154)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(243, 34)
@@ -139,9 +142,9 @@ Partial Class ViewRecipe
         ' 
         ' btnFav
         ' 
-        btnFav.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         btnFav.Animated = True
         btnFav.BorderRadius = 8
+        btnFav.Cursor = Cursors.Hand
         btnFav.CustomizableEdges = CustomizableEdges5
         btnFav.DisabledState.BorderColor = Color.DarkGray
         btnFav.DisabledState.CustomBorderColor = Color.DarkGray
@@ -151,7 +154,7 @@ Partial Class ViewRecipe
         btnFav.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnFav.ForeColor = Color.White
         btnFav.Image = My.Resources.Resources.favorite
-        btnFav.Location = New Point(9, 207)
+        btnFav.Location = New Point(17, 207)
         btnFav.Name = "btnFav"
         btnFav.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnFav.Size = New Size(180, 45)
@@ -160,9 +163,9 @@ Partial Class ViewRecipe
         ' 
         ' btnRate
         ' 
-        btnRate.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         btnRate.Animated = True
         btnRate.BorderRadius = 8
+        btnRate.Cursor = Cursors.Hand
         btnRate.CustomizableEdges = CustomizableEdges7
         btnRate.DisabledState.BorderColor = Color.DarkGray
         btnRate.DisabledState.CustomBorderColor = Color.DarkGray
@@ -172,7 +175,7 @@ Partial Class ViewRecipe
         btnRate.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRate.ForeColor = Color.White
         btnRate.Image = My.Resources.Resources.star
-        btnRate.Location = New Point(195, 207)
+        btnRate.Location = New Point(203, 207)
         btnRate.Name = "btnRate"
         btnRate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnRate.Size = New Size(180, 45)
@@ -184,7 +187,7 @@ Partial Class ViewRecipe
         Instructions.BackColor = Color.Transparent
         Instructions.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Instructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Instructions.Location = New Point(9, 316)
+        Instructions.Location = New Point(17, 319)
         Instructions.Name = "Instructions"
         Instructions.Size = New Size(161, 34)
         Instructions.TabIndex = 24
@@ -206,10 +209,10 @@ Partial Class ViewRecipe
         txtInstructions.Enabled = False
         txtInstructions.FillColor = SystemColors.Control
         txtInstructions.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Font = New Font("Arial Narrow", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtInstructions.Font = New Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtInstructions.ForeColor = Color.Black
         txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Location = New Point(9, 346)
+        txtInstructions.Location = New Point(17, 349)
         txtInstructions.Margin = New Padding(3, 4, 3, 4)
         txtInstructions.Multiline = True
         txtInstructions.Name = "txtInstructions"
@@ -226,7 +229,7 @@ Partial Class ViewRecipe
         Ingredients.BackColor = Color.Transparent
         Ingredients.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Ingredients.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Ingredients.Location = New Point(450, 316)
+        Ingredients.Location = New Point(458, 319)
         Ingredients.Name = "Ingredients"
         Ingredients.Size = New Size(152, 34)
         Ingredients.TabIndex = 26
@@ -247,10 +250,10 @@ Partial Class ViewRecipe
         txtIngredients.Enabled = False
         txtIngredients.FillColor = SystemColors.Control
         txtIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Font = New Font("Arial Narrow", 12.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        txtIngredients.Font = New Font("Arial Narrow", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         txtIngredients.ForeColor = Color.Black
         txtIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Location = New Point(450, 346)
+        txtIngredients.Location = New Point(458, 349)
         txtIngredients.Margin = New Padding(3, 5, 3, 5)
         txtIngredients.Multiline = True
         txtIngredients.Name = "txtIngredients"
@@ -259,7 +262,7 @@ Partial Class ViewRecipe
         txtIngredients.ReadOnly = True
         txtIngredients.SelectedText = ""
         txtIngredients.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        txtIngredients.Size = New Size(245, 391)
+        txtIngredients.Size = New Size(199, 391)
         txtIngredients.TabIndex = 27
         ' 
         ' Guna2HtmlLabel1
@@ -267,7 +270,7 @@ Partial Class ViewRecipe
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel1.Location = New Point(701, 316)
+        Guna2HtmlLabel1.Location = New Point(663, 319)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(148, 34)
         Guna2HtmlLabel1.TabIndex = 28
@@ -275,16 +278,40 @@ Partial Class ViewRecipe
         ' 
         ' CommentPanel
         ' 
-        CommentPanel.Location = New Point(701, 346)
+        CommentPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        CommentPanel.FlowDirection = FlowDirection.TopDown
+        CommentPanel.Location = New Point(663, 349)
         CommentPanel.Name = "CommentPanel"
-        CommentPanel.Size = New Size(334, 495)
+        CommentPanel.Size = New Size(372, 495)
         CommentPanel.TabIndex = 29
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.Animated = True
+        btnDelete.BorderRadius = 8
+        btnDelete.Cursor = Cursors.Hand
+        btnDelete.CustomizableEdges = CustomizableEdges13
+        btnDelete.DisabledState.BorderColor = Color.DarkGray
+        btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
+        btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnDelete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnDelete.FillColor = Color.Red
+        btnDelete.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDelete.ForeColor = Color.White
+        btnDelete.Image = My.Resources.Resources.delete_white
+        btnDelete.Location = New Point(389, 207)
+        btnDelete.Name = "btnDelete"
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnDelete.Size = New Size(180, 45)
+        btnDelete.TabIndex = 30
+        btnDelete.Text = "Delete Meal"
         ' 
         ' ViewRecipe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
+        Controls.Add(btnDelete)
         Controls.Add(CommentPanel)
         Controls.Add(Guna2HtmlLabel1)
         Controls.Add(txtIngredients)
@@ -321,6 +348,7 @@ Partial Class ViewRecipe
     Friend WithEvents txtIngredients As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CommentPanel As FlowLayoutPanel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
 
 
 End Class

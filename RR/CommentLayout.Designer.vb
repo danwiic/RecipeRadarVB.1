@@ -22,18 +22,16 @@ Partial Class CommentLayout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        commentPanel = New Guna.UI2.WinForms.Guna2Panel()
+        commentPanel = New FlowLayoutPanel()
         lblNoComment = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         btnComment = New Guna.UI2.WinForms.Guna2Button()
@@ -48,23 +46,22 @@ Partial Class CommentLayout
         Guna2Panel1.BorderRadius = 8
         Guna2Panel1.Controls.Add(commentPanel)
         Guna2Panel1.Controls.Add(Guna2Panel3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges9
+        Guna2Panel1.CustomizableEdges = CustomizableEdges7
         Guna2Panel1.FillColor = Color.WhiteSmoke
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Panel1.Size = New Size(327, 390)
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Panel1.Size = New Size(351, 390)
         Guna2Panel1.TabIndex = 0
         ' 
         ' commentPanel
         ' 
+        commentPanel.AutoScroll = True
         commentPanel.Controls.Add(lblNoComment)
-        commentPanel.CustomizableEdges = CustomizableEdges1
         commentPanel.Dock = DockStyle.Fill
         commentPanel.Location = New Point(0, 0)
         commentPanel.Name = "commentPanel"
-        commentPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        commentPanel.Size = New Size(327, 339)
+        commentPanel.Size = New Size(351, 339)
         commentPanel.TabIndex = 3
         ' 
         ' lblNoComment
@@ -81,17 +78,17 @@ Partial Class CommentLayout
         ' 
         Guna2Panel3.Controls.Add(btnComment)
         Guna2Panel3.Controls.Add(txtInputComment)
-        Guna2Panel3.CustomizableEdges = CustomizableEdges7
+        Guna2Panel3.CustomizableEdges = CustomizableEdges5
         Guna2Panel3.Dock = DockStyle.Bottom
         Guna2Panel3.Location = New Point(0, 339)
         Guna2Panel3.Name = "Guna2Panel3"
-        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2Panel3.Size = New Size(327, 51)
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel3.Size = New Size(351, 51)
         Guna2Panel3.TabIndex = 2
         ' 
         ' btnComment
         ' 
-        btnComment.CustomizableEdges = CustomizableEdges3
+        btnComment.CustomizableEdges = CustomizableEdges1
         btnComment.DisabledState.BorderColor = Color.DarkGray
         btnComment.DisabledState.CustomBorderColor = Color.DarkGray
         btnComment.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -100,15 +97,15 @@ Partial Class CommentLayout
         btnComment.Font = New Font("Segoe UI", 9F)
         btnComment.ForeColor = Color.White
         btnComment.Image = My.Resources.Resources.chat
-        btnComment.Location = New Point(245, 0)
+        btnComment.Location = New Point(269, 0)
         btnComment.Name = "btnComment"
-        btnComment.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnComment.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnComment.Size = New Size(82, 51)
         btnComment.TabIndex = 1
         ' 
         ' txtInputComment
         ' 
-        txtInputComment.CustomizableEdges = CustomizableEdges5
+        txtInputComment.CustomizableEdges = CustomizableEdges3
         txtInputComment.DefaultText = ""
         txtInputComment.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtInputComment.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -123,8 +120,8 @@ Partial Class CommentLayout
         txtInputComment.PasswordChar = ChrW(0)
         txtInputComment.PlaceholderText = "Enter your comment"
         txtInputComment.SelectedText = ""
-        txtInputComment.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        txtInputComment.Size = New Size(327, 51)
+        txtInputComment.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        txtInputComment.Size = New Size(351, 51)
         txtInputComment.TabIndex = 0
         ' 
         ' CommentLayout
@@ -134,7 +131,7 @@ Partial Class CommentLayout
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
         Name = "CommentLayout"
-        Size = New Size(327, 445)
+        Size = New Size(351, 445)
         Guna2Panel1.ResumeLayout(False)
         commentPanel.ResumeLayout(False)
         commentPanel.PerformLayout()
@@ -144,9 +141,9 @@ Partial Class CommentLayout
 
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents commentPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblNoComment As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnComment As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtInputComment As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents commentPanel As FlowLayoutPanel
 
 End Class

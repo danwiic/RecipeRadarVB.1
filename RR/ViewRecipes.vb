@@ -5,7 +5,8 @@ Public Class ViewRecipe
     Dim mealID As Integer
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
     Dim isFavorite As Boolean = False
-
+    Dim role As String = LoginForm.currentUserRole
+    Dim userID As Integer = LoginForm.currentUserID
     Public Sub New(mealID As Integer)
         InitializeComponent()
         Me.mealID = mealID
@@ -191,5 +192,33 @@ Public Class ViewRecipe
 
         Dim comments As New CommentLayout(mealID)
         Me.CommentPanel.Controls.Add(comments)
+        checkRole()
+
+    End Sub
+    Private Sub checkRole()
+        If role = "admin" Then
+            btnDelete.Visible = True
+        Else
+            btnDelete.Visible = False
+        End If
+    End Sub
+
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim query As String = "DELETE FROM meals WHERE idMeal = @mealID"
+
+        Using conn As New MySqlConnection(connStr)
+            Try
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@mealID", mealID)
+                    cmd.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Recipe deleted successfully.")
+                Me.Hide()
+            Catch ex As Exception
+                MessageBox.Show("Error deleting recipe: " & ex.Message)
+            End Try
+        End Using
     End Sub
 End Class

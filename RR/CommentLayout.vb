@@ -68,6 +68,7 @@ Public Class CommentLayout
                             AddHandler comment.CommentDeleted, AddressOf OnCommentDeleted
 
                             commentPanel.Controls.Add(comment)
+                            comment.Dock = DockStyle.Top
                         End While
                     End Using
                 End Using
@@ -121,5 +122,13 @@ Public Class CommentLayout
         If e.KeyCode = Keys.Enter Then
             submitComment()
         End If
+    End Sub
+
+    Private Sub lblNoComment_Click(sender As Object, e As EventArgs) Handles lblNoComment.Click
+
+    End Sub
+
+    Private Sub commentPanel_Paint(sender As Object, e As PaintEventArgs) Handles commentPanel.Paint
+
     End Sub
 End Class

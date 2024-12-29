@@ -115,4 +115,10 @@ Public Class LoginForm
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Me.Hide()
+        Dim recoverForm As New RecoverAccount
+        recoverForm.Show()
+    End Sub
 End Class

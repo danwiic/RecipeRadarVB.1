@@ -22,15 +22,13 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        btnSearch = New Guna.UI2.WinForms.Guna2Button()
         lblResults = New Guna.UI2.WinForms.Guna2HtmlLabel()
         flowPanelPopular = New FlowLayoutPanel()
         lblPopular = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -38,6 +36,7 @@ Partial Class Home
         lblHighRated = New Guna.UI2.WinForms.Guna2HtmlLabel()
         flowPanelResults = New FlowLayoutPanel()
         btnRemove = New Guna.UI2.WinForms.Guna2Button()
+        btnSearch = New Guna.UI2.WinForms.Guna2CircleButton()
         SuspendLayout()
         ' 
         ' Guna2HtmlLabel1
@@ -54,8 +53,11 @@ Partial Class Home
         ' 
         ' txtSearch
         ' 
-        txtSearch.BorderRadius = 8
-        txtSearch.CustomizableEdges = CustomizableEdges7
+        txtSearch.Animated = True
+        txtSearch.AutoRoundedCorners = True
+        txtSearch.BackColor = Color.Transparent
+        txtSearch.BorderRadius = 24
+        txtSearch.CustomizableEdges = CustomizableEdges1
         txtSearch.DefaultText = ""
         txtSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -64,31 +66,17 @@ Partial Class Home
         txtSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSearch.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSearch.Location = New Point(348, 191)
+        txtSearch.Location = New Point(356, 180)
         txtSearch.Name = "txtSearch"
         txtSearch.PasswordChar = ChrW(0)
-        txtSearch.PlaceholderText = "Search recipes"
+        txtSearch.PlaceholderText = "Search recipes..."
         txtSearch.SelectedText = ""
-        txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        txtSearch.Size = New Size(309, 45)
+        txtSearch.ShadowDecoration.BorderRadius = 28
+        txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtSearch.ShadowDecoration.Depth = 15
+        txtSearch.ShadowDecoration.Enabled = True
+        txtSearch.Size = New Size(334, 50)
         txtSearch.TabIndex = 1
-        ' 
-        ' btnSearch
-        ' 
-        btnSearch.Animated = True
-        btnSearch.CustomizableEdges = CustomizableEdges9
-        btnSearch.DisabledState.BorderColor = Color.DarkGray
-        btnSearch.DisabledState.CustomBorderColor = Color.DarkGray
-        btnSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnSearch.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnSearch.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSearch.ForeColor = Color.White
-        btnSearch.Location = New Point(612, 191)
-        btnSearch.Name = "btnSearch"
-        btnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        btnSearch.Size = New Size(86, 45)
-        btnSearch.TabIndex = 2
-        btnSearch.Text = "Search "
         ' 
         ' lblResults
         ' 
@@ -153,7 +141,7 @@ Partial Class Home
         ' 
         ' btnRemove
         ' 
-        btnRemove.CustomizableEdges = CustomizableEdges11
+        btnRemove.CustomizableEdges = CustomizableEdges3
         btnRemove.DisabledState.BorderColor = Color.DarkGray
         btnRemove.DisabledState.CustomBorderColor = Color.DarkGray
         btnRemove.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -161,13 +149,32 @@ Partial Class Home
         btnRemove.FillColor = Color.White
         btnRemove.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRemove.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        btnRemove.Location = New Point(570, 196)
+        btnRemove.HoverState.FillColor = Color.Transparent
+        btnRemove.Location = New Point(603, 187)
         btnRemove.Name = "btnRemove"
-        btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnRemove.Size = New Size(36, 34)
         btnRemove.TabIndex = 7
         btnRemove.Text = "×"
         btnRemove.Visible = False
+        ' 
+        ' btnSearch
+        ' 
+        btnSearch.Animated = True
+        btnSearch.BackColor = Color.Transparent
+        btnSearch.DisabledState.BorderColor = Color.DarkGray
+        btnSearch.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSearch.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSearch.Font = New Font("Segoe UI", 9F)
+        btnSearch.ForeColor = Color.White
+        btnSearch.Image = My.Resources.Resources.search_white
+        btnSearch.Location = New Point(641, 187)
+        btnSearch.Name = "btnSearch"
+        btnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges5
+        btnSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        btnSearch.Size = New Size(40, 36)
+        btnSearch.TabIndex = 8
         ' 
         ' Home
         ' 
@@ -175,6 +182,7 @@ Partial Class Home
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = SystemColors.Control
+        Controls.Add(btnSearch)
         Controls.Add(btnRemove)
         Controls.Add(flowPanelResults)
         Controls.Add(lblHighRated)
@@ -182,19 +190,17 @@ Partial Class Home
         Controls.Add(lblPopular)
         Controls.Add(flowPanelPopular)
         Controls.Add(lblResults)
-        Controls.Add(btnSearch)
         Controls.Add(txtSearch)
         Controls.Add(Guna2HtmlLabel1)
         MinimumSize = New Size(1047, 0)
         Name = "Home"
-        Size = New Size(1047, 1034)
+        Size = New Size(1047, 1045)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblResults As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents flowPanelPopular As FlowLayoutPanel
     Friend WithEvents lblPopular As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -202,5 +208,6 @@ Partial Class Home
     Friend WithEvents lblHighRated As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents flowPanelResults As FlowLayoutPanel
     Friend WithEvents btnRemove As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2CircleButton
 
 End Class

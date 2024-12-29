@@ -176,4 +176,8 @@ Public Class SignupForm
     Private Sub SignupForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub signupPanel_Paint(sender As Object, e As PaintEventArgs) Handles signupPanel.Paint
+
+    End Sub
 End Class

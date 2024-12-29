@@ -22,13 +22,13 @@ Partial Class UserCommentCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblUser = New Guna.UI2.WinForms.Guna2HtmlLabel()
         picUser = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         txtComment = New Guna.UI2.WinForms.Guna2TextBox()
@@ -55,7 +55,7 @@ Partial Class UserCommentCard
         picUser.ImageRotate = 0F
         picUser.Location = New Point(6, 41)
         picUser.Name = "picUser"
-        picUser.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        picUser.ShadowDecoration.CustomizableEdges = CustomizableEdges1
         picUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         picUser.Size = New Size(32, 34)
         picUser.SizeMode = PictureBoxSizeMode.StretchImage
@@ -64,7 +64,8 @@ Partial Class UserCommentCard
         ' 
         ' txtComment
         ' 
-        txtComment.CustomizableEdges = CustomizableEdges9
+        txtComment.BorderRadius = 6
+        txtComment.CustomizableEdges = CustomizableEdges2
         txtComment.DefaultText = ""
         txtComment.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtComment.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -74,11 +75,13 @@ Partial Class UserCommentCard
         txtComment.Font = New Font("Segoe UI", 9F)
         txtComment.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtComment.Location = New Point(44, 41)
+        txtComment.Multiline = True
         txtComment.Name = "txtComment"
         txtComment.PasswordChar = ChrW(0)
         txtComment.PlaceholderText = ""
+        txtComment.ReadOnly = True
         txtComment.SelectedText = ""
-        txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges3
         txtComment.Size = New Size(217, 36)
         txtComment.TabIndex = 2
         ' 
@@ -94,7 +97,7 @@ Partial Class UserCommentCard
         ' 
         ' btnDelete
         ' 
-        btnDelete.CustomizableEdges = CustomizableEdges11
+        btnDelete.CustomizableEdges = CustomizableEdges4
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -105,13 +108,13 @@ Partial Class UserCommentCard
         btnDelete.Image = My.Resources.Resources.delete
         btnDelete.Location = New Point(267, 41)
         btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        btnDelete.Size = New Size(47, 36)
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges5
+        btnDelete.Size = New Size(37, 36)
         btnDelete.TabIndex = 4
         ' 
         ' btnReport
         ' 
-        btnReport.CustomizableEdges = CustomizableEdges13
+        btnReport.CustomizableEdges = CustomizableEdges6
         btnReport.DisabledState.BorderColor = Color.DarkGray
         btnReport.DisabledState.CustomBorderColor = Color.DarkGray
         btnReport.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -120,10 +123,10 @@ Partial Class UserCommentCard
         btnReport.Font = New Font("Segoe UI", 9F)
         btnReport.ForeColor = Color.White
         btnReport.Image = My.Resources.Resources.problem_report
-        btnReport.Location = New Point(267, 41)
+        btnReport.Location = New Point(263, 41)
         btnReport.Name = "btnReport"
-        btnReport.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        btnReport.Size = New Size(47, 36)
+        btnReport.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        btnReport.Size = New Size(44, 36)
         btnReport.TabIndex = 5
         ' 
         ' UserCommentCard
@@ -137,7 +140,7 @@ Partial Class UserCommentCard
         Controls.Add(picUser)
         Controls.Add(lblUser)
         Name = "UserCommentCard"
-        Size = New Size(329, 107)
+        Size = New Size(307, 107)
         CType(picUser, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

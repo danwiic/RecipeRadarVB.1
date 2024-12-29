@@ -22,11 +22,10 @@ Public Class UserCommentCard
 
                 Using deleteComment As New MySqlCommand(query, conn)
                     deleteComment.Parameters.AddWithValue("@commentID", commentID)
-                    deleteComment.ExecuteNonQuery() ' Execute the delete command
+                    deleteComment.ExecuteNonQuery()
                 End Using
             End Using
 
-            ' Raise the CommentDeleted event
             RaiseEvent CommentDeleted(Me, EventArgs.Empty)
 
         Catch ex As Exception
@@ -52,5 +51,9 @@ Public Class UserCommentCard
 
     Private Sub UserCommentCard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckUserRole()
+    End Sub
+
+    Private Sub txtComment_TextChanged(sender As Object, e As EventArgs) Handles txtComment.TextChanged
+
     End Sub
 End Class

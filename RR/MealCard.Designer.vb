@@ -86,7 +86,7 @@ Partial Class MealCard
         ' 
         lblFavoriteCount.BackColor = Color.Transparent
         lblFavoriteCount.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblFavoriteCount.Location = New Point(84, 204)
+        lblFavoriteCount.Location = New Point(88, 203)
         lblFavoriteCount.Name = "lblFavoriteCount"
         lblFavoriteCount.Size = New Size(10, 18)
         lblFavoriteCount.TabIndex = 4
@@ -96,7 +96,7 @@ Partial Class MealCard
         ' 
         lblMealCategory.BackColor = Color.Transparent
         lblMealCategory.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblMealCategory.Location = New Point(124, 204)
+        lblMealCategory.Location = New Point(119, 203)
         lblMealCategory.Name = "lblMealCategory"
         lblMealCategory.Size = New Size(60, 18)
         lblMealCategory.TabIndex = 3
@@ -117,7 +117,7 @@ Partial Class MealCard
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(12, 180)
+        lblMealName.Location = New Point(12, 178)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(88, 18)
         lblMealName.TabIndex = 1
