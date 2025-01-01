@@ -39,6 +39,7 @@ Partial Class Profile
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2ContainerControl1 = New Guna.UI2.WinForms.Guna2ContainerControl()
+        lblError = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2vSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
         btnUpload = New Guna.UI2.WinForms.Guna2Button()
@@ -66,6 +67,7 @@ Partial Class Profile
         ' 
         ' txtUsername
         ' 
+        txtUsername.BorderRadius = 6
         txtUsername.BorderThickness = 0
         txtUsername.CustomizableEdges = CustomizableEdges2
         txtUsername.DefaultText = ""
@@ -83,11 +85,12 @@ Partial Class Profile
         txtUsername.ReadOnly = True
         txtUsername.SelectedText = ""
         txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges3
-        txtUsername.Size = New Size(221, 38)
+        txtUsername.Size = New Size(221, 46)
         txtUsername.TabIndex = 1
         ' 
         ' txtEmail
         ' 
+        txtEmail.BorderRadius = 6
         txtEmail.BorderThickness = 0
         txtEmail.CustomizableEdges = CustomizableEdges4
         txtEmail.DefaultText = ""
@@ -105,7 +108,7 @@ Partial Class Profile
         txtEmail.ReadOnly = True
         txtEmail.SelectedText = ""
         txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges5
-        txtEmail.Size = New Size(221, 38)
+        txtEmail.Size = New Size(221, 46)
         txtEmail.TabIndex = 2
         ' 
         ' Guna2ContainerControl1
@@ -113,6 +116,7 @@ Partial Class Profile
         Guna2ContainerControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2ContainerControl1.BackColor = Color.Transparent
         Guna2ContainerControl1.BorderRadius = 12
+        Guna2ContainerControl1.Controls.Add(lblError)
         Guna2ContainerControl1.Controls.Add(Guna2HtmlLabel3)
         Guna2ContainerControl1.Controls.Add(Guna2vSeparator1)
         Guna2ContainerControl1.Controls.Add(btnUpload)
@@ -134,6 +138,17 @@ Partial Class Profile
         Guna2ContainerControl1.Size = New Size(906, 424)
         Guna2ContainerControl1.TabIndex = 3
         Guna2ContainerControl1.Text = "Guna2ContainerControl1"
+        ' 
+        ' lblError
+        ' 
+        lblError.BackColor = Color.Transparent
+        lblError.Font = New Font("Arial", 9.75F)
+        lblError.ForeColor = Color.Red
+        lblError.Location = New Point(379, 213)
+        lblError.Name = "lblError"
+        lblError.Size = New Size(3, 2)
+        lblError.TabIndex = 10
+        lblError.Text = Nothing
         ' 
         ' Guna2HtmlLabel3
         ' 
@@ -287,5 +302,6 @@ Partial Class Profile
     Friend WithEvents lblFav As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2vSeparator1 As Guna.UI2.WinForms.Guna2VSeparator
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblError As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class
