@@ -180,7 +180,7 @@ Partial Class Profile
         btnUpload.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnUpload.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpload.ForeColor = Color.White
-        btnUpload.Location = New Point(58, 362)
+        btnUpload.Location = New Point(48, 364)
         btnUpload.Name = "btnUpload"
         btnUpload.ShadowDecoration.BorderRadius = 12
         btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges7
