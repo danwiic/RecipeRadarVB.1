@@ -27,20 +27,23 @@ Partial Class Profile
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pbUserImage = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2ContainerControl1 = New Guna.UI2.WinForms.Guna2ContainerControl()
+        btnUpload = New Guna.UI2.WinForms.Guna2Button()
+        btnSave = New Guna.UI2.WinForms.Guna2Button()
         btnEdit = New Guna.UI2.WinForms.Guna2Button()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        btnSave = New Guna.UI2.WinForms.Guna2Button()
         CType(pbUserImage, ComponentModel.ISupportInitialize).BeginInit()
         Guna2ContainerControl1.SuspendLayout()
         SuspendLayout()
@@ -105,6 +108,7 @@ Partial Class Profile
         Guna2ContainerControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2ContainerControl1.BackColor = Color.Transparent
         Guna2ContainerControl1.BorderRadius = 12
+        Guna2ContainerControl1.Controls.Add(btnUpload)
         Guna2ContainerControl1.Controls.Add(btnSave)
         Guna2ContainerControl1.Controls.Add(btnEdit)
         Guna2ContainerControl1.Controls.Add(Guna2HtmlLabel2)
@@ -112,11 +116,11 @@ Partial Class Profile
         Guna2ContainerControl1.Controls.Add(pbUserImage)
         Guna2ContainerControl1.Controls.Add(txtUsername)
         Guna2ContainerControl1.Controls.Add(txtEmail)
-        Guna2ContainerControl1.CustomizableEdges = CustomizableEdges10
+        Guna2ContainerControl1.CustomizableEdges = CustomizableEdges12
         Guna2ContainerControl1.Location = New Point(70, 111)
         Guna2ContainerControl1.Name = "Guna2ContainerControl1"
         Guna2ContainerControl1.ShadowDecoration.BorderRadius = 14
-        Guna2ContainerControl1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        Guna2ContainerControl1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         Guna2ContainerControl1.ShadowDecoration.Depth = 8
         Guna2ContainerControl1.ShadowDecoration.Enabled = True
         Guna2ContainerControl1.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
@@ -124,12 +128,62 @@ Partial Class Profile
         Guna2ContainerControl1.TabIndex = 3
         Guna2ContainerControl1.Text = "Guna2ContainerControl1"
         ' 
+        ' btnUpload
+        ' 
+        btnUpload.Animated = True
+        btnUpload.BackColor = Color.Transparent
+        btnUpload.BorderRadius = 10
+        btnUpload.CustomizableEdges = CustomizableEdges6
+        btnUpload.DisabledState.BorderColor = Color.DarkGray
+        btnUpload.DisabledState.CustomBorderColor = Color.DarkGray
+        btnUpload.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnUpload.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUpload.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpload.ForeColor = Color.White
+        btnUpload.Location = New Point(582, 200)
+        btnUpload.Name = "btnUpload"
+        btnUpload.ShadowDecoration.BorderRadius = 12
+        btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        btnUpload.ShadowDecoration.Depth = 8
+        btnUpload.ShadowDecoration.Enabled = True
+        btnUpload.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
+        btnUpload.Size = New Size(172, 45)
+        btnUpload.TabIndex = 7
+        btnUpload.Text = "CHANGE PROFILE"
+        ' 
+        ' btnSave
+        ' 
+        btnSave.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        btnSave.Animated = True
+        btnSave.BackColor = Color.Transparent
+        btnSave.BorderRadius = 10
+        btnSave.CustomizableEdges = CustomizableEdges8
+        btnSave.DisabledState.BorderColor = Color.DarkGray
+        btnSave.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSave.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.Image = My.Resources.Resources.save
+        btnSave.Location = New Point(710, 411)
+        btnSave.Name = "btnSave"
+        btnSave.ShadowDecoration.BorderRadius = 12
+        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        btnSave.ShadowDecoration.Depth = 8
+        btnSave.ShadowDecoration.Enabled = True
+        btnSave.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
+        btnSave.Size = New Size(180, 45)
+        btnSave.TabIndex = 6
+        btnSave.Text = "SAVE"
+        btnSave.Visible = False
+        ' 
         ' btnEdit
         ' 
+        btnEdit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnEdit.Animated = True
         btnEdit.BackColor = Color.Transparent
         btnEdit.BorderRadius = 10
-        btnEdit.CustomizableEdges = CustomizableEdges8
+        btnEdit.CustomizableEdges = CustomizableEdges10
         btnEdit.DisabledState.BorderColor = Color.DarkGray
         btnEdit.DisabledState.CustomBorderColor = Color.DarkGray
         btnEdit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -140,7 +194,7 @@ Partial Class Profile
         btnEdit.Location = New Point(710, 411)
         btnEdit.Name = "btnEdit"
         btnEdit.ShadowDecoration.BorderRadius = 12
-        btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         btnEdit.ShadowDecoration.Depth = 8
         btnEdit.ShadowDecoration.Enabled = True
         btnEdit.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
@@ -168,31 +222,6 @@ Partial Class Profile
         Guna2HtmlLabel1.TabIndex = 3
         Guna2HtmlLabel1.Text = "Username"
         ' 
-        ' btnSave
-        ' 
-        btnSave.Animated = True
-        btnSave.BackColor = Color.Transparent
-        btnSave.BorderRadius = 10
-        btnSave.CustomizableEdges = CustomizableEdges6
-        btnSave.DisabledState.BorderColor = Color.DarkGray
-        btnSave.DisabledState.CustomBorderColor = Color.DarkGray
-        btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnSave.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSave.ForeColor = Color.White
-        btnSave.Image = My.Resources.Resources.save
-        btnSave.Location = New Point(710, 411)
-        btnSave.Name = "btnSave"
-        btnSave.ShadowDecoration.BorderRadius = 12
-        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges7
-        btnSave.ShadowDecoration.Depth = 8
-        btnSave.ShadowDecoration.Enabled = True
-        btnSave.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
-        btnSave.Size = New Size(180, 45)
-        btnSave.TabIndex = 6
-        btnSave.Text = "SAVE"
-        btnSave.Visible = False
-        ' 
         ' Profile
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -214,5 +243,6 @@ Partial Class Profile
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnUpload As Guna.UI2.WinForms.Guna2Button
 
 End Class

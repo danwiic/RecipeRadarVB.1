@@ -56,4 +56,8 @@ Public Class UserCommentCard
     Private Sub txtComment_TextChanged(sender As Object, e As EventArgs) Handles txtComment.TextChanged
 
     End Sub
+
+    Private Sub picUser_Click(sender As Object, e As EventArgs) Handles picUser.Click
+
+    End Sub
 End Class

@@ -43,4 +43,8 @@ Public Class ChangePass
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         ChangePassword()
     End Sub
+
+    Private Sub verifyCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles verifyCodePanel.Paint
+
+    End Sub
 End Class
