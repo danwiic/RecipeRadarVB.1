@@ -69,6 +69,7 @@ Partial Class SendOTP
         txtEmail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtEmail.Font = New Font("Segoe UI", 9F)
         txtEmail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtEmail.IconLeft = My.Resources.Resources.mail
         txtEmail.Location = New Point(179, 189)
         txtEmail.Name = "txtEmail"
         txtEmail.PasswordChar = ChrW(0)

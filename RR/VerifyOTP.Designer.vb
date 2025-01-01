@@ -67,7 +67,7 @@ Partial Class VerifyOTP
         lblNotif.BackColor = Color.Transparent
         lblNotif.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
         lblNotif.ForeColor = SystemColors.ControlLightLight
-        lblNotif.Location = New Point(178, 192)
+        lblNotif.Location = New Point(130, 175)
         lblNotif.Name = "lblNotif"
         lblNotif.Size = New Size(122, 18)
         lblNotif.TabIndex = 24

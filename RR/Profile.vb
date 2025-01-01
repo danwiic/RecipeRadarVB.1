@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class Profile
 
-    Dim userID As String = 16
+    Dim userID As String = LoginForm.currentUserID
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
     Dim conn As New MySqlConnection(connStr)
 
@@ -50,9 +50,9 @@ Public Class Profile
 
     Private Sub btnAction_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         btnEdit.Visible = False
+        txtUsername.BorderThickness = 1
         txtUsername.ReadOnly = False
         btnSave.Visible = True
-
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -74,8 +74,8 @@ Public Class Profile
                 Dim rowsAffected As Integer = cmd.ExecuteNonQuery() ' Execute the update command
 
                 If rowsAffected > 0 Then
-                    MessageBox.Show("Username updated successfully.")
                     txtUsername.ReadOnly = True
+                    txtUsername.BorderThickness = 0
                     btnSave.Visible = False
                     btnEdit.Visible = True
                 Else

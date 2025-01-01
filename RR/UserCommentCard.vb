@@ -1,15 +1,24 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 
 Public Class UserCommentCard
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
     Dim commentID As Integer
     Dim userRole = LoginForm.currentUserRole
 
-    Public Sub setComment(commentID As Integer, userName As String, comment As String, createdAt As DateTime)
+    Public Sub setComment(commentID As Integer, userName As String, comment As String, createdAt As DateTime, Optional imageData As Byte() = Nothing)
         Me.commentID = commentID
         lblUser.Text = userName
         txtComment.Text = comment
         lblDate.Text = createdAt.ToString("g")
+
+        If imageData IsNot Nothing AndAlso imageData.Length > 0 Then
+            Using ms As New MemoryStream(imageData)
+                picUser.Image = Image.FromStream(ms)
+            End Using
+        Else
+            picUser.Image = My.Resources.img
+        End If
     End Sub
 
     Public Event CommentDeleted As EventHandler

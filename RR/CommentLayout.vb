@@ -42,11 +42,11 @@ Public Class CommentLayout
     End Sub
 
     Private Sub LoadActualComments()
-        Dim query As String = "SELECT c.comment_id, c.comment_text, u.username, c.created_at " &
-                              "FROM comments c " &
-                              "JOIN users u ON c.user_id = u.user_id " &
-                              "WHERE c.meal_id = @mealID " &
-                              "ORDER BY c.created_at DESC"
+        Dim query As String = "SELECT c.comment_id, c.comment_text, u.username, u.profile_image, c.created_at " &
+                          "FROM comments c " &
+                          "JOIN users u ON c.user_id = u.user_id " &
+                          "WHERE c.meal_id = @mealID " &
+                          "ORDER BY c.created_at DESC"
 
         Using conn As New MySqlConnection(connStr)
             Try
@@ -62,8 +62,11 @@ Public Class CommentLayout
                             Dim userName As String = reader("username").ToString()
                             Dim commentText As String = reader("comment_text").ToString()
                             Dim createdAt As DateTime = Convert.ToDateTime(reader("created_at"))
+
+                            Dim imageData As Byte() = If(reader("profile_image") IsNot DBNull.Value, CType(reader("profile_image"), Byte()), Nothing)
+
                             Dim comment As New UserCommentCard()
-                            comment.setComment(commentID, userName, commentText, createdAt)
+                            comment.setComment(commentID, userName, commentText, createdAt, imageData)
 
                             AddHandler comment.CommentDeleted, AddressOf OnCommentDeleted
 
