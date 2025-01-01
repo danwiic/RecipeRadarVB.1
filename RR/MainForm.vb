@@ -73,4 +73,11 @@ Public Class MainForm
     Private Sub displayPanel_Paint(sender As Object, e As PaintEventArgs) Handles displayPanel.Paint
 
     End Sub
+
+    Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
+        displayPanel.Controls.Clear()
+        Dim prof As New Profile
+        displayPanel.Controls.Add(prof)
+        prof.Dock = DockStyle.Fill
+    End Sub
 End Class

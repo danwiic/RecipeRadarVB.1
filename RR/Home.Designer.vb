@@ -22,11 +22,11 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         lblResults = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -57,7 +57,7 @@ Partial Class Home
         txtSearch.AutoRoundedCorners = True
         txtSearch.BackColor = Color.Transparent
         txtSearch.BorderRadius = 24
-        txtSearch.CustomizableEdges = CustomizableEdges6
+        txtSearch.CustomizableEdges = CustomizableEdges1
         txtSearch.DefaultText = ""
         txtSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -72,7 +72,7 @@ Partial Class Home
         txtSearch.PlaceholderText = "Search recipes..."
         txtSearch.SelectedText = ""
         txtSearch.ShadowDecoration.BorderRadius = 28
-        txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtSearch.ShadowDecoration.Depth = 15
         txtSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         txtSearch.Size = New Size(334, 50)
@@ -141,7 +141,7 @@ Partial Class Home
         ' 
         ' btnRemove
         ' 
-        btnRemove.CustomizableEdges = CustomizableEdges8
+        btnRemove.CustomizableEdges = CustomizableEdges3
         btnRemove.DisabledState.BorderColor = Color.DarkGray
         btnRemove.DisabledState.CustomBorderColor = Color.DarkGray
         btnRemove.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -152,7 +152,7 @@ Partial Class Home
         btnRemove.HoverState.FillColor = Color.Transparent
         btnRemove.Location = New Point(599, 187)
         btnRemove.Name = "btnRemove"
-        btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnRemove.Size = New Size(39, 34)
         btnRemove.TabIndex = 7
         btnRemove.Text = "×"
@@ -171,7 +171,7 @@ Partial Class Home
         btnSearch.Image = My.Resources.Resources.search_white
         btnSearch.Location = New Point(641, 187)
         btnSearch.Name = "btnSearch"
-        btnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges5
         btnSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         btnSearch.Size = New Size(40, 36)
         btnSearch.TabIndex = 8

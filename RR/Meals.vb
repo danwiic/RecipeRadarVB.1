@@ -101,4 +101,18 @@ Public Class Meals
             btnAdd.Text = "SUBMIT NEW RECIPE"
         End If
     End Sub
+
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        If currentPage > 1 Then
+            currentPage -= 1
+            LoadAddedMeals() ' Reload meals for the new page
+        End If
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If currentPage * pageSize < totalMeals Then
+            currentPage += 1
+            LoadAddedMeals() ' Reload meals for the new page
+        End If
+    End Sub
 End Class
