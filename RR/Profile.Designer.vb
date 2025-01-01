@@ -78,7 +78,7 @@ Partial Class Profile
         txtUsername.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.Font = New Font("Arial", 9.75F)
         txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUsername.Location = New Point(395, 161)
+        txtUsername.Location = New Point(411, 161)
         txtUsername.Name = "txtUsername"
         txtUsername.PasswordChar = ChrW(0)
         txtUsername.PlaceholderText = ""
@@ -101,7 +101,7 @@ Partial Class Profile
         txtEmail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtEmail.Font = New Font("Arial", 9.75F)
         txtEmail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtEmail.Location = New Point(395, 258)
+        txtEmail.Location = New Point(411, 258)
         txtEmail.Name = "txtEmail"
         txtEmail.PasswordChar = ChrW(0)
         txtEmail.PlaceholderText = ""
@@ -144,7 +144,7 @@ Partial Class Profile
         lblError.BackColor = Color.Transparent
         lblError.Font = New Font("Arial", 9.75F)
         lblError.ForeColor = Color.Red
-        lblError.Location = New Point(379, 213)
+        lblError.Location = New Point(395, 213)
         lblError.Name = "lblError"
         lblError.Size = New Size(3, 2)
         lblError.TabIndex = 10
@@ -155,7 +155,7 @@ Partial Class Profile
         Guna2HtmlLabel3.BackColor = Color.Transparent
         Guna2HtmlLabel3.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel3.ForeColor = SystemColors.ControlDarkDark
-        Guna2HtmlLabel3.Location = New Point(360, 27)
+        Guna2HtmlLabel3.Location = New Point(371, 27)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(202, 40)
         Guna2HtmlLabel3.TabIndex = 9
@@ -247,7 +247,7 @@ Partial Class Profile
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Arial", 9.75F)
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel2.Location = New Point(379, 234)
+        Guna2HtmlLabel2.Location = New Point(395, 234)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(36, 18)
         Guna2HtmlLabel2.TabIndex = 4
@@ -258,7 +258,7 @@ Partial Class Profile
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial", 9.75F)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel1.Location = New Point(379, 137)
+        Guna2HtmlLabel1.Location = New Point(395, 137)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(62, 18)
         Guna2HtmlLabel1.TabIndex = 3
