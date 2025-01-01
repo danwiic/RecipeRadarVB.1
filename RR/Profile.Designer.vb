@@ -140,7 +140,7 @@ Partial Class Profile
         Guna2HtmlLabel3.BackColor = Color.Transparent
         Guna2HtmlLabel3.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel3.ForeColor = SystemColors.ControlDarkDark
-        Guna2HtmlLabel3.Location = New Point(360, 40)
+        Guna2HtmlLabel3.Location = New Point(360, 27)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(202, 40)
         Guna2HtmlLabel3.TabIndex = 9
