@@ -112,4 +112,10 @@ Public Class SendOTP
     Private Sub sendCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles sendCodePanel.Paint
 
     End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        RecoverAccount.displayPanel.Controls.Clear()
+        RecoverAccount.Hide()
+        LoginForm.Show()
+    End Sub
 End Class

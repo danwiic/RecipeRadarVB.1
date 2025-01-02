@@ -23,12 +23,14 @@ Partial Class VerifyOTP
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         verifyCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         lblNotif = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblResend = New LinkLabel()
@@ -37,28 +39,30 @@ Partial Class VerifyOTP
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnVerify = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
+        btnBack = New Guna.UI2.WinForms.Guna2Button()
         verifyCodePanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' verifyCodePanel
         ' 
+        verifyCodePanel.BackgroundImage = My.Resources.Resources.bg
+        verifyCodePanel.BackgroundImageLayout = ImageLayout.Stretch
+        verifyCodePanel.Controls.Add(btnBack)
         verifyCodePanel.Controls.Add(lblNotif)
         verifyCodePanel.Controls.Add(lblResend)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel1)
         verifyCodePanel.Controls.Add(txtOTP)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel7)
         verifyCodePanel.Controls.Add(btnVerify)
-        verifyCodePanel.CustomizableEdges = CustomizableEdges5
+        verifyCodePanel.CustomizableEdges = CustomizableEdges7
         verifyCodePanel.Dock = DockStyle.Fill
-        verifyCodePanel.FillColor = Color.FromArgb(CByte(77), CByte(161), CByte(169))
-        verifyCodePanel.FillColor2 = Color.FromArgb(CByte(188), CByte(204), CByte(220))
         verifyCodePanel.ForeColor = SystemColors.ControlLightLight
         verifyCodePanel.Location = New Point(0, 0)
         verifyCodePanel.MaximumSize = New Size(590, 425)
         verifyCodePanel.MinimumSize = New Size(590, 425)
         verifyCodePanel.Name = "verifyCodePanel"
         verifyCodePanel.ShadowDecoration.BorderRadius = 4
-        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         verifyCodePanel.Size = New Size(590, 425)
         verifyCodePanel.TabIndex = 24
         ' 
@@ -66,7 +70,7 @@ Partial Class VerifyOTP
         ' 
         lblNotif.BackColor = Color.Transparent
         lblNotif.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
-        lblNotif.ForeColor = SystemColors.ControlLightLight
+        lblNotif.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblNotif.Location = New Point(130, 175)
         lblNotif.Name = "lblNotif"
         lblNotif.Size = New Size(122, 18)
@@ -79,7 +83,8 @@ Partial Class VerifyOTP
         lblResend.BackColor = Color.Transparent
         lblResend.Cursor = Cursors.Hand
         lblResend.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResend.LinkColor = Color.White
+        lblResend.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblResend.LinkColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblResend.Location = New Point(309, 319)
         lblResend.Name = "lblResend"
         lblResend.Size = New Size(47, 16)
@@ -91,7 +96,7 @@ Partial Class VerifyOTP
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
-        Guna2HtmlLabel1.ForeColor = SystemColors.ControlLightLight
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel1.Location = New Point(179, 318)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(131, 18)
@@ -103,7 +108,7 @@ Partial Class VerifyOTP
         txtOTP.Animated = True
         txtOTP.BackColor = Color.Transparent
         txtOTP.BorderRadius = 8
-        txtOTP.CustomizableEdges = CustomizableEdges1
+        txtOTP.CustomizableEdges = CustomizableEdges3
         txtOTP.DefaultText = ""
         txtOTP.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtOTP.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -117,7 +122,7 @@ Partial Class VerifyOTP
         txtOTP.PasswordChar = ChrW(0)
         txtOTP.PlaceholderText = "Enter 6-Digit Code"
         txtOTP.SelectedText = ""
-        txtOTP.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtOTP.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtOTP.ShadowDecoration.Depth = 10
         txtOTP.Size = New Size(232, 45)
         txtOTP.TabIndex = 19
@@ -126,8 +131,8 @@ Partial Class VerifyOTP
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
         Guna2HtmlLabel7.Font = New Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel7.ForeColor = SystemColors.ControlLightLight
-        Guna2HtmlLabel7.Location = New Point(219, 108)
+        Guna2HtmlLabel7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel7.Location = New Point(219, 95)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(151, 37)
         Guna2HtmlLabel7.TabIndex = 18
@@ -138,7 +143,7 @@ Partial Class VerifyOTP
         btnVerify.Animated = True
         btnVerify.BackColor = Color.Transparent
         btnVerify.BorderRadius = 8
-        btnVerify.CustomizableEdges = CustomizableEdges3
+        btnVerify.CustomizableEdges = CustomizableEdges5
         btnVerify.DisabledState.BorderColor = Color.Transparent
         btnVerify.DisabledState.CustomBorderColor = Color.Transparent
         btnVerify.DisabledState.FillColor = Color.FromArgb(CByte(122), CByte(156), CByte(223))
@@ -148,7 +153,7 @@ Partial Class VerifyOTP
         btnVerify.Location = New Point(178, 267)
         btnVerify.Name = "btnVerify"
         btnVerify.ShadowDecoration.BorderRadius = 8
-        btnVerify.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnVerify.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnVerify.ShadowDecoration.Depth = 10
         btnVerify.Size = New Size(232, 45)
         btnVerify.TabIndex = 17
@@ -158,6 +163,24 @@ Partial Class VerifyOTP
         ' 
         countdownTimer.Enabled = True
         countdownTimer.Interval = 1000
+        ' 
+        ' btnBack
+        ' 
+        btnBack.Animated = True
+        btnBack.BorderRadius = 8
+        btnBack.CustomizableEdges = CustomizableEdges1
+        btnBack.DisabledState.BorderColor = Color.DarkGray
+        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.ForeColor = Color.White
+        btnBack.Location = New Point(13, 14)
+        btnBack.Name = "btnBack"
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnBack.Size = New Size(132, 45)
+        btnBack.TabIndex = 25
+        btnBack.Text = "BACK"
         ' 
         ' VerifyOTP
         ' 
@@ -181,5 +204,6 @@ Partial Class VerifyOTP
     Friend WithEvents lblResend As LinkLabel
     Friend WithEvents countdownTimer As Timer
     Friend WithEvents lblNotif As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
 
 End Class

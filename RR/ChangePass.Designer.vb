@@ -22,14 +22,16 @@ Partial Class ChangePass
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         verifyCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         txtNewPass = New Guna.UI2.WinForms.Guna2TextBox()
         lblResend = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -37,26 +39,28 @@ Partial Class ChangePass
         txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnChange = New Guna.UI2.WinForms.Guna2Button()
+        btnBack = New Guna.UI2.WinForms.Guna2Button()
         verifyCodePanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' verifyCodePanel
         ' 
+        verifyCodePanel.BackgroundImage = My.Resources.Resources.bg
+        verifyCodePanel.BackgroundImageLayout = ImageLayout.Stretch
+        verifyCodePanel.Controls.Add(btnBack)
         verifyCodePanel.Controls.Add(txtNewPass)
         verifyCodePanel.Controls.Add(lblResend)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel1)
         verifyCodePanel.Controls.Add(txtConfirmPass)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel7)
         verifyCodePanel.Controls.Add(btnChange)
-        verifyCodePanel.CustomizableEdges = CustomizableEdges7
+        verifyCodePanel.CustomizableEdges = CustomizableEdges9
         verifyCodePanel.Dock = DockStyle.Fill
-        verifyCodePanel.FillColor = Color.FromArgb(CByte(77), CByte(161), CByte(169))
-        verifyCodePanel.FillColor2 = Color.FromArgb(CByte(188), CByte(204), CByte(220))
         verifyCodePanel.ForeColor = SystemColors.ControlLightLight
         verifyCodePanel.Location = New Point(0, 0)
         verifyCodePanel.Name = "verifyCodePanel"
         verifyCodePanel.ShadowDecoration.BorderRadius = 4
-        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         verifyCodePanel.Size = New Size(590, 425)
         verifyCodePanel.TabIndex = 25
         ' 
@@ -65,7 +69,7 @@ Partial Class ChangePass
         txtNewPass.Animated = True
         txtNewPass.BackColor = Color.Transparent
         txtNewPass.BorderRadius = 8
-        txtNewPass.CustomizableEdges = CustomizableEdges1
+        txtNewPass.CustomizableEdges = CustomizableEdges3
         txtNewPass.DefaultText = ""
         txtNewPass.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtNewPass.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -79,7 +83,7 @@ Partial Class ChangePass
         txtNewPass.PasswordChar = ChrW(0)
         txtNewPass.PlaceholderText = "Enter new password"
         txtNewPass.SelectedText = ""
-        txtNewPass.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtNewPass.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtNewPass.ShadowDecoration.Depth = 10
         txtNewPass.Size = New Size(232, 45)
         txtNewPass.TabIndex = 22
@@ -88,7 +92,7 @@ Partial Class ChangePass
         ' 
         lblResend.BackColor = Color.Transparent
         lblResend.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResend.ForeColor = SystemColors.ControlLightLight
+        lblResend.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblResend.Location = New Point(185, 143)
         lblResend.Name = "lblResend"
         lblResend.Size = New Size(79, 18)
@@ -99,7 +103,7 @@ Partial Class ChangePass
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
-        Guna2HtmlLabel1.ForeColor = SystemColors.ControlLightLight
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel1.Location = New Point(185, 225)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(99, 18)
@@ -111,7 +115,7 @@ Partial Class ChangePass
         txtConfirmPass.Animated = True
         txtConfirmPass.BackColor = Color.Transparent
         txtConfirmPass.BorderRadius = 8
-        txtConfirmPass.CustomizableEdges = CustomizableEdges3
+        txtConfirmPass.CustomizableEdges = CustomizableEdges5
         txtConfirmPass.DefaultText = ""
         txtConfirmPass.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtConfirmPass.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -125,7 +129,7 @@ Partial Class ChangePass
         txtConfirmPass.PasswordChar = ChrW(0)
         txtConfirmPass.PlaceholderText = "Confirm password"
         txtConfirmPass.SelectedText = ""
-        txtConfirmPass.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        txtConfirmPass.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         txtConfirmPass.ShadowDecoration.Depth = 10
         txtConfirmPass.Size = New Size(232, 45)
         txtConfirmPass.TabIndex = 19
@@ -134,7 +138,7 @@ Partial Class ChangePass
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
         Guna2HtmlLabel7.Font = New Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel7.ForeColor = SystemColors.ControlLightLight
+        Guna2HtmlLabel7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel7.Location = New Point(173, 70)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(256, 37)
@@ -146,7 +150,7 @@ Partial Class ChangePass
         btnChange.Animated = True
         btnChange.BackColor = Color.Transparent
         btnChange.BorderRadius = 8
-        btnChange.CustomizableEdges = CustomizableEdges5
+        btnChange.CustomizableEdges = CustomizableEdges7
         btnChange.DisabledState.BorderColor = Color.Transparent
         btnChange.DisabledState.CustomBorderColor = Color.Transparent
         btnChange.DisabledState.FillColor = Color.FromArgb(CByte(122), CByte(156), CByte(223))
@@ -156,11 +160,29 @@ Partial Class ChangePass
         btnChange.Location = New Point(185, 309)
         btnChange.Name = "btnChange"
         btnChange.ShadowDecoration.BorderRadius = 8
-        btnChange.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnChange.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnChange.ShadowDecoration.Depth = 10
         btnChange.Size = New Size(232, 51)
         btnChange.TabIndex = 17
         btnChange.Text = "CHANGE"
+        ' 
+        ' btnBack
+        ' 
+        btnBack.Animated = True
+        btnBack.BorderRadius = 8
+        btnBack.CustomizableEdges = CustomizableEdges1
+        btnBack.DisabledState.BorderColor = Color.DarkGray
+        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.ForeColor = Color.White
+        btnBack.Location = New Point(13, 14)
+        btnBack.Name = "btnBack"
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnBack.Size = New Size(132, 45)
+        btnBack.TabIndex = 23
+        btnBack.Text = "BACK"
         ' 
         ' ChangePass
         ' 
@@ -183,5 +205,6 @@ Partial Class ChangePass
     Friend WithEvents txtConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnChange As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
 
 End Class
