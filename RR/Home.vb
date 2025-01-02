@@ -22,8 +22,16 @@ Public Class Home
 
         flowPanelResults.Visible = False  ' Initially hidden
         lblResults.Visible = False
+
+        Dim view As New ViewRecipe(0)
+        AddHandler view.RefreshFavorites, AddressOf RefreshFavorites
     End Sub
 
+    Private Sub RefreshFavorites()
+        flowPanelPopular.Controls.Clear()
+        LoadMealsData()
+        LoadRatedMeal()
+    End Sub
     Private Sub AdjustPanelSizes()
         ' Ensure maxColumns is greater than 0 to avoid division by zero
         If maxColumns <= 0 Then

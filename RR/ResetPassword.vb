@@ -53,5 +53,7 @@ Public Class ResetPassword
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
+        Dim ver As New VerifyOTP
+        ver.Show()
     End Sub
 End Class

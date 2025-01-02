@@ -7,6 +7,7 @@ Public Class ViewRecipe
     Dim isFavorite As Boolean = False
     Dim role As String = LoginForm.currentUserRole
     Dim userID As Integer = LoginForm.currentUserID
+    Public Event RefreshFavorites()
     Public Sub New(mealID As Integer)
         InitializeComponent()
         Me.mealID = mealID
@@ -129,6 +130,7 @@ Public Class ViewRecipe
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles btnFav.Click
+
         Dim userId As Integer = LoginForm.currentUserID
 
         Using conn As New MySqlConnection(connStr)
@@ -162,6 +164,7 @@ Public Class ViewRecipe
                             isFavorite = False ' Update the local state
                         End Using
                     End If
+                    RaiseEvent RefreshFavorites()
                 End Using
 
                 UpdateFavoriteButton()
@@ -195,7 +198,10 @@ Public Class ViewRecipe
         Me.CommentPanel.Controls.Add(comments)
         checkRole()
 
+
     End Sub
+
+
     Private Sub checkRole()
         If role = "admin" Then
             btnDelete.Visible = True
