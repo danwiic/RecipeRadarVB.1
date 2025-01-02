@@ -174,7 +174,7 @@ Public Class SignupForm
     End Sub
 
     Private Sub SignupForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        shadowForm.SetShadowForm(Me)
     End Sub
 
     Private Sub signupPanel_Paint(sender As Object, e As PaintEventArgs) Handles signupPanel.Paint

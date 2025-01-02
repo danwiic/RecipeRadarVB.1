@@ -8,12 +8,18 @@ Public Class ViewRecipe
     Dim role As String = LoginForm.currentUserRole
     Dim userID As Integer = LoginForm.currentUserID
     Public Event RefreshFavorites()
+
     Public Sub New(mealID As Integer)
         InitializeComponent()
         Me.mealID = mealID
         LoadRecipeData()
     End Sub
 
+    Private Sub OpenRateForm()
+        Dim rateForm As New Rate(mealID)
+        AddHandler rateForm.RefreshRating, AddressOf RefreshRatings
+        rateForm.Show()
+    End Sub
     Public Sub GetMealRatings(mealId As Integer)
         Using conn As New MySqlConnection(connStr)
             Try
@@ -29,7 +35,7 @@ Public Class ViewRecipe
                             Dim totalUsers As Integer = reader.GetInt32("total_users")
                             Dim overallAverageRating As Double = If(reader.IsDBNull(reader.GetOrdinal("ratings")), 0, reader.GetDouble("ratings"))
 
-                            lblRating.Text = overallAverageRating
+                            lblRating.Text = Math.Round(overallAverageRating, 1)
                             lblTotalUser.Text = "(" & totalUsers & ")"
                             rating.Value = overallAverageRating
                         End If
@@ -201,7 +207,13 @@ Public Class ViewRecipe
         Me.CommentPanel.Controls.Add(comments)
         checkRole()
 
+        Dim rate As New Rate(mealID)
+        AddHandler rate.RefreshRating, AddressOf RefreshRatings
 
+    End Sub
+
+    Private Sub RefreshRatings()
+        GetMealRatings(mealID)
     End Sub
 
 
@@ -230,5 +242,17 @@ Public Class ViewRecipe
                 MessageBox.Show("Error deleting recipe: " & ex.Message)
             End Try
         End Using
+    End Sub
+
+    Private Sub btnRate_Click(sender As Object, e As EventArgs) Handles btnRate.Click
+        OpenRateForm()
+    End Sub
+
+    Private Sub rating_ValueChanged(sender As Object, e As EventArgs) Handles rating.ValueChanged
+
+    End Sub
+
+    Private Sub lblRating_Click(sender As Object, e As EventArgs) Handles lblRating.Click
+
     End Sub
 End Class

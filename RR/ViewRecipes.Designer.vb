@@ -73,8 +73,8 @@ Partial Class ViewRecipe
         btnBack.CustomizableEdges = CustomizableEdges1
         btnBack.DisabledState.BorderColor = Color.DarkGray
         btnBack.DisabledState.CustomBorderColor = Color.DarkGray
-        btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
         btnBack.ForeColor = Color.White
         btnBack.Location = New Point(17, 12)
@@ -87,8 +87,8 @@ Partial Class ViewRecipe
         ' lblMealName
         ' 
         lblMealName.BackColor = Color.Transparent
-        lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        lblMealName.ForeColor = Color.FromArgb(64, 64, 64)
+        lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblMealName.Location = New Point(20, 99)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(146, 34)
@@ -99,8 +99,8 @@ Partial Class ViewRecipe
         ' 
         lblRating.BackColor = Color.Transparent
         lblRating.Dock = DockStyle.Left
-        lblRating.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        lblRating.ForeColor = Color.FromArgb(64, 64, 64)
+        lblRating.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblRating.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblRating.Location = New Point(0, 0)
         lblRating.Name = "lblRating"
         lblRating.Size = New Size(18, 34)
@@ -133,8 +133,8 @@ Partial Class ViewRecipe
         ' 
         lblTotalUser.BackColor = Color.Transparent
         lblTotalUser.Dock = DockStyle.Right
-        lblTotalUser.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        lblTotalUser.ForeColor = Color.FromArgb(64, 64, 64)
+        lblTotalUser.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotalUser.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblTotalUser.Location = New Point(207, 0)
         lblTotalUser.Name = "lblTotalUser"
         lblTotalUser.Size = New Size(36, 34)
@@ -149,10 +149,10 @@ Partial Class ViewRecipe
         btnFav.CustomizableEdges = CustomizableEdges5
         btnFav.DisabledState.BorderColor = Color.DarkGray
         btnFav.DisabledState.CustomBorderColor = Color.DarkGray
-        btnFav.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnFav.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnFav.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnFav.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnFav.FillColor = Color.Red
-        btnFav.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btnFav.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnFav.ForeColor = Color.White
         btnFav.Image = My.Resources.Resources.favorite
         btnFav.Location = New Point(20, 247)
@@ -170,10 +170,10 @@ Partial Class ViewRecipe
         btnRate.CustomizableEdges = CustomizableEdges7
         btnRate.DisabledState.BorderColor = Color.DarkGray
         btnRate.DisabledState.CustomBorderColor = Color.DarkGray
-        btnRate.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnRate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnRate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnRate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnRate.FillColor = Color.Gold
-        btnRate.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btnRate.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRate.ForeColor = Color.White
         btnRate.Image = My.Resources.Resources.star
         btnRate.Location = New Point(206, 247)
@@ -186,8 +186,8 @@ Partial Class ViewRecipe
         ' Instructions
         ' 
         Instructions.BackColor = Color.Transparent
-        Instructions.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        Instructions.ForeColor = Color.FromArgb(64, 64, 64)
+        Instructions.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Instructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Instructions.Location = New Point(17, 319)
         Instructions.Name = "Instructions"
         Instructions.Size = New Size(161, 34)
@@ -205,14 +205,14 @@ Partial Class ViewRecipe
         txtInstructions.DefaultText = ""
         txtInstructions.DisabledState.BorderColor = Color.Transparent
         txtInstructions.DisabledState.FillColor = Color.Transparent
-        txtInstructions.DisabledState.ForeColor = Color.FromArgb(64, 64, 64)
+        txtInstructions.DisabledState.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtInstructions.DisabledState.PlaceholderForeColor = Color.Transparent
         txtInstructions.Enabled = False
         txtInstructions.FillColor = SystemColors.Control
-        txtInstructions.FocusedState.BorderColor = Color.FromArgb(94, 148, 255)
-        txtInstructions.Font = New Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        txtInstructions.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtInstructions.Font = New Font("Arial Narrow", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtInstructions.ForeColor = Color.Black
-        txtInstructions.HoverState.BorderColor = Color.FromArgb(94, 148, 255)
+        txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtInstructions.Location = New Point(17, 349)
         txtInstructions.Margin = New Padding(3, 4, 3, 4)
         txtInstructions.Multiline = True
@@ -228,8 +228,8 @@ Partial Class ViewRecipe
         ' Ingredients
         ' 
         Ingredients.BackColor = Color.Transparent
-        Ingredients.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        Ingredients.ForeColor = Color.FromArgb(64, 64, 64)
+        Ingredients.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Ingredients.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Ingredients.Location = New Point(458, 319)
         Ingredients.Name = "Ingredients"
         Ingredients.Size = New Size(152, 34)
@@ -246,14 +246,14 @@ Partial Class ViewRecipe
         txtIngredients.DefaultText = ""
         txtIngredients.DisabledState.BorderColor = Color.Transparent
         txtIngredients.DisabledState.FillColor = Color.Transparent
-        txtIngredients.DisabledState.ForeColor = Color.FromArgb(64, 64, 64)
+        txtIngredients.DisabledState.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtIngredients.DisabledState.PlaceholderForeColor = Color.Transparent
         txtIngredients.Enabled = False
         txtIngredients.FillColor = SystemColors.Control
-        txtIngredients.FocusedState.BorderColor = Color.FromArgb(94, 148, 255)
-        txtIngredients.Font = New Font("Arial Narrow", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, 0)
+        txtIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtIngredients.Font = New Font("Arial Narrow", 12.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         txtIngredients.ForeColor = Color.Black
-        txtIngredients.HoverState.BorderColor = Color.FromArgb(94, 148, 255)
+        txtIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtIngredients.Location = New Point(458, 349)
         txtIngredients.Margin = New Padding(3, 5, 3, 5)
         txtIngredients.Multiline = True
@@ -269,8 +269,8 @@ Partial Class ViewRecipe
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        Guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64)
+        Guna2HtmlLabel1.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel1.Location = New Point(663, 319)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(148, 34)
@@ -294,10 +294,10 @@ Partial Class ViewRecipe
         btnDelete.CustomizableEdges = CustomizableEdges13
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
-        btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
-        btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnDelete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnDelete.FillColor = Color.Red
-        btnDelete.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btnDelete.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete_white
         btnDelete.Location = New Point(392, 247)
@@ -310,8 +310,8 @@ Partial Class ViewRecipe
         ' lblCategory
         ' 
         lblCategory.BackColor = Color.Transparent
-        lblCategory.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        lblCategory.ForeColor = Color.FromArgb(64, 64, 64)
+        lblCategory.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblCategory.Location = New Point(20, 151)
         lblCategory.Name = "lblCategory"
         lblCategory.Size = New Size(101, 26)

@@ -22,6 +22,7 @@ Partial Class SignupForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -63,6 +64,7 @@ Partial Class SignupForm
         Label5 = New Label()
         chkConfirm = New Guna.UI2.WinForms.Guna2CustomCheckBox()
         Label6 = New Label()
+        shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         signupPanel.SuspendLayout()
         Guna2Panel1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -419,4 +421,5 @@ Partial Class SignupForm
     Friend WithEvents Label5 As Label
     Friend WithEvents chkConfirm As Guna.UI2.WinForms.Guna2CustomCheckBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

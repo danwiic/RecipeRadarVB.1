@@ -66,7 +66,7 @@ Partial Class Home
         txtSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSearch.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtSearch.Location = New Point(356, 180)
+        txtSearch.Location = New Point(331, 180)
         txtSearch.Name = "txtSearch"
         txtSearch.PasswordChar = ChrW(0)
         txtSearch.PlaceholderText = "Search recipes..."
@@ -75,7 +75,7 @@ Partial Class Home
         txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtSearch.ShadowDecoration.Depth = 15
         txtSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        txtSearch.Size = New Size(334, 50)
+        txtSearch.Size = New Size(385, 50)
         txtSearch.TabIndex = 1
         ' 
         ' lblResults
@@ -150,7 +150,7 @@ Partial Class Home
         btnRemove.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRemove.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnRemove.HoverState.FillColor = Color.Transparent
-        btnRemove.Location = New Point(599, 187)
+        btnRemove.Location = New Point(625, 187)
         btnRemove.Name = "btnRemove"
         btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnRemove.Size = New Size(39, 34)
@@ -169,7 +169,7 @@ Partial Class Home
         btnSearch.Font = New Font("Segoe UI", 9F)
         btnSearch.ForeColor = Color.White
         btnSearch.Image = My.Resources.Resources.search_white
-        btnSearch.Location = New Point(641, 187)
+        btnSearch.Location = New Point(667, 187)
         btnSearch.Name = "btnSearch"
         btnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges5
         btnSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle

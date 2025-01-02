@@ -42,6 +42,8 @@ Public Class RecoverAccount
         AddHandler sendOtpControl.BackButtonClicked, AddressOf OnBackButtonClicked
 
         AddHandler sendOtpControl.HideFormButton, AddressOf HideForm
+
+        shadowForm.SetShadowForm(Me)
     End Sub
 
     Private Sub OnBackButtonClicked()

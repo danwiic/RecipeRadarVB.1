@@ -23,14 +23,15 @@ Partial Class RecoverAccount
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
         displayPanel = New Guna.UI2.WinForms.Guna2Panel()
+        shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
@@ -49,7 +50,7 @@ Partial Class RecoverAccount
         ' 
         ' Guna2Button1
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges5
+        Guna2Button1.CustomizableEdges = CustomizableEdges1
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -60,7 +61,7 @@ Partial Class RecoverAccount
         Guna2Button1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2Button1.Location = New Point(544, 0)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button1.Size = New Size(45, 25)
         Guna2Button1.TabIndex = 10
         Guna2Button1.Text = "✕"
@@ -71,11 +72,11 @@ Partial Class RecoverAccount
         ' 
         ' displayPanel
         ' 
-        displayPanel.CustomizableEdges = CustomizableEdges7
+        displayPanel.CustomizableEdges = CustomizableEdges3
         displayPanel.Dock = DockStyle.Fill
         displayPanel.Location = New Point(0, 25)
         displayPanel.Name = "displayPanel"
-        displayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        displayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         displayPanel.Size = New Size(589, 425)
         displayPanel.TabIndex = 0
         ' 
@@ -102,4 +103,5 @@ Partial Class RecoverAccount
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents countdownTimer As Timer
     Friend WithEvents displayPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
 End Class
