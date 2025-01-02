@@ -7,6 +7,8 @@ Public Class SendOTP
     Dim conn As New MySqlConnection(connStr)
     Dim countdown As Integer = 60
     Public Shared currentEmail As String
+    Public Event BackButtonClicked()
+    Public Event HideFormButton()
 
     Public Function EmailExists(email As String) As Boolean
         Dim exists As Boolean = False
@@ -49,14 +51,18 @@ Public Class SendOTP
                     btnSend.Enabled = False
                     countdown = 60
                     btnSend.Text = countdown.ToString() & " seconds"
+                    countdownTimer.Interval = 1000
                     countdownTimer.Start()
                     StoreOtpInDatabase(recipientEmail, otp)
                     currentEmail = recipientEmail
-                    Dim verifyOTP As New VerifyOTP
-                    RecoverAccount.displayPanel.Controls.Add(verifyOTP)
+
+
+                    Dim verifyOTP As New Verify()
+                    verifyOTP.Show()
                     verifyOTP.lblResend.Text = "Resend in " & countdown.ToString() & " seconds"
                     verifyOTP.lblResend.Enabled = False
-                    verifyOTP.BringToFront()
+                    RaiseEvent HideFormButton()
+
                 Else
                     Dim errorMessage As String = Await response.Content.ReadAsStringAsync()
                     MessageBox.Show($"Error sending email: {response.StatusCode} - {errorMessage}")
@@ -67,26 +73,20 @@ Public Class SendOTP
         End Using
     End Function
 
-
-    Public Sub countdownTimer_Tick(sender As Object, e As EventArgs) Handles countdownTimer.Tick
-
-        Dim verifyOTP As New VerifyOTP
+    Private Sub countdownTimer_Tick(sender As Object, e As EventArgs) Handles countdownTimer.Tick
         countdown -= 1
         btnSend.Text = countdown.ToString() & " seconds"
-        VerifyOTP.lblResend.Text = "Resend in " & countdown.ToString() & " seconds"
+
         If countdown <= 0 Then
             countdownTimer.Stop()
             btnSend.Enabled = True
             btnSend.Text = "SEND CODE"
-            VerifyOTP.lblResend.Text = "Resend"
-            VerifyOTP.lblResend.Enabled = True
         End If
     End Sub
-    Public Sub StoreOtpInDatabase(email As String, otp As String)
 
+    Public Sub StoreOtpInDatabase(email As String, otp As String)
         Dim expiresAt As DateTime = DateTime.Now.AddMinutes(5)
         Dim lastRequestedAt As DateTime = DateTime.Now
-        Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
         Using connection As New MySqlConnection(connStr)
             connection.Open()
             Dim command As New MySqlCommand("INSERT INTO otps (email, otp, expires_at, last_requested_at) VALUES (@Email, @Otp, @ExpiresAt, @LastRequestedAt) ON DUPLICATE KEY UPDATE otp = @Otp, expires_at = @ExpiresAt, last_requested_at = @LastRequestedAt", connection)
@@ -99,7 +99,7 @@ Public Class SendOTP
     End Sub
 
     Private Async Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        Dim email = txtEmail.Text.Trim
+        Dim email = txtEmail.Text.Trim()
 
         If EmailExists(email) Then
             Dim otp = GenerateOTP()
@@ -109,13 +109,11 @@ Public Class SendOTP
         End If
     End Sub
 
-    Private Sub sendCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles sendCodePanel.Paint
-
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        RaiseEvent BackButtonClicked()
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        RecoverAccount.displayPanel.Controls.Clear()
-        RecoverAccount.Hide()
-        LoginForm.Show()
+    Private Sub sendCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles sendCodePanel.Paint
+
     End Sub
 End Class

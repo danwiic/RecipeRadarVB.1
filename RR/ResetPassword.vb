@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class ChangePass
+Public Class ResetPassword
 
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
     Dim conn As New MySqlConnection(connStr)
@@ -29,6 +29,9 @@ Public Class ChangePass
                 updatePass.ExecuteNonQuery()
             End Using
             MessageBox.Show("Password updated successfully")
+            Me.Hide()
+
+            LoginForm.Show()
 
         Catch ex As Exception
             MessageBox.Show("Error updating password: " & ex.Message)

@@ -39,7 +39,7 @@ Partial Class Favorites
         lblFav.BackColor = Color.Transparent
         lblFav.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblFav.ForeColor = SystemColors.ControlDarkDark
-        lblFav.Location = New Point(13, 27)
+        lblFav.Location = New Point(13, 14)
         lblFav.Name = "lblFav"
         lblFav.Size = New Size(121, 40)
         lblFav.TabIndex = 7
@@ -49,7 +49,7 @@ Partial Class Favorites
         ' 
         panelFav.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         panelFav.BackColor = Color.Transparent
-        panelFav.Location = New Point(13, 73)
+        panelFav.Location = New Point(13, 60)
         panelFav.MaximumSize = New Size(1045, 1000)
         panelFav.Name = "panelFav"
         panelFav.Size = New Size(1021, 468)

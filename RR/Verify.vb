@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports System.Text
 
-Public Class VerifyOTP
+Public Class Verify
     Dim currentEmail As String = SendOTP.currentEmail
     Dim countdown As Integer = 60
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
@@ -49,8 +49,8 @@ Public Class VerifyOTP
     Public Sub countdownTimer_Tick(sender As Object, e As EventArgs) Handles countdownTimer.Tick
         Dim reqOTP As New SendOTP
         countdown -= 1
-        reqOTP.btnSend.Text = countdown.ToString() & " seconds"
-        lblResend.Text = "Resend in " & countdown.ToString() & " seconds"
+        reqOTP.btnSend.Text = countdown.ToString & " seconds"
+        lblResend.Text = "Resend in " & countdown.ToString & " seconds"
 
         If countdown <= 0 Then
             countdownTimer.Stop()
@@ -114,11 +114,9 @@ Public Class VerifyOTP
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 If reader.Read() Then
                     MessageBox.Show("OTP verified successfully.")
-                    Dim resetPassword As New ChangePass
-                    RecoverAccount.displayPanel.Controls.Clear()
-                    RecoverAccount.displayPanel.Controls.Add(resetPassword)
-                    RecoverAccount.BringToFront()
-
+                    Dim resetPassword As New ResetPassword
+                    Me.Hide()
+                    resetPassword.Show()
                 Else
                     MessageBox.Show("Invalid OTP code.")
                 End If
@@ -128,7 +126,4 @@ Public Class VerifyOTP
         End Try
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Hide()
-    End Sub
 End Class

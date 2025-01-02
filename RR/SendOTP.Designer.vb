@@ -25,18 +25,18 @@ Partial Class SendOTP
         components = New ComponentModel.Container()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         sendCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
+        btnBack = New Guna.UI2.WinForms.Guna2Button()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnSend = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
-        btnBack = New Guna.UI2.WinForms.Guna2Button()
         sendCodePanel.SuspendLayout()
         SuspendLayout()
         ' 
@@ -58,6 +58,24 @@ Partial Class SendOTP
         sendCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         sendCodePanel.Size = New Size(590, 425)
         sendCodePanel.TabIndex = 23
+        ' 
+        ' btnBack
+        ' 
+        btnBack.Animated = True
+        btnBack.BorderRadius = 8
+        btnBack.CustomizableEdges = CustomizableEdges1
+        btnBack.DisabledState.BorderColor = Color.DarkGray
+        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.ForeColor = Color.White
+        btnBack.Location = New Point(13, 14)
+        btnBack.Name = "btnBack"
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnBack.Size = New Size(132, 45)
+        btnBack.TabIndex = 24
+        btnBack.Text = "BACK"
         ' 
         ' txtEmail
         ' 
@@ -89,11 +107,11 @@ Partial Class SendOTP
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel2.Location = New Point(256, 87)
+        Guna2HtmlLabel2.Location = New Point(167, 87)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(72, 37)
+        Guna2HtmlLabel2.Size = New Size(256, 37)
         Guna2HtmlLabel2.TabIndex = 18
-        Guna2HtmlLabel2.Text = "SEND"
+        Guna2HtmlLabel2.Text = "REQUEST OTP CODE"
         ' 
         ' btnSend
         ' 
@@ -119,24 +137,6 @@ Partial Class SendOTP
         ' countdownTimer
         ' 
         countdownTimer.Interval = 1000
-        ' 
-        ' btnBack
-        ' 
-        btnBack.Animated = True
-        btnBack.BorderRadius = 8
-        btnBack.CustomizableEdges = CustomizableEdges1
-        btnBack.DisabledState.BorderColor = Color.DarkGray
-        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
-        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(13, 14)
-        btnBack.Name = "btnBack"
-        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btnBack.Size = New Size(132, 45)
-        btnBack.TabIndex = 24
-        btnBack.Text = "BACK"
         ' 
         ' SendOTP
         ' 

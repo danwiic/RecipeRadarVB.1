@@ -7,7 +7,7 @@ Public Class RecoverAccount
     Dim isDragging As Boolean
     Private startPoint As Point
 
-    Public Property CurrentEmail As String
+    Public Shared CurrentEmail As String
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Me.Close()
@@ -39,13 +39,32 @@ Public Class RecoverAccount
         Dim sendOtpControl As New SendOTP()
         displayPanel.Controls.Add(sendOtpControl)
 
+        AddHandler sendOtpControl.BackButtonClicked, AddressOf OnBackButtonClicked
+
+        AddHandler sendOtpControl.HideFormButton, AddressOf HideForm
     End Sub
 
+    Private Sub OnBackButtonClicked()
+        Me.Hide()
+        LoginForm.Show()
+    End Sub
+
+    Private Sub HideForm()
+        Me.Hide()
+    End Sub
     Private Sub displayPanel_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
     Private Sub recoverPanel_Paint(sender As Object, e As PaintEventArgs) Handles recoverPanel.Paint
+
+    End Sub
+
+    Private Sub displayPanel_Paint_1(sender As Object, e As PaintEventArgs) Handles displayPanel.Paint
+
+    End Sub
+
+    Private Sub countdownTimer_Tick(sender As Object, e As EventArgs) Handles countdownTimer.Tick
 
     End Sub
 End Class
