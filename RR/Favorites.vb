@@ -124,21 +124,7 @@ Public Class Favorites
         LoadFavoriteMeals()
     End Sub
 
-    Private Sub panelFav_Paint(sender As Object, e As PaintEventArgs) Handles panelFav.Paint
-
-    End Sub
-
-    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
-        If currentPage > 1 Then
-            currentPage -= 1
-            LoadFavoriteMeals()
-            checkButton()
-        End If
-
-
-    End Sub
-
-    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+    Private Sub btnNext_Click_1(sender As Object, e As EventArgs) Handles btnNext.Click
         If currentPage < Math.Ceiling(totalMeals / pageSize) Then
             currentPage += 1
             LoadFavoriteMeals()
@@ -146,7 +132,11 @@ Public Class Favorites
         End If
     End Sub
 
-    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles lblPages.Click
-
+    Private Sub btnPrev_Click_1(sender As Object, e As EventArgs) Handles btnPrev.Click
+        If currentPage > 1 Then
+            currentPage -= 1
+            LoadFavoriteMeals()
+            checkButton()
+        End If
     End Sub
 End Class

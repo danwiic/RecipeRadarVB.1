@@ -153,6 +153,7 @@ Public Class ViewRecipe
                             insertCmd.Parameters.AddWithValue("@mealId", mealID)
                             insertCmd.ExecuteNonQuery()
                             isFavorite = True ' Update the local state
+                            RaiseEvent RefreshFavorites()
                         End Using
                     Else
                         ' Meal is in favorites, so remove it
@@ -162,9 +163,10 @@ Public Class ViewRecipe
                             deleteCmd.Parameters.AddWithValue("@mealId", mealID)
                             deleteCmd.ExecuteNonQuery()
                             isFavorite = False ' Update the local state
+                            RaiseEvent RefreshFavorites()
                         End Using
                     End If
-                    RaiseEvent RefreshFavorites()
+
                 End Using
 
                 UpdateFavoriteButton()
@@ -183,6 +185,7 @@ Public Class ViewRecipe
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
         flowPanelVideo.Controls.Clear()
+        RaiseEvent RefreshFavorites()
     End Sub
 
     Private Sub lblMealName_Click(sender As Object, e As EventArgs) Handles lblMealName.Click

@@ -35,8 +35,8 @@ Partial Class Meals
         lblPage = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         panelAddedMeals = New FlowLayoutPanel()
-        lblMeals = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblMessage = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblMeals = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
@@ -61,6 +61,7 @@ Partial Class Meals
         btnNext.Animated = True
         btnNext.AutoRoundedCorners = True
         btnNext.BorderRadius = 21
+        btnNext.Cursor = Cursors.Hand
         btnNext.CustomizableEdges = CustomizableEdges1
         btnNext.DisabledState.BorderColor = Color.DarkGray
         btnNext.DisabledState.CustomBorderColor = Color.DarkGray
@@ -92,6 +93,7 @@ Partial Class Meals
         btnPrev.Animated = True
         btnPrev.AutoRoundedCorners = True
         btnPrev.BorderRadius = 21
+        btnPrev.Cursor = Cursors.Hand
         btnPrev.CustomizableEdges = CustomizableEdges3
         btnPrev.DisabledState.BorderColor = Color.DarkGray
         btnPrev.DisabledState.CustomBorderColor = Color.DarkGray
@@ -116,6 +118,17 @@ Partial Class Meals
         panelAddedMeals.Size = New Size(1021, 461)
         panelAddedMeals.TabIndex = 11
         ' 
+        ' lblMessage
+        ' 
+        lblMessage.BackColor = Color.Transparent
+        lblMessage.Font = New Font("Comic Sans MS", 18F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblMessage.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblMessage.Location = New Point(13, 113)
+        lblMessage.Name = "lblMessage"
+        lblMessage.Size = New Size(196, 36)
+        lblMessage.TabIndex = 12
+        lblMessage.Text = "Guna2HtmlLabel1"
+        ' 
         ' lblMeals
         ' 
         lblMeals.BackColor = Color.Transparent
@@ -127,21 +140,13 @@ Partial Class Meals
         lblMeals.TabIndex = 10
         lblMeals.Text = "Meals"
         ' 
-        ' lblMessage
-        ' 
-        lblMessage.BackColor = Color.Transparent
-        lblMessage.Location = New Point(157, 23)
-        lblMessage.Name = "lblMessage"
-        lblMessage.Size = New Size(98, 17)
-        lblMessage.TabIndex = 12
-        lblMessage.Text = "Guna2HtmlLabel1"
-        ' 
         ' btnAdd
         ' 
         btnAdd.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         btnAdd.Animated = True
         btnAdd.AutoRoundedCorners = True
         btnAdd.BorderRadius = 21
+        btnAdd.Cursor = Cursors.Hand
         btnAdd.CustomizableEdges = CustomizableEdges7
         btnAdd.DisabledState.BorderColor = Color.DarkGray
         btnAdd.DisabledState.CustomBorderColor = Color.DarkGray
@@ -160,8 +165,8 @@ Partial Class Meals
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(btnAdd)
         Controls.Add(lblMessage)
+        Controls.Add(btnAdd)
         Controls.Add(Guna2Panel1)
         Controls.Add(panelAddedMeals)
         Controls.Add(lblMeals)

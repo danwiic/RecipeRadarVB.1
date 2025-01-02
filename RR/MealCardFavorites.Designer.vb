@@ -160,7 +160,7 @@ Partial Class MealCardFavorites
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
         Name = "MealCardFavorites"
-        Size = New Size(197, 319)
+        Size = New Size(197, 295)
         CType(picMealImage, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel1.PerformLayout()

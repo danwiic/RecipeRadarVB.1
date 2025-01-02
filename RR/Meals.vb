@@ -62,14 +62,15 @@ Public Class Meals
                             Dim mealName As String = reader.GetString("strMeal")
                             Dim mealImage As String = reader.GetString("strMealThumb")
                             Dim averageRating As Single = If(reader.IsDBNull(reader.GetOrdinal("averageRating")), 0, reader.GetFloat("averageRating"))
-
+                            lblMessage.Visible = False
                             ' Create a new meal card or UI element for each added meal
                             Dim mealCard As New MealCardStar()
                             mealCard.SetMealData(mealID, mealName, mealImage, averageRating, False) ' Assuming isFavorite is False
                             panelAddedMeals.Controls.Add(mealCard)
                         End While
                     Else
-                        lblMessage.Text = "No added meals yet." ' Assuming you have a label named lblMessage
+                        lblMessage.Visible = True
+                        lblMessage.Text = "No added meals yet."
                     End If
                 End Using
             End Using
