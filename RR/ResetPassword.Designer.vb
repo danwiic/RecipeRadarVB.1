@@ -22,16 +22,19 @@ Partial Class ResetPassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         verifyCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         btnBack = New Guna.UI2.WinForms.Guna2Button()
         txtNewPass = New Guna.UI2.WinForms.Guna2TextBox()
@@ -40,7 +43,12 @@ Partial Class ResetPassword
         txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnChange = New Guna.UI2.WinForms.Guna2Button()
+        recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        countdownTimer = New Timer(components)
+        shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         verifyCodePanel.SuspendLayout()
+        recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' verifyCodePanel
@@ -54,30 +62,31 @@ Partial Class ResetPassword
         verifyCodePanel.Controls.Add(txtConfirmPass)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel7)
         verifyCodePanel.Controls.Add(btnChange)
-        verifyCodePanel.CustomizableEdges = CustomizableEdges29
+        verifyCodePanel.CustomizableEdges = CustomizableEdges21
         verifyCodePanel.Dock = DockStyle.Fill
         verifyCodePanel.ForeColor = SystemColors.ControlLightLight
         verifyCodePanel.Location = New Point(0, 0)
         verifyCodePanel.Name = "verifyCodePanel"
         verifyCodePanel.ShadowDecoration.BorderRadius = 4
-        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        verifyCodePanel.Size = New Size(573, 411)
+        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        verifyCodePanel.Size = New Size(589, 450)
         verifyCodePanel.TabIndex = 26
         ' 
         ' btnBack
         ' 
         btnBack.Animated = True
         btnBack.BorderRadius = 8
-        btnBack.CustomizableEdges = CustomizableEdges21
+        btnBack.Cursor = Cursors.Hand
+        btnBack.CustomizableEdges = CustomizableEdges13
         btnBack.DisabledState.BorderColor = Color.DarkGray
         btnBack.DisabledState.CustomBorderColor = Color.DarkGray
         btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(13, 14)
+        btnBack.Location = New Point(12, 31)
         btnBack.Name = "btnBack"
-        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnBack.Size = New Size(132, 45)
         btnBack.TabIndex = 23
         btnBack.Text = "BACK"
@@ -87,7 +96,7 @@ Partial Class ResetPassword
         txtNewPass.Animated = True
         txtNewPass.BackColor = Color.Transparent
         txtNewPass.BorderRadius = 8
-        txtNewPass.CustomizableEdges = CustomizableEdges23
+        txtNewPass.CustomizableEdges = CustomizableEdges15
         txtNewPass.DefaultText = ""
         txtNewPass.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtNewPass.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -101,7 +110,7 @@ Partial Class ResetPassword
         txtNewPass.PasswordChar = ChrW(0)
         txtNewPass.PlaceholderText = "Enter new password"
         txtNewPass.SelectedText = ""
-        txtNewPass.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        txtNewPass.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         txtNewPass.ShadowDecoration.Depth = 10
         txtNewPass.Size = New Size(232, 45)
         txtNewPass.TabIndex = 22
@@ -133,7 +142,7 @@ Partial Class ResetPassword
         txtConfirmPass.Animated = True
         txtConfirmPass.BackColor = Color.Transparent
         txtConfirmPass.BorderRadius = 8
-        txtConfirmPass.CustomizableEdges = CustomizableEdges25
+        txtConfirmPass.CustomizableEdges = CustomizableEdges17
         txtConfirmPass.DefaultText = ""
         txtConfirmPass.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtConfirmPass.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -147,7 +156,7 @@ Partial Class ResetPassword
         txtConfirmPass.PasswordChar = ChrW(0)
         txtConfirmPass.PlaceholderText = "Confirm password"
         txtConfirmPass.SelectedText = ""
-        txtConfirmPass.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        txtConfirmPass.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtConfirmPass.ShadowDecoration.Depth = 10
         txtConfirmPass.Size = New Size(232, 45)
         txtConfirmPass.TabIndex = 19
@@ -168,7 +177,8 @@ Partial Class ResetPassword
         btnChange.Animated = True
         btnChange.BackColor = Color.Transparent
         btnChange.BorderRadius = 8
-        btnChange.CustomizableEdges = CustomizableEdges27
+        btnChange.Cursor = Cursors.Hand
+        btnChange.CustomizableEdges = CustomizableEdges19
         btnChange.DisabledState.BorderColor = Color.Transparent
         btnChange.DisabledState.CustomBorderColor = Color.Transparent
         btnChange.DisabledState.FillColor = Color.FromArgb(CByte(122), CByte(156), CByte(223))
@@ -178,19 +188,57 @@ Partial Class ResetPassword
         btnChange.Location = New Point(170, 309)
         btnChange.Name = "btnChange"
         btnChange.ShadowDecoration.BorderRadius = 8
-        btnChange.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        btnChange.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnChange.ShadowDecoration.Depth = 10
         btnChange.Size = New Size(232, 51)
         btnChange.TabIndex = 17
         btnChange.Text = "CHANGE"
         ' 
+        ' recoverPanel
+        ' 
+        recoverPanel.BackColor = Color.Transparent
+        recoverPanel.Controls.Add(Guna2Button1)
+        recoverPanel.Dock = DockStyle.Top
+        recoverPanel.FillColor = Color.WhiteSmoke
+        recoverPanel.Location = New Point(0, 0)
+        recoverPanel.MaximumSize = New Size(589, 25)
+        recoverPanel.MinimumSize = New Size(589, 25)
+        recoverPanel.Name = "recoverPanel"
+        recoverPanel.ShadowColor = Color.Black
+        recoverPanel.ShadowShift = 0
+        recoverPanel.Size = New Size(589, 25)
+        recoverPanel.TabIndex = 27
+        ' 
+        ' Guna2Button1
+        ' 
+        Guna2Button1.CustomizableEdges = CustomizableEdges23
+        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button1.Dock = DockStyle.Right
+        Guna2Button1.FillColor = Color.Transparent
+        Guna2Button1.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2Button1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2Button1.Location = New Point(549, 0)
+        Guna2Button1.Name = "Guna2Button1"
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2Button1.Size = New Size(40, 25)
+        Guna2Button1.TabIndex = 10
+        Guna2Button1.Text = "✕"
+        ' 
+        ' countdownTimer
+        ' 
+        countdownTimer.Interval = 1000
+        ' 
         ' ResetPassword
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(573, 411)
+        ClientSize = New Size(589, 450)
+        Controls.Add(recoverPanel)
         Controls.Add(verifyCodePanel)
-        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        FormBorderStyle = FormBorderStyle.None
         MaximumSize = New Size(589, 450)
         MinimumSize = New Size(589, 450)
         Name = "ResetPassword"
@@ -198,6 +246,7 @@ Partial Class ResetPassword
         Text = "Reset Password"
         verifyCodePanel.ResumeLayout(False)
         verifyCodePanel.PerformLayout()
+        recoverPanel.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -209,4 +258,8 @@ Partial Class ResetPassword
     Friend WithEvents txtConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnChange As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents recoverPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents countdownTimer As Timer
+    Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

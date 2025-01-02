@@ -51,6 +51,8 @@ Public Class Rate
                             updateCmd.ExecuteNonQuery()
                         End Using
                         MessageBox.Show("Your rating has been updated!")
+                        ratingStar.Value = 0
+                        Me.Hide()
                     Else
                         ' Insert a new rating
                         Dim insertQuery As String = "INSERT INTO ratings (meal_id, user_id, rating, created_at) VALUES (@mealID, @userID, @rating, NOW())"

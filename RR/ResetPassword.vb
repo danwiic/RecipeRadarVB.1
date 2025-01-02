@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Guna.UI2.WinForms.Suite
+Imports MySql.Data.MySqlClient
 
 Public Class ResetPassword
 
@@ -55,5 +56,9 @@ Public Class ResetPassword
         Me.Hide()
         Dim ver As New VerifyOTP
         ver.Show()
+    End Sub
+
+    Private Sub ResetPassword_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ShadowForm.setShadowForm(Me)
     End Sub
 End Class

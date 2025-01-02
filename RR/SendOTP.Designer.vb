@@ -63,6 +63,7 @@ Partial Class SendOTP
         ' 
         btnBack.Animated = True
         btnBack.BorderRadius = 8
+        btnBack.Cursor = Cursors.Hand
         btnBack.CustomizableEdges = CustomizableEdges1
         btnBack.DisabledState.BorderColor = Color.DarkGray
         btnBack.DisabledState.CustomBorderColor = Color.DarkGray
@@ -70,7 +71,7 @@ Partial Class SendOTP
         btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnBack.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(13, 14)
+        btnBack.Location = New Point(13, 13)
         btnBack.Name = "btnBack"
         btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnBack.Size = New Size(132, 45)
@@ -118,6 +119,7 @@ Partial Class SendOTP
         btnSend.Animated = True
         btnSend.BackColor = Color.Transparent
         btnSend.BorderRadius = 8
+        btnSend.Cursor = Cursors.Hand
         btnSend.CustomizableEdges = CustomizableEdges5
         btnSend.DisabledState.BorderColor = Color.Transparent
         btnSend.DisabledState.CustomBorderColor = Color.Transparent

@@ -27,7 +27,7 @@ Public Class Home
         AddHandler view.RefreshFavorites, AddressOf RefreshFavorite
     End Sub
 
-    Private Sub RefreshFavorite()
+    Public Sub RefreshFavorite()
         LoadMealsData()
     End Sub
     Private Sub AdjustPanelSizes()
