@@ -1,6 +1,7 @@
 ﻿Imports System.Net.Http
 Imports MySql.Data.MySqlClient
 Imports System.Text
+Imports Guna.UI2.WinForms.Suite
 
 Public Class Verify
     Dim currentEmail As String = SendOTP.currentEmail
@@ -87,6 +88,7 @@ Public Class Verify
     Private Sub VerifyOTP_Load(sender As Object, e As EventArgs) Handles Me.Load
         lblNotif.Text = "The 6-Digit code has been sent to " & SendOTP.currentEmail
         lblNotif.Visible = True
+        ShadowForm.setShadowForm(Me)
     End Sub
 
     Private Sub verifyCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles verifyCodePanel.Paint
