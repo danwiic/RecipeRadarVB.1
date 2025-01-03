@@ -39,8 +39,8 @@ Partial Class PendingRecipeCard
         btnView = New Guna.UI2.WinForms.Guna2Button()
         lblMealName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         approvePanel = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        btnReject = New Guna.UI2.WinForms.Guna2Button()
+        btnAprrove = New Guna.UI2.WinForms.Guna2Button()
         CType(picMealImage, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
         approvePanel.SuspendLayout()
@@ -106,7 +106,7 @@ Partial Class PendingRecipeCard
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(12, 170)
+        lblMealName.Location = New Point(7, 169)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(88, 18)
         lblMealName.TabIndex = 1
@@ -114,8 +114,8 @@ Partial Class PendingRecipeCard
         ' 
         ' approvePanel
         ' 
-        approvePanel.Controls.Add(Guna2Button1)
-        approvePanel.Controls.Add(Guna2Button2)
+        approvePanel.Controls.Add(btnReject)
+        approvePanel.Controls.Add(btnAprrove)
         approvePanel.CustomizableEdges = CustomizableEdges7
         approvePanel.Location = New Point(7, 189)
         approvePanel.Name = "approvePanel"
@@ -123,39 +123,45 @@ Partial Class PendingRecipeCard
         approvePanel.Size = New Size(180, 32)
         approvePanel.TabIndex = 6
         ' 
-        ' Guna2Button1
+        ' btnReject
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges3
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.Dock = DockStyle.Left
-        Guna2Button1.Font = New Font("Segoe UI", 9F)
-        Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(0, 0)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button1.Size = New Size(86, 32)
-        Guna2Button1.TabIndex = 7
-        Guna2Button1.Text = "Guna2Button1"
+        btnReject.Animated = True
+        btnReject.BorderRadius = 4
+        btnReject.CustomizableEdges = CustomizableEdges3
+        btnReject.DisabledState.BorderColor = Color.DarkGray
+        btnReject.DisabledState.CustomBorderColor = Color.DarkGray
+        btnReject.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnReject.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnReject.Dock = DockStyle.Left
+        btnReject.FillColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnReject.Font = New Font("Segoe UI", 9F)
+        btnReject.ForeColor = Color.White
+        btnReject.Image = My.Resources.Resources.wrong
+        btnReject.Location = New Point(0, 0)
+        btnReject.Name = "btnReject"
+        btnReject.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnReject.Size = New Size(86, 32)
+        btnReject.TabIndex = 7
         ' 
-        ' Guna2Button2
+        ' btnAprrove
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges5
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.Dock = DockStyle.Right
-        Guna2Button2.Font = New Font("Segoe UI", 9F)
-        Guna2Button2.ForeColor = Color.White
-        Guna2Button2.Location = New Point(94, 0)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button2.Size = New Size(86, 32)
-        Guna2Button2.TabIndex = 8
-        Guna2Button2.Text = "Guna2Button2"
+        btnAprrove.Animated = True
+        btnAprrove.BorderRadius = 4
+        btnAprrove.CustomizableEdges = CustomizableEdges5
+        btnAprrove.DisabledState.BorderColor = Color.DarkGray
+        btnAprrove.DisabledState.CustomBorderColor = Color.DarkGray
+        btnAprrove.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnAprrove.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnAprrove.Dock = DockStyle.Right
+        btnAprrove.FillColor = Color.LimeGreen
+        btnAprrove.Font = New Font("Segoe UI", 9F)
+        btnAprrove.ForeColor = Color.White
+        btnAprrove.Image = My.Resources.Resources.check1
+        btnAprrove.Location = New Point(94, 0)
+        btnAprrove.Name = "btnAprrove"
+        btnAprrove.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnAprrove.Size = New Size(86, 32)
+        btnAprrove.TabIndex = 8
         ' 
         ' PendingRecipeCard
         ' 
@@ -177,7 +183,7 @@ Partial Class PendingRecipeCard
     Friend WithEvents btnView As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblMealName As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents approvePanel As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReject As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAprrove As Guna.UI2.WinForms.Guna2Button
 
 End Class

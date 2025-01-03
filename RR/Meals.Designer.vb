@@ -30,6 +30,8 @@ Partial Class Meals
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPage = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -38,6 +40,7 @@ Partial Class Meals
         lblMessage = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblMeals = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnAdd = New Guna.UI2.WinForms.Guna2Button()
+        btnPending = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -159,12 +162,34 @@ Partial Class Meals
         btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnAdd.Size = New Size(180, 45)
         btnAdd.TabIndex = 14
-        btnAdd.Text = "ADD"
+        btnAdd.Text = "ADD NEW "
+        ' 
+        ' btnPending
+        ' 
+        btnPending.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnPending.Animated = True
+        btnPending.AutoRoundedCorners = True
+        btnPending.BorderRadius = 21
+        btnPending.Cursor = Cursors.Hand
+        btnPending.CustomizableEdges = CustomizableEdges9
+        btnPending.DisabledState.BorderColor = Color.DarkGray
+        btnPending.DisabledState.CustomBorderColor = Color.DarkGray
+        btnPending.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnPending.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnPending.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
+        btnPending.ForeColor = Color.White
+        btnPending.Location = New Point(655, 9)
+        btnPending.Name = "btnPending"
+        btnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnPending.Size = New Size(180, 45)
+        btnPending.TabIndex = 15
+        btnPending.Text = "VIEW PENDING"
         ' 
         ' Meals
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(btnPending)
         Controls.Add(lblMessage)
         Controls.Add(btnAdd)
         Controls.Add(Guna2Panel1)
@@ -187,5 +212,6 @@ Partial Class Meals
     Friend WithEvents lblMeals As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblMessage As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnPending As Guna.UI2.WinForms.Guna2Button
 
 End Class
