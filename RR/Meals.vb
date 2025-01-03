@@ -118,6 +118,7 @@ Public Class Meals
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-
+        AddRecipe.Show()
+        AddRecipe.StartPosition = FormStartPosition.CenterScreen
     End Sub
 End Class

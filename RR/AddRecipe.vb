@@ -31,22 +31,54 @@ Public Class AddRecipe
         Dim recipeInstruction As String = txtRecipeInstruction.Text.Trim()
         Dim recipeYoutubeLink As String = txtRecipeYoutubeLink.Text.Trim()
         Dim recipeIngredients As String = txtRecipeIngredients.Text.Trim()
-        If mealName = "" Or recipeCategory = "" Or recipeOrigin = "" Or recipeImageLink = "" Or recipeInstruction = "" Or recipeYoutubeLink = "" Or recipeIngredients = "" Then
+
+        ' Check for empty fields
+        If String.IsNullOrEmpty(mealName) OrElse String.IsNullOrEmpty(recipeCategory) OrElse String.IsNullOrEmpty(recipeOrigin) OrElse
+       String.IsNullOrEmpty(recipeImageLink) OrElse String.IsNullOrEmpty(recipeInstruction) OrElse String.IsNullOrEmpty(recipeYoutubeLink) OrElse
+       String.IsNullOrEmpty(recipeIngredients) Then
             MessageBox.Show("All fields are required.")
             Return
         End If
 
+        Dim categoryID As Integer
+        Dim areaID As Integer
+
         Try
+            Dim userID As Integer = 16
             conn.Open()
-            Dim query As String = "INSERT INTO meals (strMeal, category, origin, image_link, instructions, youtube_link, ingredients) VALUES (@recipeName, @category, @origin, @imageLink, @instructions, @youtubeLink, @ingredients)"
+            Try
+                Dim categoryQuery As String = "SELECT id FROM categories WHERE category_name = @categoryName"
+                Using cmd As New MySqlCommand(categoryQuery, conn)
+                    cmd.Parameters.AddWithValue("@categoryName", recipeCategory)
+                    categoryID = Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error fetching category ID: " & ex.Message)
+                Return
+            End Try
+
+            Try
+                Dim areaQuery As String = "SELECT area_id FROM recipe_origin WHERE area_origin = @originName"
+                Using cmd As New MySqlCommand(areaQuery, conn)
+                    cmd.Parameters.AddWithValue("@originName", recipeOrigin)
+                    areaID = Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error fetching area ID: " & ex.Message)
+                Return
+            End Try
+
+            Dim query As String = "INSERT INTO meals (strMeal, category_id, area_id, strMealThumb, strInstructions, strYoutube, ingredients, user_id) " &
+                              "VALUES (@recipeName, @categoryID, @areaID, @imageLink, @instructions, @youtubeLink, @ingredients, @userID)"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@recipeName", mealName)
-                cmd.Parameters.AddWithValue("@category", recipeCategory)
-                cmd.Parameters.AddWithValue("@origin", recipeOrigin)
+                cmd.Parameters.AddWithValue("@categoryID", categoryID)
+                cmd.Parameters.AddWithValue("@areaID", areaID)
                 cmd.Parameters.AddWithValue("@imageLink", recipeImageLink)
                 cmd.Parameters.AddWithValue("@instructions", recipeInstruction)
                 cmd.Parameters.AddWithValue("@youtubeLink", recipeYoutubeLink)
                 cmd.Parameters.AddWithValue("@ingredients", recipeIngredients)
+                cmd.Parameters.AddWithValue("@userID", userID)
                 cmd.ExecuteNonQuery()
             End Using
             MessageBox.Show("Recipe added successfully.")
@@ -58,10 +90,10 @@ Public Class AddRecipe
         Finally
             conn.Close()
         End Try
-
     End Sub
-    Private Sub btnAddNewRecipe_Click(sender As Object, e As EventArgs) Handles btnAddNewRecipe.Click
 
+    Private Sub btnAddNewRecipe_Click(sender As Object, e As EventArgs) Handles btnAddNewRecipe.Click
+        AddRecipe()
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
@@ -126,8 +158,6 @@ Public Class AddRecipe
     End Sub
 
     Private Sub ClearFields()
-        FetchCategory()
-        FetchMealOrigin()
         txtMealName.Text = ""
         cbRecipeCategory.SelectedIndex = 0
         cbRecipeOrigin.SelectedIndex = 0
