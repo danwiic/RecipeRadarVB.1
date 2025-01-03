@@ -337,6 +337,7 @@ Partial Class AddRecipe
         Controls.Add(recoverPanel)
         FormBorderStyle = FormBorderStyle.None
         Name = "AddRecipe"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "AddRecipe"
         recoverPanel.ResumeLayout(False)
         ResumeLayout(False)
