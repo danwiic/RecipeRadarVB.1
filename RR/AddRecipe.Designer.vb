@@ -139,7 +139,6 @@ Partial Class AddRecipe
         cbRecipeCategory.Name = "cbRecipeCategory"
         cbRecipeCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         cbRecipeCategory.Size = New Size(200, 36)
-        cbRecipeCategory.Sorted = True
         cbRecipeCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         cbRecipeCategory.TabIndex = 19
         ' 
@@ -312,7 +311,6 @@ Partial Class AddRecipe
         cbRecipeOrigin.Name = "cbRecipeOrigin"
         cbRecipeOrigin.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         cbRecipeOrigin.Size = New Size(200, 36)
-        cbRecipeOrigin.Sorted = True
         cbRecipeOrigin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         cbRecipeOrigin.TabIndex = 33
         ' 

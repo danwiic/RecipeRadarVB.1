@@ -50,13 +50,7 @@ Public Class AddRecipe
                 cmd.ExecuteNonQuery()
             End Using
             MessageBox.Show("Recipe added successfully.")
-            txtMealName.Text = ""
-            cbRecipeCategory.SelectedIndex = -1
-            cbRecipeOrigin.SelectedIndex = -1
-            txtRecipeImageLink.Text = ""
-            txtRecipeInstruction.Text = ""
-            txtRecipeYoutubeLink.Text = ""
-            txtRecipeIngredients.Text = ""
+            ClearFields()
         Catch ex As MySqlException
             MessageBox.Show("Database error: " & ex.Message)
         Catch ex As Exception
@@ -83,7 +77,7 @@ Public Class AddRecipe
     End Sub
 
     Private Sub FetchCategory()
-        cbRecipeCategory.Items.Add("Select Category")
+        cbRecipeCategory.Items.Add("--SELECT CATEGORY--")
         cbRecipeCategory.StartIndex = 0
         Try
             conn.Open()
@@ -108,7 +102,7 @@ Public Class AddRecipe
 
     End Sub
     Private Sub FetchMealOrigin()
-        cbRecipeOrigin.Items.Add("Select Recipe Origin")
+        cbRecipeOrigin.Items.Add("--SELECT ORIGIN--")
         cbRecipeOrigin.StartIndex = 0
         Try
             conn.Open()
@@ -132,9 +126,11 @@ Public Class AddRecipe
     End Sub
 
     Private Sub ClearFields()
+        FetchCategory()
+        FetchMealOrigin()
         txtMealName.Text = ""
-        cbRecipeCategory.SelectedIndex = -1
-        cbRecipeOrigin.SelectedIndex = -1
+        cbRecipeCategory.SelectedIndex = 0
+        cbRecipeOrigin.SelectedIndex = 0
         txtRecipeImageLink.Text = ""
         txtRecipeInstruction.Text = ""
         txtRecipeYoutubeLink.Text = ""
