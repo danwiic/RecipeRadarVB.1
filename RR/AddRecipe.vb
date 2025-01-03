@@ -1,5 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 Imports Mysqlx.Cursor
+Imports Newtonsoft.Json
 
 Public Class AddRecipe
     Dim userRole As String = LoginForm.currentUserRole
@@ -40,6 +42,20 @@ Public Class AddRecipe
             Return
         End If
 
+        ' Validate URLs
+        If Not IsValidUrl(recipeImageLink) Then
+            MessageBox.Show("Please enter a valid image URL.")
+            Return
+        End If
+
+        If Not IsValidUrl(recipeYoutubeLink) Then
+            MessageBox.Show("Please enter a valid YouTube URL.")
+            Return
+        End If
+
+        Dim ingredientsArray As String() = ConvertIngredientsToArray(recipeIngredients)
+        Dim ingredientsJson As String = JsonConvert.SerializeObject(ingredientsArray)
+
         Dim categoryID As Integer
         Dim areaID As Integer
 
@@ -69,7 +85,7 @@ Public Class AddRecipe
             End Try
 
             Dim query As String = "INSERT INTO meals (strMeal, category_id, area_id, strMealThumb, strInstructions, strYoutube, ingredients, user_id) " &
-                              "VALUES (@recipeName, @categoryID, @areaID, @imageLink, @instructions, @youtubeLink, @ingredients, @userID)"
+                          "VALUES (@recipeName, @categoryID, @areaID, @imageLink, @instructions, @youtubeLink, @ingredients, @userID)"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@recipeName", mealName)
                 cmd.Parameters.AddWithValue("@categoryID", categoryID)
@@ -77,7 +93,7 @@ Public Class AddRecipe
                 cmd.Parameters.AddWithValue("@imageLink", recipeImageLink)
                 cmd.Parameters.AddWithValue("@instructions", recipeInstruction)
                 cmd.Parameters.AddWithValue("@youtubeLink", recipeYoutubeLink)
-                cmd.Parameters.AddWithValue("@ingredients", recipeIngredients)
+                cmd.Parameters.AddWithValue("@ingredients", ingredientsJson)
                 cmd.Parameters.AddWithValue("@userID", userID)
                 cmd.ExecuteNonQuery()
             End Using
@@ -91,6 +107,17 @@ Public Class AddRecipe
             conn.Close()
         End Try
     End Sub
+
+    Private Function IsValidUrl(url As String) As Boolean
+        Dim pattern As String = "^(http|https)://[^\s/$.?#].[^\s]*$"
+        Dim regex As New Regex(pattern)
+        Return regex.IsMatch(url)
+    End Function
+
+
+    Private Function ConvertIngredientsToArray(ingredients As String) As String()
+        Return ingredients.Split(New String() {", "}, StringSplitOptions.RemoveEmptyEntries).Select(Function(i) i.Trim()).ToArray()
+    End Function
 
     Private Sub btnAddNewRecipe_Click(sender As Object, e As EventArgs) Handles btnAddNewRecipe.Click
         AddRecipe()
