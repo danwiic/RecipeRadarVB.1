@@ -302,14 +302,14 @@ Partial Class MainForm
         Guna2Panel2.Controls.Add(Guna2Panel3)
         Guna2Panel2.CustomizableEdges = CustomizableEdges27
         Guna2Panel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2Panel2.Location = New Point(0, 23)
+        Guna2Panel2.Location = New Point(0, 25)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.ShadowDecoration.BorderRadius = 10
         CustomizableEdges28.BottomLeft = False
         CustomizableEdges28.TopLeft = False
         Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2Panel2.ShadowDecoration.Enabled = True
-        Guna2Panel2.Size = New Size(224, 577)
+        Guna2Panel2.Size = New Size(224, 575)
         Guna2Panel2.TabIndex = 12
         ' 
         ' Guna2Panel4
@@ -318,7 +318,7 @@ Partial Class MainForm
         Guna2Panel4.Controls.Add(btnLogout)
         Guna2Panel4.CustomizableEdges = CustomizableEdges25
         Guna2Panel4.Dock = DockStyle.Bottom
-        Guna2Panel4.Location = New Point(0, 498)
+        Guna2Panel4.Location = New Point(0, 496)
         Guna2Panel4.Name = "Guna2Panel4"
         Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Panel4.Size = New Size(224, 79)
@@ -329,9 +329,9 @@ Partial Class MainForm
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1000, 600)
+        Controls.Add(Guna2Panel1)
         Controls.Add(displayPanel)
         Controls.Add(Guna2Panel2)
-        Controls.Add(Guna2Panel1)
         FormBorderStyle = FormBorderStyle.None
         MinimumSize = New Size(1000, 600)
         Name = "MainForm"
