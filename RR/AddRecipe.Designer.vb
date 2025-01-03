@@ -104,7 +104,7 @@ Partial Class AddRecipe
         txtMealName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtMealName.Font = New Font("Segoe UI", 9F)
         txtMealName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtMealName.Location = New Point(48, 70)
+        txtMealName.Location = New Point(83, 70)
         txtMealName.Name = "txtMealName"
         txtMealName.PasswordChar = ChrW(0)
         txtMealName.PlaceholderText = ""
@@ -116,7 +116,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Location = New Point(48, 47)
+        Guna2HtmlLabel1.Location = New Point(83, 47)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(73, 17)
         Guna2HtmlLabel1.TabIndex = 18
@@ -135,7 +135,7 @@ Partial Class AddRecipe
         cbRecipeCategory.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbRecipeCategory.IntegralHeight = False
         cbRecipeCategory.ItemHeight = 30
-        cbRecipeCategory.Location = New Point(48, 148)
+        cbRecipeCategory.Location = New Point(83, 148)
         cbRecipeCategory.Name = "cbRecipeCategory"
         cbRecipeCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         cbRecipeCategory.Size = New Size(200, 36)
@@ -145,7 +145,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Location = New Point(48, 125)
+        Guna2HtmlLabel2.Location = New Point(83, 125)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(89, 17)
         Guna2HtmlLabel2.TabIndex = 21
@@ -154,7 +154,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Location = New Point(48, 208)
+        Guna2HtmlLabel3.Location = New Point(83, 208)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(74, 17)
         Guna2HtmlLabel3.TabIndex = 23
@@ -163,7 +163,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Location = New Point(320, 47)
+        Guna2HtmlLabel4.Location = New Point(355, 47)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(103, 17)
         Guna2HtmlLabel4.TabIndex = 25
@@ -180,7 +180,7 @@ Partial Class AddRecipe
         txtRecipeInstruction.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeInstruction.Font = New Font("Segoe UI", 9F)
         txtRecipeInstruction.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRecipeInstruction.Location = New Point(320, 70)
+        txtRecipeInstruction.Location = New Point(355, 70)
         txtRecipeInstruction.Multiline = True
         txtRecipeInstruction.Name = "txtRecipeInstruction"
         txtRecipeInstruction.PasswordChar = ChrW(0)
@@ -193,7 +193,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Location = New Point(48, 290)
+        Guna2HtmlLabel5.Location = New Point(83, 290)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(119, 17)
         Guna2HtmlLabel5.TabIndex = 27
@@ -210,7 +210,7 @@ Partial Class AddRecipe
         txtRecipeImageLink.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeImageLink.Font = New Font("Segoe UI", 9F)
         txtRecipeImageLink.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRecipeImageLink.Location = New Point(48, 313)
+        txtRecipeImageLink.Location = New Point(83, 313)
         txtRecipeImageLink.Name = "txtRecipeImageLink"
         txtRecipeImageLink.PasswordChar = ChrW(0)
         txtRecipeImageLink.PlaceholderText = ""
@@ -222,7 +222,7 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Location = New Point(48, 358)
+        Guna2HtmlLabel6.Location = New Point(83, 358)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Guna2HtmlLabel6.Size = New Size(160, 17)
         Guna2HtmlLabel6.TabIndex = 29
@@ -239,7 +239,7 @@ Partial Class AddRecipe
         txtRecipeYoutubeLink.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeYoutubeLink.Font = New Font("Segoe UI", 9F)
         txtRecipeYoutubeLink.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRecipeYoutubeLink.Location = New Point(48, 381)
+        txtRecipeYoutubeLink.Location = New Point(83, 381)
         txtRecipeYoutubeLink.Name = "txtRecipeYoutubeLink"
         txtRecipeYoutubeLink.PasswordChar = ChrW(0)
         txtRecipeYoutubeLink.PlaceholderText = ""
@@ -251,11 +251,11 @@ Partial Class AddRecipe
         ' Guna2HtmlLabel7
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Location = New Point(320, 208)
+        Guna2HtmlLabel7.Location = New Point(355, 208)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(100, 17)
         Guna2HtmlLabel7.TabIndex = 31
-        Guna2HtmlLabel7.Text = "Recipe Ingredients"
+        Guna2HtmlLabel7.Text = "Recipe Ingredients "
         ' 
         ' txtRecipeIngredients
         ' 
@@ -268,7 +268,7 @@ Partial Class AddRecipe
         txtRecipeIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeIngredients.Font = New Font("Segoe UI", 9F)
         txtRecipeIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRecipeIngredients.Location = New Point(320, 231)
+        txtRecipeIngredients.Location = New Point(355, 231)
         txtRecipeIngredients.Name = "txtRecipeIngredients"
         txtRecipeIngredients.PasswordChar = ChrW(0)
         txtRecipeIngredients.PlaceholderText = ""
@@ -279,6 +279,9 @@ Partial Class AddRecipe
         ' 
         ' btnAddNewRecipe
         ' 
+        btnAddNewRecipe.Animated = True
+        btnAddNewRecipe.AutoRoundedCorners = True
+        btnAddNewRecipe.BorderRadius = 21
         btnAddNewRecipe.CustomizableEdges = CustomizableEdges15
         btnAddNewRecipe.DisabledState.BorderColor = Color.DarkGray
         btnAddNewRecipe.DisabledState.CustomBorderColor = Color.DarkGray
@@ -306,7 +309,7 @@ Partial Class AddRecipe
         cbRecipeOrigin.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbRecipeOrigin.IntegralHeight = False
         cbRecipeOrigin.ItemHeight = 30
-        cbRecipeOrigin.Location = New Point(48, 231)
+        cbRecipeOrigin.Location = New Point(83, 231)
         cbRecipeOrigin.MaxDropDownItems = 5
         cbRecipeOrigin.Name = "cbRecipeOrigin"
         cbRecipeOrigin.ShadowDecoration.CustomizableEdges = CustomizableEdges18
