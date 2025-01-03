@@ -116,4 +116,8 @@ Public Class Meals
             LoadAddedMeals() ' Reload meals for the new page
         End If
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+    End Sub
 End Class
