@@ -82,6 +82,7 @@ Public Class RecipeChart
     Public Shared Sub Example(ByVal chart As GunaChart, ByVal query As String, ByVal selectedFilter As String)
         chart.YAxes.GridLines.Display = False
         Dim dataset As New GunaBarDataset()
+        dataset.Label = "New Recipe"
         Dim dataTable As New DataTable()
 
         Using conn As New MySqlConnection("Server=localhost; Database=recipe_books; Uid=root; Pwd=;")
@@ -119,7 +120,7 @@ Public Class RecipeChart
 
                 chart.Datasets.Clear()
                 chart.Datasets.Add(dataset)
-                chart.Legend.Display = False
+                chart.Legend.BoxWidth = 0
                 chart.Update()
 
             Catch ex As Exception
