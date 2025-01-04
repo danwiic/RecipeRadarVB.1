@@ -36,11 +36,11 @@ Public Class BarGraph
         End Using
     End Sub
 
-    Private Sub cbFilter_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbFilter.SelectedIndexChanged
         UpdateChart()
     End Sub
 
-    Private Sub cbYear_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cbYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbYear.SelectedIndexChanged
         UpdateChart()
     End Sub
 
@@ -145,6 +145,4 @@ Public Class BarGraph
         End Select
     End Function
 
-    Private Sub GunaChart1_Load(sender As Object, e As EventArgs)
-    End Sub
 End Class

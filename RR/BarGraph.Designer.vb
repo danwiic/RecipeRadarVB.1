@@ -67,7 +67,7 @@ Partial Class BarGraph
         Guna2GradientPanel1.FillColor2 = Color.White
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.BorderRadius = 14
+        Guna2GradientPanel1.ShadowDecoration.BorderRadius = 16
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
@@ -132,9 +132,9 @@ Partial Class BarGraph
         ' 
         ChartFont1.FontName = "Arial"
         GunaChart1.Legend.LabelFont = ChartFont1
-        GunaChart1.Location = New Point(3, 52)
+        GunaChart1.Location = New Point(14, 52)
         GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(508, 233)
+        GunaChart1.Size = New Size(484, 226)
         GunaChart1.TabIndex = 5
         ChartFont2.FontName = "Arial"
         ChartFont2.Size = 12

@@ -148,10 +148,10 @@ Partial Class MainForm
         displayPanel.AutoScroll = True
         displayPanel.BackColor = Color.Transparent
         displayPanel.CustomizableEdges = CustomizableEdges9
-        displayPanel.Location = New Point(230, 31)
+        displayPanel.Location = New Point(230, 25)
         displayPanel.Name = "displayPanel"
         displayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        displayPanel.Size = New Size(767, 569)
+        displayPanel.Size = New Size(767, 575)
         displayPanel.TabIndex = 13
         ' 
         ' Guna2Panel3
