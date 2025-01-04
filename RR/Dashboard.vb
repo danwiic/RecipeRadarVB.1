@@ -1,5 +1,5 @@
 ﻿Public Class Dashboard
-    Private Sub btnViewPending_Click(sender As Object, e As EventArgs)
+    Private Sub btnViewPending_Click(sender As Object, e As EventArgs) Handles btnViewPending.Click
         dashDisplayPanel.Controls.Clear()
         Dim pending As New PendingRecipe
         dashDisplayPanel.Controls.Add(pending)
