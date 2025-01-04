@@ -48,14 +48,19 @@ Public Class MainForm
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        LoginForm.currentUserRole = ""
-        LoginForm.currentUserID = 0
-        LoginForm.currentUsername = ""
-        LoginForm.currentUserEmail = ""
-        Me.Hide()
-        Dim login As New LoginForm()
-        login.ShowDialog()
-        Me.Dispose()
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+            LoginForm.currentUserRole = ""
+            LoginForm.currentUserID = 0
+            LoginForm.currentUsername = ""
+            LoginForm.currentUserEmail = ""
+
+            Me.Hide()
+            Dim login As New LoginForm()
+            login.ShowDialog()
+            Me.Dispose()
+        End If
     End Sub
 
     Private Sub btnMeals_Click(sender As Object, e As EventArgs) Handles btnMeals.Click
