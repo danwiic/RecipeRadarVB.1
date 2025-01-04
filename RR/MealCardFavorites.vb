@@ -104,4 +104,8 @@ Public Class MealCardFavorites
         main.displayPanel.PerformLayout()
         main.displayPanel.Invalidate()
     End Sub
+
+    Private Sub picMealImage_Click(sender As Object, e As EventArgs) Handles picMealImage.Click
+
+    End Sub
 End Class

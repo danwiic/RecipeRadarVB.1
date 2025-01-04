@@ -26,21 +26,21 @@ Partial Class PendingRecipeCard
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         picMealImage = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        btnView = New Guna.UI2.WinForms.Guna2Button()
-        lblMealName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         approvePanel = New Guna.UI2.WinForms.Guna2Panel()
         btnReject = New Guna.UI2.WinForms.Guna2Button()
         btnAprrove = New Guna.UI2.WinForms.Guna2Button()
+        btnView = New Guna.UI2.WinForms.Guna2Button()
+        lblMealName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(picMealImage, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
         approvePanel.SuspendLayout()
@@ -78,39 +78,6 @@ Partial Class PendingRecipeCard
         Guna2Panel1.ShadowDecoration.Enabled = True
         Guna2Panel1.Size = New Size(194, 279)
         Guna2Panel1.TabIndex = 3
-        ' 
-        ' btnView
-        ' 
-        btnView.Animated = True
-        btnView.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        btnView.BorderRadius = 8
-        btnView.BorderThickness = 2
-        btnView.Cursor = Cursors.Hand
-        btnView.CustomizableEdges = CustomizableEdges9
-        btnView.DisabledState.BorderColor = Color.DarkGray
-        btnView.DisabledState.CustomBorderColor = Color.DarkGray
-        btnView.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnView.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnView.FillColor = Color.WhiteSmoke
-        btnView.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnView.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        btnView.Location = New Point(7, 227)
-        btnView.Name = "btnView"
-        btnView.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        btnView.Size = New Size(180, 45)
-        btnView.TabIndex = 5
-        btnView.Text = "VIEW RECIPE"
-        ' 
-        ' lblMealName
-        ' 
-        lblMealName.BackColor = Color.Transparent
-        lblMealName.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(7, 169)
-        lblMealName.Name = "lblMealName"
-        lblMealName.Size = New Size(88, 18)
-        lblMealName.TabIndex = 1
-        lblMealName.Text = "Recipe Name"
         ' 
         ' approvePanel
         ' 
@@ -162,6 +129,39 @@ Partial Class PendingRecipeCard
         btnAprrove.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnAprrove.Size = New Size(86, 32)
         btnAprrove.TabIndex = 8
+        ' 
+        ' btnView
+        ' 
+        btnView.Animated = True
+        btnView.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        btnView.BorderRadius = 8
+        btnView.BorderThickness = 2
+        btnView.Cursor = Cursors.Hand
+        btnView.CustomizableEdges = CustomizableEdges9
+        btnView.DisabledState.BorderColor = Color.DarkGray
+        btnView.DisabledState.CustomBorderColor = Color.DarkGray
+        btnView.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnView.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnView.FillColor = Color.WhiteSmoke
+        btnView.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnView.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        btnView.Location = New Point(7, 227)
+        btnView.Name = "btnView"
+        btnView.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnView.Size = New Size(180, 45)
+        btnView.TabIndex = 5
+        btnView.Text = "VIEW RECIPE"
+        ' 
+        ' lblMealName
+        ' 
+        lblMealName.BackColor = Color.Transparent
+        lblMealName.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblMealName.Location = New Point(7, 169)
+        lblMealName.Name = "lblMealName"
+        lblMealName.Size = New Size(88, 18)
+        lblMealName.TabIndex = 1
+        lblMealName.Text = "Recipe Name"
         ' 
         ' PendingRecipeCard
         ' 

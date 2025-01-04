@@ -85,4 +85,11 @@ Public Class MainForm
         displayPanel.Controls.Add(prof)
         prof.Dock = DockStyle.Fill
     End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        displayPanel.Controls.Clear()
+        Dim dash As New Dashboard
+        displayPanel.Controls.Add(dash)
+        dash.Dock = DockStyle.Fill
+    End Sub
 End Class
