@@ -56,7 +56,7 @@ Partial Class Overview
         Guna2GradientPanel4 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         panelBarGraph = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Guna2GradientPanel6 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        panelRecipeChart = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2GradientPanel1.SuspendLayout()
         Guna2GradientPanel2.SuspendLayout()
         Guna2GradientPanel3.SuspendLayout()
@@ -281,20 +281,20 @@ Partial Class Overview
         panelBarGraph.Size = New Size(514, 281)
         panelBarGraph.TabIndex = 16
         ' 
-        ' Guna2GradientPanel6
+        ' panelRecipeChart
         ' 
-        Guna2GradientPanel6.CustomizableEdges = CustomizableEdges39
-        Guna2GradientPanel6.Location = New Point(523, 244)
-        Guna2GradientPanel6.Name = "Guna2GradientPanel6"
-        Guna2GradientPanel6.ShadowDecoration.CustomizableEdges = CustomizableEdges40
-        Guna2GradientPanel6.Size = New Size(514, 281)
-        Guna2GradientPanel6.TabIndex = 17
+        panelRecipeChart.CustomizableEdges = CustomizableEdges39
+        panelRecipeChart.Location = New Point(523, 244)
+        panelRecipeChart.Name = "panelRecipeChart"
+        panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        panelRecipeChart.Size = New Size(514, 281)
+        panelRecipeChart.TabIndex = 17
         ' 
         ' Overview
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(Guna2GradientPanel6)
+        Controls.Add(panelRecipeChart)
         Controls.Add(panelBarGraph)
         Controls.Add(Guna2GradientPanel4)
         Controls.Add(Guna2GradientPanel3)
@@ -329,6 +329,6 @@ Partial Class Overview
     Friend WithEvents Guna2GradientPanel4 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents panelBarGraph As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents Guna2GradientPanel6 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents panelRecipeChart As Guna.UI2.WinForms.Guna2GradientPanel
 
 End Class

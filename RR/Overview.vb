@@ -9,6 +9,15 @@ Public Class Overview
         FetchTotalCategories()
         FetchTotalRecipe()
         FetchTotalPending()
+
+        Dim bar As New BarGraph()
+        bar.Dock = DockStyle.Fill
+        panelBarGraph.Controls.Add(bar)
+
+        Dim recChart As New RecipeChart()
+        recChart.Dock = DockStyle.Fill
+        panelRecipeChart.Controls.Add(recChart)
+
     End Sub
 
     Private Sub FetchTotalUsers()
@@ -76,6 +85,10 @@ Public Class Overview
     End Sub
 
     Private Sub btnTotalRecipes_Click(sender As Object, e As EventArgs) Handles btnTotalRecipes.Click
+
+    End Sub
+
+    Private Sub Guna2GradientPanel6_Paint(sender As Object, e As PaintEventArgs) Handles panelRecipeChart.Paint
 
     End Sub
 End Class
