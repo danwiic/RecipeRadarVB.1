@@ -71,14 +71,14 @@ Partial Class RecipeChart
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
-        Guna2GradientPanel1.Size = New Size(514, 292)
+        Guna2GradientPanel1.Size = New Size(657, 281)
         Guna2GradientPanel1.TabIndex = 6
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel2.Location = New Point(315, 19)
+        Guna2HtmlLabel2.Location = New Point(458, 19)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(37, 19)
         Guna2HtmlLabel2.TabIndex = 9
@@ -88,7 +88,7 @@ Partial Class RecipeChart
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel1.Location = New Point(82, 19)
+        Guna2HtmlLabel1.Location = New Point(218, 17)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(58, 19)
         Guna2HtmlLabel1.TabIndex = 8
@@ -105,7 +105,7 @@ Partial Class RecipeChart
         cbYear.Font = New Font("Segoe UI", 10F)
         cbYear.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbYear.ItemHeight = 30
-        cbYear.Location = New Point(358, 12)
+        cbYear.Location = New Point(501, 10)
         cbYear.Name = "cbYear"
         cbYear.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cbYear.Size = New Size(140, 36)
@@ -122,7 +122,7 @@ Partial Class RecipeChart
         cbFilter.Font = New Font("Segoe UI", 10F)
         cbFilter.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbFilter.ItemHeight = 30
-        cbFilter.Location = New Point(146, 12)
+        cbFilter.Location = New Point(282, 10)
         cbFilter.Name = "cbFilter"
         cbFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         cbFilter.Size = New Size(140, 36)
@@ -132,9 +132,9 @@ Partial Class RecipeChart
         ' 
         ChartFont1.FontName = "Arial"
         GunaChart1.Legend.LabelFont = ChartFont1
-        GunaChart1.Location = New Point(13, 52)
+        GunaChart1.Location = New Point(14, 52)
         GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(485, 222)
+        GunaChart1.Size = New Size(627, 222)
         GunaChart1.TabIndex = 5
         ChartFont2.FontName = "Arial"
         ChartFont2.Size = 12
@@ -169,7 +169,7 @@ Partial Class RecipeChart
         BackColor = Color.Transparent
         Controls.Add(Guna2GradientPanel1)
         Name = "RecipeChart"
-        Size = New Size(514, 292)
+        Size = New Size(657, 281)
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         ResumeLayout(False)

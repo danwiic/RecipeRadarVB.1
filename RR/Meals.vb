@@ -86,8 +86,13 @@ Public Class Meals
     End Sub
 
     Private Sub UpdateCurrentPageLabel()
-        Dim totalPages As Integer = Math.Ceiling(totalMeals / pageSize) ' Calculate total pages
-        lblPage.Text = "Page " & currentPage.ToString() & " of " & totalPages.ToString() ' Update the label text
+        Dim totalPages As Integer = Math.Ceiling(totalMeals / pageSize)
+        If totalPages = 0 Then
+            totalPages = 1
+            Return
+        End If
+        lblPage.Text = "Page " & currentPage.ToString() & " of " & totalPages.ToString()
+
 
         btnPrev.Enabled = currentPage > 1
         btnNext.Enabled = currentPage < totalPages

@@ -6,7 +6,7 @@ Public Class Favorites
     Dim conn As New MySqlConnection(connStr)
     Dim maxColumns As Integer = 5
     Private currentPage As Integer = 1
-    Private pageSize As Integer = 10 ' Total number of meals to display per page
+    Private pageSize As Integer = 10
     Private totalMeals As Integer = 0
     Private Sub Favorites_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         panelFav.FlowDirection = FlowDirection.LeftToRight
@@ -93,7 +93,13 @@ Public Class Favorites
                 End Using
             End Using
 
-            lblPages.Text = $"Page {currentPage} of {Math.Ceiling(totalMeals / pageSize)}"
+            Dim totalPages As Integer = Math.Ceiling(totalMeals / pageSize)
+
+            If totalPages = 0 Then
+                totalPages = 1
+                Return
+            End If
+            lblPages.Text = $"Page {currentPage.ToString()} of {totalPages.ToString()}"
 
         Catch ex As Exception
             MessageBox.Show("Error loading favorite meals: " & ex.Message)
@@ -138,5 +144,9 @@ Public Class Favorites
             LoadFavoriteMeals()
             checkButton()
         End If
+    End Sub
+
+    Private Sub lblPages_Click(sender As Object, e As EventArgs) Handles lblPages.Click
+
     End Sub
 End Class

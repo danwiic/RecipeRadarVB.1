@@ -183,6 +183,8 @@ Partial Class MainForm
         ' btnDashboard
         ' 
         btnDashboard.Animated = True
+        btnDashboard.BackColor = Color.Transparent
+        btnDashboard.BorderRadius = 12
         btnDashboard.Cursor = Cursors.Hand
         btnDashboard.CustomizableEdges = CustomizableEdges15
         btnDashboard.DisabledState.BorderColor = Color.DarkGray

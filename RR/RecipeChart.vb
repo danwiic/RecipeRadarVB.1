@@ -104,7 +104,6 @@ Public Class RecipeChart
                     monthData(month) = mealsCreated
                 Next
 
-                ' Add month data to the dataset based on the selected filter
                 If selectedFilter = "All" Then
                     For month As Integer = 1 To 12
                         Dim monthName As String = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month)
@@ -146,5 +145,7 @@ Public Class RecipeChart
         End Select
     End Function
 
+    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
 
+    End Sub
 End Class
