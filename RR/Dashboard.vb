@@ -19,4 +19,11 @@
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
         DefaultView()
     End Sub
+
+    Private Sub btnViewManage_Click(sender As Object, e As EventArgs) Handles btnViewManage.Click
+        dashDisplayPanel.Controls.Clear()
+        Dim manage As New ManageUser
+        dashDisplayPanel.Controls.Add(manage)
+        manage.Dock = DockStyle.Fill
+    End Sub
 End Class

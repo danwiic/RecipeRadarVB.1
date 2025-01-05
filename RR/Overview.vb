@@ -18,6 +18,10 @@ Public Class Overview
         recChart.Dock = DockStyle.Fill
         panelRecipeChart.Controls.Add(recChart)
 
+        Dim pie As New PieCategory()
+        pie.Dock = DockStyle.Fill
+        PieCategories.Controls.Add(pie)
+
     End Sub
 
     Private Sub FetchTotalUsers()

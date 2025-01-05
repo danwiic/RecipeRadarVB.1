@@ -22,30 +22,28 @@ Partial Class Overview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         btnTotalUsers = New Guna.UI2.WinForms.Guna2GradientTileButton()
         btnPendingRecipe = New Guna.UI2.WinForms.Guna2GradientTileButton()
         btnTotalCategory = New Guna.UI2.WinForms.Guna2GradientTileButton()
@@ -61,7 +59,6 @@ Partial Class Overview
         panelBarGraph = New Guna.UI2.WinForms.Guna2GradientPanel()
         panelRecipeChart = New Guna.UI2.WinForms.Guna2GradientPanel()
         PieCategories = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Guna2GradientPanel6 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2GradientPanel1.SuspendLayout()
         Guna2GradientPanel2.SuspendLayout()
         Guna2GradientPanel3.SuspendLayout()
@@ -73,7 +70,7 @@ Partial Class Overview
         btnTotalUsers.Animated = True
         btnTotalUsers.BackColor = Color.Transparent
         btnTotalUsers.BorderRadius = 12
-        btnTotalUsers.CustomizableEdges = CustomizableEdges25
+        btnTotalUsers.CustomizableEdges = CustomizableEdges1
         btnTotalUsers.DisabledState.BorderColor = Color.DarkGray
         btnTotalUsers.DisabledState.CustomBorderColor = Color.DarkGray
         btnTotalUsers.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -84,7 +81,7 @@ Partial Class Overview
         btnTotalUsers.ForeColor = Color.White
         btnTotalUsers.Location = New Point(0, 0)
         btnTotalUsers.Name = "btnTotalUsers"
-        btnTotalUsers.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        btnTotalUsers.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnTotalUsers.Size = New Size(240, 167)
         btnTotalUsers.TabIndex = 0
         btnTotalUsers.Text = "10"
@@ -93,7 +90,7 @@ Partial Class Overview
         ' 
         btnPendingRecipe.Animated = True
         btnPendingRecipe.BorderRadius = 12
-        btnPendingRecipe.CustomizableEdges = CustomizableEdges27
+        btnPendingRecipe.CustomizableEdges = CustomizableEdges3
         btnPendingRecipe.DisabledState.BorderColor = Color.DarkGray
         btnPendingRecipe.DisabledState.CustomBorderColor = Color.DarkGray
         btnPendingRecipe.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -104,7 +101,7 @@ Partial Class Overview
         btnPendingRecipe.ForeColor = Color.White
         btnPendingRecipe.Location = New Point(0, 0)
         btnPendingRecipe.Name = "btnPendingRecipe"
-        btnPendingRecipe.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        btnPendingRecipe.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnPendingRecipe.Size = New Size(240, 167)
         btnPendingRecipe.TabIndex = 0
         btnPendingRecipe.Text = "0"
@@ -113,7 +110,7 @@ Partial Class Overview
         ' 
         btnTotalCategory.Animated = True
         btnTotalCategory.BorderRadius = 12
-        btnTotalCategory.CustomizableEdges = CustomizableEdges29
+        btnTotalCategory.CustomizableEdges = CustomizableEdges5
         btnTotalCategory.DisabledState.BorderColor = Color.DarkGray
         btnTotalCategory.DisabledState.CustomBorderColor = Color.DarkGray
         btnTotalCategory.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -124,7 +121,7 @@ Partial Class Overview
         btnTotalCategory.ForeColor = Color.White
         btnTotalCategory.Location = New Point(0, 0)
         btnTotalCategory.Name = "btnTotalCategory"
-        btnTotalCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        btnTotalCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnTotalCategory.Size = New Size(240, 167)
         btnTotalCategory.TabIndex = 0
         btnTotalCategory.Text = "0"
@@ -146,13 +143,13 @@ Partial Class Overview
         Guna2GradientPanel1.BorderRadius = 12
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel1)
         Guna2GradientPanel1.Controls.Add(btnTotalUsers)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges31
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
         Guna2GradientPanel1.Location = New Point(3, 14)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 14
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientPanel1.ShadowDecoration.Depth = 6
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(240, 167)
@@ -162,7 +159,7 @@ Partial Class Overview
         ' 
         btnTotalRecipes.Animated = True
         btnTotalRecipes.BorderRadius = 12
-        btnTotalRecipes.CustomizableEdges = CustomizableEdges33
+        btnTotalRecipes.CustomizableEdges = CustomizableEdges9
         btnTotalRecipes.DisabledState.BorderColor = Color.DarkGray
         btnTotalRecipes.DisabledState.CustomBorderColor = Color.DarkGray
         btnTotalRecipes.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -174,7 +171,7 @@ Partial Class Overview
         btnTotalRecipes.Location = New Point(0, 0)
         btnTotalRecipes.Name = "btnTotalRecipes"
         btnTotalRecipes.ShadowDecoration.BorderRadius = 12
-        btnTotalRecipes.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        btnTotalRecipes.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnTotalRecipes.Size = New Size(240, 167)
         btnTotalRecipes.TabIndex = 0
         btnTotalRecipes.Text = "0"
@@ -185,13 +182,13 @@ Partial Class Overview
         Guna2GradientPanel2.BorderRadius = 12
         Guna2GradientPanel2.Controls.Add(Guna2HtmlLabel2)
         Guna2GradientPanel2.Controls.Add(btnTotalRecipes)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges35
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges11
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
         Guna2GradientPanel2.Location = New Point(258, 14)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Guna2GradientPanel2.ShadowDecoration.BorderRadius = 14
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2GradientPanel2.ShadowDecoration.Depth = 6
         Guna2GradientPanel2.ShadowDecoration.Enabled = True
         Guna2GradientPanel2.Size = New Size(240, 167)
@@ -214,13 +211,13 @@ Partial Class Overview
         Guna2GradientPanel3.BorderRadius = 12
         Guna2GradientPanel3.Controls.Add(Guna2HtmlLabel3)
         Guna2GradientPanel3.Controls.Add(btnPendingRecipe)
-        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges37
+        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges13
         Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel3.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
         Guna2GradientPanel3.Location = New Point(513, 14)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
         Guna2GradientPanel3.ShadowDecoration.BorderRadius = 14
-        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2GradientPanel3.ShadowDecoration.Depth = 6
         Guna2GradientPanel3.ShadowDecoration.Enabled = True
         Guna2GradientPanel3.Size = New Size(240, 167)
@@ -243,13 +240,13 @@ Partial Class Overview
         Guna2GradientPanel4.BorderRadius = 12
         Guna2GradientPanel4.Controls.Add(Guna2HtmlLabel4)
         Guna2GradientPanel4.Controls.Add(btnTotalCategory)
-        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges39
+        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges15
         Guna2GradientPanel4.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel4.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
         Guna2GradientPanel4.Location = New Point(768, 14)
         Guna2GradientPanel4.Name = "Guna2GradientPanel4"
         Guna2GradientPanel4.ShadowDecoration.BorderRadius = 14
-        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2GradientPanel4.ShadowDecoration.Depth = 6
         Guna2GradientPanel4.ShadowDecoration.Enabled = True
         Guna2GradientPanel4.Size = New Size(240, 167)
@@ -269,47 +266,37 @@ Partial Class Overview
         ' panelBarGraph
         ' 
         panelBarGraph.BackColor = Color.Transparent
-        panelBarGraph.CustomizableEdges = CustomizableEdges41
+        panelBarGraph.CustomizableEdges = CustomizableEdges17
         panelBarGraph.Location = New Point(3, 200)
         panelBarGraph.Name = "panelBarGraph"
-        panelBarGraph.ShadowDecoration.CustomizableEdges = CustomizableEdges42
-        panelBarGraph.Size = New Size(657, 281)
+        panelBarGraph.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        panelBarGraph.Size = New Size(495, 281)
         panelBarGraph.TabIndex = 16
         ' 
         ' panelRecipeChart
         ' 
         panelRecipeChart.BackColor = Color.Transparent
-        panelRecipeChart.CustomizableEdges = CustomizableEdges43
-        panelRecipeChart.Location = New Point(3, 498)
+        panelRecipeChart.CustomizableEdges = CustomizableEdges19
+        panelRecipeChart.Location = New Point(38, 498)
         panelRecipeChart.Name = "panelRecipeChart"
-        panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges44
-        panelRecipeChart.Size = New Size(657, 281)
+        panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        panelRecipeChart.Size = New Size(938, 281)
         panelRecipeChart.TabIndex = 17
         ' 
         ' PieCategories
         ' 
-        PieCategories.CustomizableEdges = CustomizableEdges45
-        PieCategories.Location = New Point(666, 200)
+        PieCategories.CustomizableEdges = CustomizableEdges21
+        PieCategories.Location = New Point(513, 200)
         PieCategories.Name = "PieCategories"
-        PieCategories.ShadowDecoration.CustomizableEdges = CustomizableEdges46
-        PieCategories.Size = New Size(342, 281)
+        PieCategories.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        PieCategories.Size = New Size(495, 281)
         PieCategories.TabIndex = 0
-        ' 
-        ' Guna2GradientPanel6
-        ' 
-        Guna2GradientPanel6.CustomizableEdges = CustomizableEdges47
-        Guna2GradientPanel6.Location = New Point(666, 498)
-        Guna2GradientPanel6.Name = "Guna2GradientPanel6"
-        Guna2GradientPanel6.ShadowDecoration.CustomizableEdges = CustomizableEdges48
-        Guna2GradientPanel6.Size = New Size(342, 281)
-        Guna2GradientPanel6.TabIndex = 1
         ' 
         ' Overview
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
-        Controls.Add(Guna2GradientPanel6)
         Controls.Add(PieCategories)
         Controls.Add(panelRecipeChart)
         Controls.Add(panelBarGraph)
@@ -344,6 +331,5 @@ Partial Class Overview
     Friend WithEvents panelBarGraph As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents panelRecipeChart As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents PieCategories As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents Guna2GradientPanel6 As Guna.UI2.WinForms.Guna2GradientPanel
 
 End Class

@@ -71,14 +71,15 @@ Partial Class BarGraph
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
-        Guna2GradientPanel1.Size = New Size(657, 281)
+        Guna2GradientPanel1.Size = New Size(495, 281)
         Guna2GradientPanel1.TabIndex = 5
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel2.Location = New Point(434, 19)
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel2.Location = New Point(298, 19)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(37, 19)
         Guna2HtmlLabel2.TabIndex = 9
@@ -88,7 +89,8 @@ Partial Class BarGraph
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel1.Location = New Point(193, 17)
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel1.Location = New Point(88, 17)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(58, 19)
         Guna2HtmlLabel1.TabIndex = 8
@@ -105,7 +107,7 @@ Partial Class BarGraph
         cbYear.Font = New Font("Segoe UI", 10F)
         cbYear.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbYear.ItemHeight = 30
-        cbYear.Location = New Point(477, 10)
+        cbYear.Location = New Point(341, 10)
         cbYear.Name = "cbYear"
         cbYear.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cbYear.Size = New Size(140, 36)
@@ -122,7 +124,7 @@ Partial Class BarGraph
         cbFilter.Font = New Font("Segoe UI", 10F)
         cbFilter.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cbFilter.ItemHeight = 30
-        cbFilter.Location = New Point(257, 10)
+        cbFilter.Location = New Point(152, 10)
         cbFilter.Name = "cbFilter"
         cbFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         cbFilter.Size = New Size(140, 36)
@@ -134,7 +136,7 @@ Partial Class BarGraph
         GunaChart1.Legend.LabelFont = ChartFont1
         GunaChart1.Location = New Point(14, 52)
         GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(628, 222)
+        GunaChart1.Size = New Size(467, 222)
         GunaChart1.TabIndex = 5
         ChartFont2.FontName = "Arial"
         ChartFont2.Size = 12
@@ -169,7 +171,7 @@ Partial Class BarGraph
         BackColor = Color.Transparent
         Controls.Add(Guna2GradientPanel1)
         Name = "BarGraph"
-        Size = New Size(657, 281)
+        Size = New Size(495, 281)
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         ResumeLayout(False)

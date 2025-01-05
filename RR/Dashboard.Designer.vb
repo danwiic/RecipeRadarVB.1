@@ -48,10 +48,10 @@ Partial Class Dashboard
         dashDisplayPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dashDisplayPanel.AutoScroll = True
         dashDisplayPanel.CustomizableEdges = CustomizableEdges1
-        dashDisplayPanel.Location = New Point(3, 57)
+        dashDisplayPanel.Location = New Point(3, 51)
         dashDisplayPanel.Name = "dashDisplayPanel"
         dashDisplayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        dashDisplayPanel.Size = New Size(1041, 540)
+        dashDisplayPanel.Size = New Size(1041, 546)
         dashDisplayPanel.TabIndex = 1
         ' 
         ' Guna2GradientPanel1
