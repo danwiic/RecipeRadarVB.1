@@ -22,8 +22,8 @@ Partial Class ManageUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -31,6 +31,7 @@ Partial Class ManageUser
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -39,9 +40,9 @@ Partial Class ManageUser
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         FlowLayoutPanel1.AutoScroll = True
         FlowLayoutPanel1.BackColor = Color.White
-        FlowLayoutPanel1.Location = New Point(69, 63)
+        FlowLayoutPanel1.Location = New Point(69, 105)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(903, 448)
+        FlowLayoutPanel1.Size = New Size(903, 406)
         FlowLayoutPanel1.TabIndex = 0
         ' 
         ' Guna2HtmlLabel1
@@ -109,22 +110,34 @@ Partial Class ManageUser
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel4)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel2)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel3)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
         Guna2GradientPanel1.FillColor = Color.White
         Guna2GradientPanel1.FillColor2 = Color.White
-        Guna2GradientPanel1.Location = New Point(43, 20)
+        Guna2GradientPanel1.Location = New Point(43, 57)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 12
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
-        Guna2GradientPanel1.Size = New Size(955, 514)
+        Guna2GradientPanel1.Size = New Size(955, 477)
         Guna2GradientPanel1.TabIndex = 5
+        ' 
+        ' lblFav
+        ' 
+        lblFav.BackColor = Color.Transparent
+        lblFav.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblFav.ForeColor = SystemColors.ControlDarkDark
+        lblFav.Location = New Point(17, 11)
+        lblFav.Name = "lblFav"
+        lblFav.Size = New Size(179, 40)
+        lblFav.TabIndex = 8
+        lblFav.Text = "Manage Users"
         ' 
         ' ManageUser
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(lblFav)
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(Guna2GradientPanel1)
         Name = "ManageUser"
@@ -132,6 +145,7 @@ Partial Class ManageUser
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
@@ -141,5 +155,6 @@ Partial Class ManageUser
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents lblFav As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class

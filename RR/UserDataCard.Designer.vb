@@ -22,19 +22,19 @@ Partial Class UserDataCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         profImage = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
@@ -51,7 +51,7 @@ Partial Class UserDataCard
         profImage.ImageRotate = 0F
         profImage.Location = New Point(8, 3)
         profImage.Name = "profImage"
-        profImage.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        profImage.ShadowDecoration.CustomizableEdges = CustomizableEdges1
         profImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         profImage.Size = New Size(40, 44)
         profImage.SizeMode = PictureBoxSizeMode.StretchImage
@@ -60,8 +60,10 @@ Partial Class UserDataCard
         ' 
         ' txtUsername
         ' 
+        txtUsername.Animated = True
+        txtUsername.BorderRadius = 6
         txtUsername.BorderThickness = 0
-        txtUsername.CustomizableEdges = CustomizableEdges15
+        txtUsername.CustomizableEdges = CustomizableEdges2
         txtUsername.DefaultText = ""
         txtUsername.DisabledState.BorderColor = Color.White
         txtUsername.DisabledState.FillColor = Color.White
@@ -77,14 +79,16 @@ Partial Class UserDataCard
         txtUsername.PlaceholderText = ""
         txtUsername.ReadOnly = True
         txtUsername.SelectedText = ""
-        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges3
         txtUsername.Size = New Size(200, 36)
         txtUsername.TabIndex = 1
         ' 
         ' txtEmail
         ' 
+        txtEmail.Animated = True
+        txtEmail.BorderRadius = 6
         txtEmail.BorderThickness = 0
-        txtEmail.CustomizableEdges = CustomizableEdges17
+        txtEmail.CustomizableEdges = CustomizableEdges4
         txtEmail.DefaultText = ""
         txtEmail.DisabledState.BorderColor = Color.White
         txtEmail.DisabledState.FillColor = Color.White
@@ -100,14 +104,16 @@ Partial Class UserDataCard
         txtEmail.PlaceholderText = ""
         txtEmail.ReadOnly = True
         txtEmail.SelectedText = ""
-        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges5
         txtEmail.Size = New Size(200, 36)
         txtEmail.TabIndex = 2
         ' 
         ' txtPassword
         ' 
+        txtPassword.Animated = True
+        txtPassword.BorderRadius = 6
         txtPassword.BorderThickness = 0
-        txtPassword.CustomizableEdges = CustomizableEdges19
+        txtPassword.CustomizableEdges = CustomizableEdges6
         txtPassword.DefaultText = ""
         txtPassword.DisabledState.BorderColor = Color.White
         txtPassword.DisabledState.FillColor = Color.White
@@ -123,45 +129,56 @@ Partial Class UserDataCard
         txtPassword.PlaceholderText = ""
         txtPassword.ReadOnly = True
         txtPassword.SelectedText = ""
-        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         txtPassword.Size = New Size(200, 36)
         txtPassword.TabIndex = 3
         ' 
         ' btnEdit
         ' 
-        btnEdit.CustomizableEdges = CustomizableEdges21
+        btnEdit.Animated = True
+        btnEdit.BorderRadius = 6
+        btnEdit.Cursor = Cursors.Hand
+        btnEdit.CustomizableEdges = CustomizableEdges8
         btnEdit.DisabledState.BorderColor = Color.DarkGray
         btnEdit.DisabledState.CustomBorderColor = Color.DarkGray
         btnEdit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnEdit.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnEdit.FillColor = Color.LimeGreen
         btnEdit.Font = New Font("Segoe UI", 9F)
         btnEdit.ForeColor = Color.White
         btnEdit.Image = My.Resources.Resources.pencil
         btnEdit.Location = New Point(731, 7)
         btnEdit.Name = "btnEdit"
-        btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         btnEdit.Size = New Size(59, 36)
         btnEdit.TabIndex = 4
         ' 
         ' btnDelete
         ' 
-        btnDelete.CustomizableEdges = CustomizableEdges23
+        btnDelete.Animated = True
+        btnDelete.BorderRadius = 6
+        btnDelete.Cursor = Cursors.Hand
+        btnDelete.CustomizableEdges = CustomizableEdges10
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnDelete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnDelete.FillColor = Color.Tomato
         btnDelete.Font = New Font("Segoe UI", 9F)
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete_white
         btnDelete.Location = New Point(796, 7)
         btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         btnDelete.Size = New Size(59, 36)
         btnDelete.TabIndex = 5
         ' 
         ' btnSave
         ' 
-        btnSave.CustomizableEdges = CustomizableEdges25
+        btnSave.Animated = True
+        btnSave.BorderRadius = 6
+        btnSave.Cursor = Cursors.Hand
+        btnSave.CustomizableEdges = CustomizableEdges12
         btnSave.DisabledState.BorderColor = Color.DarkGray
         btnSave.DisabledState.CustomBorderColor = Color.DarkGray
         btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -171,7 +188,7 @@ Partial Class UserDataCard
         btnSave.Image = My.Resources.Resources.save
         btnSave.Location = New Point(731, 7)
         btnSave.Name = "btnSave"
-        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         btnSave.Size = New Size(59, 36)
         btnSave.TabIndex = 6
         ' 

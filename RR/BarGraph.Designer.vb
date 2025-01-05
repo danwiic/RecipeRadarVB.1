@@ -70,7 +70,6 @@ Partial Class BarGraph
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 20
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
-        Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(495, 281)
         Guna2GradientPanel1.TabIndex = 5
         ' 

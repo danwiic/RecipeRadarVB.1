@@ -266,29 +266,49 @@ Partial Class Overview
         ' panelBarGraph
         ' 
         panelBarGraph.BackColor = Color.Transparent
+        panelBarGraph.BorderRadius = 12
         panelBarGraph.CustomizableEdges = CustomizableEdges17
+        panelBarGraph.FillColor = Color.White
+        panelBarGraph.FillColor2 = Color.White
         panelBarGraph.Location = New Point(3, 200)
         panelBarGraph.Name = "panelBarGraph"
+        panelBarGraph.ShadowDecoration.BorderRadius = 12
         panelBarGraph.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        panelBarGraph.ShadowDecoration.Depth = 8
+        panelBarGraph.ShadowDecoration.Enabled = True
         panelBarGraph.Size = New Size(495, 281)
         panelBarGraph.TabIndex = 16
         ' 
         ' panelRecipeChart
         ' 
+        panelRecipeChart.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         panelRecipeChart.BackColor = Color.Transparent
+        panelRecipeChart.BorderRadius = 12
         panelRecipeChart.CustomizableEdges = CustomizableEdges19
+        panelRecipeChart.FillColor = Color.White
+        panelRecipeChart.FillColor2 = Color.White
         panelRecipeChart.Location = New Point(38, 498)
         panelRecipeChart.Name = "panelRecipeChart"
+        panelRecipeChart.ShadowDecoration.BorderRadius = 12
         panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        panelRecipeChart.ShadowDecoration.Depth = 8
+        panelRecipeChart.ShadowDecoration.Enabled = True
         panelRecipeChart.Size = New Size(938, 281)
         panelRecipeChart.TabIndex = 17
         ' 
         ' PieCategories
         ' 
+        PieCategories.BackColor = Color.Transparent
+        PieCategories.BorderRadius = 12
         PieCategories.CustomizableEdges = CustomizableEdges21
+        PieCategories.FillColor = Color.White
+        PieCategories.FillColor2 = Color.White
         PieCategories.Location = New Point(513, 200)
         PieCategories.Name = "PieCategories"
+        PieCategories.ShadowDecoration.BorderRadius = 12
         PieCategories.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        PieCategories.ShadowDecoration.Depth = 8
+        PieCategories.ShadowDecoration.Enabled = True
         PieCategories.Size = New Size(495, 281)
         PieCategories.TabIndex = 0
         ' 
@@ -305,7 +325,7 @@ Partial Class Overview
         Controls.Add(Guna2GradientPanel2)
         Controls.Add(Guna2GradientPanel1)
         Name = "Overview"
-        Size = New Size(1014, 1000)
+        Size = New Size(1014, 785)
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         Guna2GradientPanel2.ResumeLayout(False)
