@@ -204,7 +204,11 @@ Public Class AddRecipe
     End Sub
 
     Private Sub btnAddNewRecipe_Click(sender As Object, e As EventArgs) Handles btnAddNewRecipe.Click
-        SubmitRecipe()
+        If userRole = "admin" Then
+            AddRecipe()
+        Else
+            SubmitRecipe()
+        End If
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click

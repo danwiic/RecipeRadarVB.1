@@ -13,8 +13,8 @@
     Private Sub DefaultView()
         dashDisplayPanel.Controls.Clear()
         Dim ovr As New Overview
-        dashDisplayPanel.Controls.Add(ovr)
         ovr.Dock = DockStyle.Fill
+        dashDisplayPanel.Controls.Add(ovr)
     End Sub
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
         DefaultView()

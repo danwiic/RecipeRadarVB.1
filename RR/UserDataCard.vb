@@ -85,6 +85,8 @@ Public Class UserDataCard
 
             btnSave.Visible = False
             btnEdit.Visible = True
+
+            chkSeePass.Hide()
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
@@ -144,6 +146,25 @@ Public Class UserDataCard
         End Try
 
     End Function
+
+    Private Sub Guna2CustomCheckBox1_Click(sender As Object, e As EventArgs) Handles chkSeePass.Click
+        If chkSeePass.Checked Then
+            chkSeePass.BackgroundImage = My.Resources.eye
+            txtPassword.PasswordChar = "" ' Show password
+        Else
+            txtPassword.PasswordChar = "*" ' Hide password
+            chkSeePass.BackgroundImage = My.Resources.hidden
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+        If txtPassword.Focused Then
+            chkSeePass.Show()
+            chkSeePass.BackgroundImage = My.Resources.hidden
+        Else
+            chkSeePass.Hide()
+        End If
+    End Sub
 
     Private Sub UserDataCard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

@@ -35,6 +35,8 @@ Partial Class UserDataCard
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         profImage = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
@@ -43,6 +45,7 @@ Partial Class UserDataCard
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
         btnSave = New Guna.UI2.WinForms.Guna2Button()
         Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        chkSeePass = New Guna.UI2.WinForms.Guna2CustomCheckBox()
         CType(profImage, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -200,11 +203,35 @@ Partial Class UserDataCard
         Guna2Separator1.Size = New Size(875, 10)
         Guna2Separator1.TabIndex = 7
         ' 
+        ' chkSeePass
+        ' 
+        chkSeePass.BackColor = Color.White
+        chkSeePass.BackgroundImage = My.Resources.Resources.hidden
+        chkSeePass.BackgroundImageLayout = ImageLayout.Center
+        chkSeePass.CheckedState.BorderColor = Color.Transparent
+        chkSeePass.CheckedState.BorderRadius = 2
+        chkSeePass.CheckedState.BorderThickness = 0
+        chkSeePass.CheckedState.FillColor = Color.Transparent
+        chkSeePass.CheckMarkColor = Color.Transparent
+        chkSeePass.Cursor = Cursors.Hand
+        chkSeePass.CustomizableEdges = CustomizableEdges14
+        chkSeePass.ForeColor = Color.Transparent
+        chkSeePass.Location = New Point(673, 12)
+        chkSeePass.Name = "chkSeePass"
+        chkSeePass.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        chkSeePass.Size = New Size(22, 25)
+        chkSeePass.TabIndex = 12
+        chkSeePass.UncheckedState.BorderColor = Color.Transparent
+        chkSeePass.UncheckedState.BorderRadius = 0
+        chkSeePass.UncheckedState.BorderThickness = 0
+        chkSeePass.UncheckedState.FillColor = Color.Transparent
+        ' 
         ' UserDataCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        Controls.Add(chkSeePass)
         Controls.Add(Guna2Separator1)
         Controls.Add(btnDelete)
         Controls.Add(btnEdit)
@@ -227,5 +254,6 @@ Partial Class UserDataCard
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents chkSeePass As Guna.UI2.WinForms.Guna2CustomCheckBox
 
 End Class

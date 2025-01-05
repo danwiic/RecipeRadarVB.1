@@ -49,6 +49,7 @@ Partial Class Dashboard
         dashDisplayPanel.AutoScroll = True
         dashDisplayPanel.CustomizableEdges = CustomizableEdges1
         dashDisplayPanel.Location = New Point(3, 51)
+        dashDisplayPanel.MaximumSize = New Size(1041, 1100)
         dashDisplayPanel.Name = "dashDisplayPanel"
         dashDisplayPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         dashDisplayPanel.Size = New Size(1041, 546)
@@ -56,11 +57,17 @@ Partial Class Dashboard
         ' 
         ' Guna2GradientPanel1
         ' 
+        Guna2GradientPanel1.BackColor = Color.Transparent
+        Guna2GradientPanel1.BorderRadius = 12
         Guna2GradientPanel1.Controls.Add(btnViewReported)
         Guna2GradientPanel1.Controls.Add(btnViewManage)
         Guna2GradientPanel1.Controls.Add(btnViewPending)
         Guna2GradientPanel1.Controls.Add(btnViewOverview)
+        CustomizableEdges11.TopLeft = False
+        CustomizableEdges11.TopRight = False
         Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
+        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel1.Location = New Point(162, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
@@ -70,12 +77,14 @@ Partial Class Dashboard
         ' btnViewReported
         ' 
         btnViewReported.Animated = True
+        btnViewReported.Cursor = Cursors.Hand
         btnViewReported.CustomizableEdges = CustomizableEdges3
         btnViewReported.DisabledState.BorderColor = Color.DarkGray
         btnViewReported.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewReported.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewReported.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnViewReported.Dock = DockStyle.Right
+        btnViewReported.FillColor = Color.Transparent
         btnViewReported.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewReported.ForeColor = Color.White
         btnViewReported.Location = New Point(542, 0)
@@ -88,12 +97,14 @@ Partial Class Dashboard
         ' btnViewManage
         ' 
         btnViewManage.Animated = True
+        btnViewManage.Cursor = Cursors.Hand
         btnViewManage.CustomizableEdges = CustomizableEdges5
         btnViewManage.DisabledState.BorderColor = Color.DarkGray
         btnViewManage.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewManage.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewManage.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnViewManage.Dock = DockStyle.Left
+        btnViewManage.FillColor = Color.Transparent
         btnViewManage.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewManage.ForeColor = Color.White
         btnViewManage.Location = New Point(360, 0)
@@ -106,12 +117,14 @@ Partial Class Dashboard
         ' btnViewPending
         ' 
         btnViewPending.Animated = True
+        btnViewPending.Cursor = Cursors.Hand
         btnViewPending.CustomizableEdges = CustomizableEdges7
         btnViewPending.DisabledState.BorderColor = Color.DarkGray
         btnViewPending.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewPending.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewPending.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnViewPending.Dock = DockStyle.Left
+        btnViewPending.FillColor = Color.Transparent
         btnViewPending.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewPending.ForeColor = Color.White
         btnViewPending.Location = New Point(180, 0)
@@ -124,12 +137,14 @@ Partial Class Dashboard
         ' btnViewOverview
         ' 
         btnViewOverview.Animated = True
+        btnViewOverview.Cursor = Cursors.Hand
         btnViewOverview.CustomizableEdges = CustomizableEdges9
         btnViewOverview.DisabledState.BorderColor = Color.DarkGray
         btnViewOverview.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewOverview.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewOverview.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnViewOverview.Dock = DockStyle.Left
+        btnViewOverview.FillColor = Color.Transparent
         btnViewOverview.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewOverview.ForeColor = Color.White
         btnViewOverview.Location = New Point(0, 0)

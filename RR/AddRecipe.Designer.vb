@@ -110,7 +110,7 @@ Partial Class AddRecipe
         txtMealName.PlaceholderText = ""
         txtMealName.SelectedText = ""
         txtMealName.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        txtMealName.Size = New Size(200, 36)
+        txtMealName.Size = New Size(213, 36)
         txtMealName.TabIndex = 17
         ' 
         ' Guna2HtmlLabel1
@@ -138,7 +138,7 @@ Partial Class AddRecipe
         cbRecipeCategory.Location = New Point(83, 148)
         cbRecipeCategory.Name = "cbRecipeCategory"
         cbRecipeCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        cbRecipeCategory.Size = New Size(200, 36)
+        cbRecipeCategory.Size = New Size(213, 36)
         cbRecipeCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         cbRecipeCategory.TabIndex = 19
         ' 
@@ -216,13 +216,13 @@ Partial Class AddRecipe
         txtRecipeImageLink.PlaceholderText = ""
         txtRecipeImageLink.SelectedText = ""
         txtRecipeImageLink.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        txtRecipeImageLink.Size = New Size(200, 36)
+        txtRecipeImageLink.Size = New Size(213, 36)
         txtRecipeImageLink.TabIndex = 26
         ' 
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Location = New Point(83, 358)
+        Guna2HtmlLabel6.Location = New Point(83, 370)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Guna2HtmlLabel6.Size = New Size(160, 17)
         Guna2HtmlLabel6.TabIndex = 29
@@ -239,13 +239,13 @@ Partial Class AddRecipe
         txtRecipeYoutubeLink.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeYoutubeLink.Font = New Font("Segoe UI", 9F)
         txtRecipeYoutubeLink.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRecipeYoutubeLink.Location = New Point(83, 381)
+        txtRecipeYoutubeLink.Location = New Point(83, 393)
         txtRecipeYoutubeLink.Name = "txtRecipeYoutubeLink"
         txtRecipeYoutubeLink.PasswordChar = ChrW(0)
         txtRecipeYoutubeLink.PlaceholderText = ""
         txtRecipeYoutubeLink.SelectedText = ""
         txtRecipeYoutubeLink.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        txtRecipeYoutubeLink.Size = New Size(200, 36)
+        txtRecipeYoutubeLink.Size = New Size(213, 36)
         txtRecipeYoutubeLink.TabIndex = 28
         ' 
         ' Guna2HtmlLabel7
@@ -269,6 +269,7 @@ Partial Class AddRecipe
         txtRecipeIngredients.Font = New Font("Segoe UI", 9F)
         txtRecipeIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeIngredients.Location = New Point(355, 231)
+        txtRecipeIngredients.Multiline = True
         txtRecipeIngredients.Name = "txtRecipeIngredients"
         txtRecipeIngredients.PasswordChar = ChrW(0)
         txtRecipeIngredients.PlaceholderText = ""
@@ -287,7 +288,7 @@ Partial Class AddRecipe
         btnAddNewRecipe.DisabledState.CustomBorderColor = Color.DarkGray
         btnAddNewRecipe.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnAddNewRecipe.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnAddNewRecipe.Font = New Font("Segoe UI", 9F)
+        btnAddNewRecipe.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAddNewRecipe.ForeColor = Color.White
         btnAddNewRecipe.Location = New Point(608, 393)
         btnAddNewRecipe.Name = "btnAddNewRecipe"
@@ -313,7 +314,7 @@ Partial Class AddRecipe
         cbRecipeOrigin.MaxDropDownItems = 5
         cbRecipeOrigin.Name = "cbRecipeOrigin"
         cbRecipeOrigin.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        cbRecipeOrigin.Size = New Size(200, 36)
+        cbRecipeOrigin.Size = New Size(213, 36)
         cbRecipeOrigin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         cbRecipeOrigin.TabIndex = 33
         ' 
