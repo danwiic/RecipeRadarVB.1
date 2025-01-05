@@ -281,7 +281,6 @@ Partial Class Overview
         ' 
         ' panelRecipeChart
         ' 
-        panelRecipeChart.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         panelRecipeChart.BackColor = Color.Transparent
         panelRecipeChart.BorderRadius = 12
         panelRecipeChart.CustomizableEdges = CustomizableEdges19
@@ -293,7 +292,7 @@ Partial Class Overview
         panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         panelRecipeChart.ShadowDecoration.Depth = 8
         panelRecipeChart.ShadowDecoration.Enabled = True
-        panelRecipeChart.Size = New Size(938, 281)
+        panelRecipeChart.Size = New Size(938, 269)
         panelRecipeChart.TabIndex = 17
         ' 
         ' PieCategories
@@ -325,7 +324,7 @@ Partial Class Overview
         Controls.Add(Guna2GradientPanel2)
         Controls.Add(Guna2GradientPanel1)
         Name = "Overview"
-        Size = New Size(1014, 785)
+        Size = New Size(1014, 1043)
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         Guna2GradientPanel2.ResumeLayout(False)

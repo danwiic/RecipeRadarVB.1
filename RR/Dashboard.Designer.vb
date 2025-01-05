@@ -46,7 +46,6 @@ Partial Class Dashboard
         ' dashDisplayPanel
         ' 
         dashDisplayPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dashDisplayPanel.AutoScroll = True
         dashDisplayPanel.CustomizableEdges = CustomizableEdges1
         dashDisplayPanel.Location = New Point(3, 51)
         dashDisplayPanel.Name = "dashDisplayPanel"
