@@ -292,7 +292,7 @@ Partial Class Overview
         panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         panelRecipeChart.ShadowDecoration.Depth = 8
         panelRecipeChart.ShadowDecoration.Enabled = True
-        panelRecipeChart.Size = New Size(938, 269)
+        panelRecipeChart.Size = New Size(938, 300)
         panelRecipeChart.TabIndex = 17
         ' 
         ' PieCategories
