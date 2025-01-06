@@ -286,7 +286,7 @@ Partial Class Overview
         panelRecipeChart.CustomizableEdges = CustomizableEdges19
         panelRecipeChart.FillColor = Color.White
         panelRecipeChart.FillColor2 = Color.White
-        panelRecipeChart.Location = New Point(38, 498)
+        panelRecipeChart.Location = New Point(40, 496)
         panelRecipeChart.Name = "panelRecipeChart"
         panelRecipeChart.ShadowDecoration.BorderRadius = 12
         panelRecipeChart.ShadowDecoration.CustomizableEdges = CustomizableEdges20
