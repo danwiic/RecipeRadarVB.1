@@ -89,7 +89,7 @@ Partial Class ViewRecipe
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(20, 99)
+        lblMealName.Location = New Point(20, 91)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(146, 34)
         lblMealName.TabIndex = 16
@@ -210,7 +210,7 @@ Partial Class ViewRecipe
         txtInstructions.Enabled = False
         txtInstructions.FillColor = SystemColors.Control
         txtInstructions.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Font = New Font("Arial Narrow", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtInstructions.Font = New Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtInstructions.ForeColor = Color.Black
         txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtInstructions.Location = New Point(17, 349)
@@ -251,7 +251,7 @@ Partial Class ViewRecipe
         txtIngredients.Enabled = False
         txtIngredients.FillColor = SystemColors.Control
         txtIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Font = New Font("Arial Narrow", 12.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        txtIngredients.Font = New Font("Arial Narrow", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         txtIngredients.ForeColor = Color.Black
         txtIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtIngredients.Location = New Point(458, 349)
@@ -312,7 +312,7 @@ Partial Class ViewRecipe
         lblCategory.BackColor = Color.Transparent
         lblCategory.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblCategory.Location = New Point(20, 151)
+        lblCategory.Location = New Point(20, 150)
         lblCategory.Name = "lblCategory"
         lblCategory.Size = New Size(101, 26)
         lblCategory.TabIndex = 31
