@@ -77,7 +77,11 @@ Partial Class Dashboard
         ' btnViewReported
         ' 
         btnViewReported.Animated = True
+        btnViewReported.BorderRadius = 12
         btnViewReported.Cursor = Cursors.Hand
+        CustomizableEdges3.BottomLeft = False
+        CustomizableEdges3.TopLeft = False
+        CustomizableEdges3.TopRight = False
         btnViewReported.CustomizableEdges = CustomizableEdges3
         btnViewReported.DisabledState.BorderColor = Color.DarkGray
         btnViewReported.DisabledState.CustomBorderColor = Color.DarkGray
@@ -137,7 +141,11 @@ Partial Class Dashboard
         ' btnViewOverview
         ' 
         btnViewOverview.Animated = True
+        btnViewOverview.BorderRadius = 12
         btnViewOverview.Cursor = Cursors.Hand
+        CustomizableEdges9.BottomRight = False
+        CustomizableEdges9.TopLeft = False
+        CustomizableEdges9.TopRight = False
         btnViewOverview.CustomizableEdges = CustomizableEdges9
         btnViewOverview.DisabledState.BorderColor = Color.DarkGray
         btnViewOverview.DisabledState.CustomBorderColor = Color.DarkGray

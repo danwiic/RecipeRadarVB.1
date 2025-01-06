@@ -88,6 +88,10 @@ Partial Class CommentLayout
         ' 
         ' btnComment
         ' 
+        btnComment.BorderRadius = 8
+        CustomizableEdges1.BottomLeft = False
+        CustomizableEdges1.TopLeft = False
+        CustomizableEdges1.TopRight = False
         btnComment.CustomizableEdges = CustomizableEdges1
         btnComment.DisabledState.BorderColor = Color.DarkGray
         btnComment.DisabledState.CustomBorderColor = Color.DarkGray
@@ -105,6 +109,11 @@ Partial Class CommentLayout
         ' 
         ' txtInputComment
         ' 
+        txtInputComment.Animated = True
+        txtInputComment.BorderRadius = 8
+        CustomizableEdges3.BottomRight = False
+        CustomizableEdges3.TopLeft = False
+        CustomizableEdges3.TopRight = False
         txtInputComment.CustomizableEdges = CustomizableEdges3
         txtInputComment.DefaultText = ""
         txtInputComment.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
