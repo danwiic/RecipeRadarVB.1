@@ -89,6 +89,7 @@ Public Class Favorites
                             Dim mealCard As New MealCardFavorites()
                             mealCard.SetMealData(mealID, mealName, mealImage, averageRating, True)
                             panelFav.Controls.Add(mealCard)
+                            lblMessage.Visible = False
                         End While
                         AdjustPanelSizes()
                     Else

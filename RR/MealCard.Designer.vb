@@ -126,6 +126,8 @@ Partial Class MealCard
         ' picMealImage
         ' 
         picMealImage.BorderRadius = 14
+        CustomizableEdges3.BottomLeft = False
+        CustomizableEdges3.BottomRight = False
         picMealImage.CustomizableEdges = CustomizableEdges3
         picMealImage.FillColor = Color.Transparent
         picMealImage.ImageRotate = 0F

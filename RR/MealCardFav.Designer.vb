@@ -44,6 +44,8 @@ Partial Class MealCardFav
         ' picMealImage
         ' 
         picMealImage.BorderRadius = 14
+        CustomizableEdges1.BottomLeft = False
+        CustomizableEdges1.BottomRight = False
         picMealImage.CustomizableEdges = CustomizableEdges1
         picMealImage.FillColor = Color.Transparent
         picMealImage.ImageRotate = 0F

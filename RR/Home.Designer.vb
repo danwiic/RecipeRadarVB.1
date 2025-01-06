@@ -68,6 +68,7 @@ Partial Class Home
         txtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtSearch.Location = New Point(331, 180)
         txtSearch.Name = "txtSearch"
+        txtSearch.Padding = New Padding(50, 0, 0, 0)
         txtSearch.PasswordChar = ChrW(0)
         txtSearch.PlaceholderText = "Search recipes..."
         txtSearch.SelectedText = ""
@@ -141,15 +142,19 @@ Partial Class Home
         ' 
         ' btnRemove
         ' 
+        btnRemove.Cursor = Cursors.Hand
         btnRemove.CustomizableEdges = CustomizableEdges3
         btnRemove.DisabledState.BorderColor = Color.DarkGray
         btnRemove.DisabledState.CustomBorderColor = Color.DarkGray
         btnRemove.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnRemove.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnRemove.FillColor = Color.White
+        btnRemove.FocusedColor = Color.White
         btnRemove.Font = New Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRemove.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        btnRemove.HoverState.FillColor = Color.Transparent
+        btnRemove.HoverState.BorderColor = Color.White
+        btnRemove.HoverState.CustomBorderColor = Color.White
+        btnRemove.HoverState.FillColor = Color.White
         btnRemove.Location = New Point(625, 187)
         btnRemove.Name = "btnRemove"
         btnRemove.ShadowDecoration.CustomizableEdges = CustomizableEdges4
@@ -162,6 +167,7 @@ Partial Class Home
         ' 
         btnSearch.Animated = True
         btnSearch.BackColor = Color.Transparent
+        btnSearch.Cursor = Cursors.Hand
         btnSearch.DisabledState.BorderColor = Color.DarkGray
         btnSearch.DisabledState.CustomBorderColor = Color.DarkGray
         btnSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
