@@ -131,7 +131,7 @@ Partial Class Overview
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel1.ForeColor = SystemColors.ControlLightLight
-        Guna2HtmlLabel1.Location = New Point(71, 14)
+        Guna2HtmlLabel1.Location = New Point(65, 14)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(112, 25)
         Guna2HtmlLabel1.TabIndex = 1
@@ -199,7 +199,7 @@ Partial Class Overview
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel2.ForeColor = SystemColors.ControlLightLight
-        Guna2HtmlLabel2.Location = New Point(71, 14)
+        Guna2HtmlLabel2.Location = New Point(62, 14)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(116, 25)
         Guna2HtmlLabel2.TabIndex = 2
@@ -228,7 +228,7 @@ Partial Class Overview
         Guna2HtmlLabel3.BackColor = Color.Transparent
         Guna2HtmlLabel3.Font = New Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel3.ForeColor = SystemColors.ControlLightLight
-        Guna2HtmlLabel3.Location = New Point(59, 14)
+        Guna2HtmlLabel3.Location = New Point(50, 14)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(132, 25)
         Guna2HtmlLabel3.TabIndex = 3
@@ -257,7 +257,7 @@ Partial Class Overview
         Guna2HtmlLabel4.BackColor = Color.Transparent
         Guna2HtmlLabel4.Font = New Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel4.ForeColor = SystemColors.ControlLightLight
-        Guna2HtmlLabel4.Location = New Point(54, 14)
+        Guna2HtmlLabel4.Location = New Point(47, 14)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(147, 25)
         Guna2HtmlLabel4.TabIndex = 16
