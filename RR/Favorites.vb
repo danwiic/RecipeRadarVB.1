@@ -79,17 +79,22 @@ Public Class Favorites
 
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     panelFav.Controls.Clear()
-                    While reader.Read()
-                        Dim mealID As Integer = reader.GetInt32("idMeal")
-                        Dim mealName As String = reader.GetString("strMeal")
-                        Dim mealImage As String = reader.GetString("strMealThumb")
-                        Dim averageRating As Single = If(reader.IsDBNull(reader.GetOrdinal("averageRating")), 0, reader.GetFloat("averageRating"))
+                    If reader.HasRows Then
+                        While reader.Read()
+                            Dim mealID As Integer = reader.GetInt32("idMeal")
+                            Dim mealName As String = reader.GetString("strMeal")
+                            Dim mealImage As String = reader.GetString("strMealThumb")
+                            Dim averageRating As Single = If(reader.IsDBNull(reader.GetOrdinal("averageRating")), 0, reader.GetFloat("averageRating"))
 
-                        Dim mealCard As New MealCardFavorites()
-                        mealCard.SetMealData(mealID, mealName, mealImage, averageRating, True)
-                        panelFav.Controls.Add(mealCard)
-                    End While
-                    AdjustPanelSizes()
+                            Dim mealCard As New MealCardFavorites()
+                            mealCard.SetMealData(mealID, mealName, mealImage, averageRating, True)
+                            panelFav.Controls.Add(mealCard)
+                        End While
+                        AdjustPanelSizes()
+                    Else
+                        lblMessage.Visible = True
+                        lblMessage.Text = "No favoite recipes added yet."
+                    End If
                 End Using
             End Using
 

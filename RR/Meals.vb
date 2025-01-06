@@ -70,7 +70,7 @@ Public Class Meals
                         End While
                     Else
                         lblMessage.Visible = True
-                        lblMessage.Text = "No added meals yet."
+                        lblMessage.Text = "No posted recipes yet."
                     End If
                 End Using
             End Using

@@ -35,6 +35,7 @@ Partial Class Favorites
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
+        lblMessage = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -136,11 +137,23 @@ Partial Class Favorites
         btnPrev.TabIndex = 11
         btnPrev.Text = "Previous"
         ' 
+        ' lblMessage
+        ' 
+        lblMessage.BackColor = Color.Transparent
+        lblMessage.Font = New Font("Comic Sans MS", 18F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblMessage.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblMessage.Location = New Point(13, 138)
+        lblMessage.Name = "lblMessage"
+        lblMessage.Size = New Size(196, 36)
+        lblMessage.TabIndex = 13
+        lblMessage.Text = "Guna2HtmlLabel1"
+        ' 
         ' Favorites
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
+        Controls.Add(lblMessage)
         Controls.Add(Guna2Panel1)
         Controls.Add(lblFav)
         Controls.Add(panelFav)
@@ -160,5 +173,6 @@ Partial Class Favorites
     Friend WithEvents btnNext As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblPages As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnPrev As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblMessage As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class
