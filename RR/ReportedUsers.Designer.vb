@@ -28,27 +28,18 @@ Partial Class ReportedUsers
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        FlowLayoutPanel1 = New FlowLayoutPanel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        FlowLayoutPanel1 = New FlowLayoutPanel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' FlowLayoutPanel1
-        ' 
-        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.BackColor = Color.White
-        FlowLayoutPanel1.Location = New Point(82, 96)
-        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(846, 395)
-        FlowLayoutPanel1.TabIndex = 11
         ' 
         ' Guna2HtmlLabel5
         ' 
@@ -99,6 +90,7 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2GradientPanel1.BackColor = Color.Transparent
         Guna2GradientPanel1.BorderRadius = 12
+        Guna2GradientPanel1.Controls.Add(FlowLayoutPanel1)
         Guna2GradientPanel1.Controls.Add(btnNext)
         Guna2GradientPanel1.Controls.Add(lblPages)
         Guna2GradientPanel1.Controls.Add(btnPrev)
@@ -118,6 +110,14 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Size = New Size(903, 497)
         Guna2GradientPanel1.TabIndex = 12
         ' 
+        ' FlowLayoutPanel1
+        ' 
+        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        FlowLayoutPanel1.Location = New Point(29, 44)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        FlowLayoutPanel1.Size = New Size(848, 395)
+        FlowLayoutPanel1.TabIndex = 20
+        ' 
         ' btnNext
         ' 
         btnNext.Anchor = AnchorStyles.Bottom
@@ -132,7 +132,7 @@ Partial Class ReportedUsers
         btnNext.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnNext.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
         btnNext.ForeColor = Color.White
-        btnNext.Location = New Point(231, 445)
+        btnNext.Location = New Point(492, 445)
         btnNext.Name = "btnNext"
         btnNext.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnNext.Size = New Size(180, 45)
@@ -164,7 +164,7 @@ Partial Class ReportedUsers
         btnPrev.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnPrev.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
         btnPrev.ForeColor = Color.White
-        btnPrev.Location = New Point(492, 445)
+        btnPrev.Location = New Point(231, 445)
         btnPrev.Name = "btnPrev"
         btnPrev.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnPrev.Size = New Size(180, 45)
@@ -186,7 +186,6 @@ Partial Class ReportedUsers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(FlowLayoutPanel1)
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(lblFav)
         Name = "ReportedUsers"
@@ -196,8 +195,6 @@ Partial Class ReportedUsers
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -207,5 +204,6 @@ Partial Class ReportedUsers
     Friend WithEvents btnNext As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblPages As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnPrev As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 
 End Class

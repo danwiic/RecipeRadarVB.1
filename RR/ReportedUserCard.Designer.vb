@@ -40,6 +40,7 @@ Partial Class ReportedUserCard
         ' 
         lblUsername.BackColor = Color.Transparent
         lblUsername.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUsername.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblUsername.Location = New Point(20, 17)
         lblUsername.Name = "lblUsername"
         lblUsername.Size = New Size(71, 19)
@@ -50,20 +51,23 @@ Partial Class ReportedUserCard
         ' 
         txtComment.Animated = True
         txtComment.AutoScroll = True
-        txtComment.BorderRadius = 8
+        txtComment.BorderRadius = 6
         txtComment.CustomizableEdges = CustomizableEdges1
         txtComment.DefaultText = ""
-        txtComment.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtComment.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtComment.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtComment.DisabledState.BorderColor = Color.White
+        txtComment.DisabledState.FillColor = Color.White
+        txtComment.DisabledState.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtComment.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtComment.Enabled = False
         txtComment.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtComment.Font = New Font("Arial", 9.75F)
+        txtComment.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtComment.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtComment.Location = New Point(123, 7)
         txtComment.Name = "txtComment"
         txtComment.PasswordChar = ChrW(0)
         txtComment.PlaceholderText = ""
+        txtComment.ReadOnly = True
         txtComment.SelectedText = ""
         txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtComment.Size = New Size(266, 36)
@@ -73,6 +77,7 @@ Partial Class ReportedUserCard
         ' 
         lblReason.BackColor = Color.Transparent
         lblReason.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblReason.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         lblReason.Location = New Point(424, 17)
         lblReason.Name = "lblReason"
         lblReason.Size = New Size(153, 19)
