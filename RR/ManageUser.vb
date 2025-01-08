@@ -9,23 +9,44 @@ Public Class ManageUser
     Private usersPerPage As Integer = 10
     Private totalUsers As Integer = 0
     Private totalPages As Integer = 0
+    Private searchTerm As String = String.Empty ' Variable to hold the search term
 
     Private Sub ManageUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FetchUsers() ' Load users when the form loads
+        PageCheck()
     End Sub
 
     Private Sub RefreshUsers()
         FlowLayoutPanel1.Controls.Clear()
         FetchUsers()
+        PageCheck()
+    End Sub
+
+    Private Sub PageCheck()
+        If currentPage = 1 Then
+            btnPrev.Enabled = False
+        Else
+            btnPrev.Enabled = True
+        End If
+        If currentPage = totalPages Then
+            btnNext.Enabled = False
+        Else
+            btnNext.Enabled = True
+        End If
+
+        If totalPages = 0 Then
+            totalPages = 1
+        End If
     End Sub
 
     Private Sub FetchUsers()
         Try
             conn.Open()
 
-            ' Get total number of users
-            Dim countQuery As String = "SELECT COUNT(*) FROM users WHERE role = 'user'"
+            ' Get total number of users based on search term
+            Dim countQuery As String = "SELECT COUNT(*) FROM users WHERE role = 'user' AND (username LIKE @searchTerm OR email LIKE @searchTerm)"
             Dim countCmd As New MySqlCommand(countQuery, conn)
+            countCmd.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
             totalUsers = Convert.ToInt32(countCmd.ExecuteScalar())
             totalPages = Math.Ceiling(totalUsers / usersPerPage)
 
@@ -35,12 +56,11 @@ Public Class ManageUser
             ' Calculate the offset
             Dim offset As Integer = (currentPage - 1) * usersPerPage
 
-            ' Fetch users for the current page
-            Dim query As String = $"SELECT * FROM users WHERE role = 'user' LIMIT {usersPerPage} OFFSET {offset}"
+            Dim query As String = $"SELECT * FROM users WHERE role = 'user' AND (username LIKE @searchTerm OR email LIKE @searchTerm) LIMIT {usersPerPage} OFFSET {offset}"
             Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-            ' Clear existing user cards if any
             FlowLayoutPanel1.Controls.Clear()
 
             While reader.Read()
@@ -75,5 +95,17 @@ Public Class ManageUser
             currentPage -= 1
             RefreshUsers()
         End If
+    End Sub
+
+    Private Sub txtUserSearch_TextChanged(sender As Object, e As EventArgs) Handles txtUserSearch.TextChanged
+        searchTerm = txtUserSearch.Text.Trim() ' Update the search term
+        currentPage = 1 ' Reset to the first page
+        RefreshUsers() ' Refresh the user list based on the search term
+    End Sub
+
+    Private Sub btnUserSearch_Click(sender As Object, e As EventArgs) Handles btnUserSearch.Click
+        searchTerm = txtUserSearch.Text.Trim() ' Update the search term
+        currentPage = 1 ' Reset to the first page
+        RefreshUsers() ' Refresh the user list based on the search term
     End Sub
 End Class

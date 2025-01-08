@@ -22,16 +22,16 @@ Partial Class ManageUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -125,13 +125,13 @@ Partial Class ManageUser
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel4)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel2)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel3)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges15
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.FillColor = Color.White
         Guna2GradientPanel1.FillColor2 = Color.White
         Guna2GradientPanel1.Location = New Point(43, 53)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 12
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(955, 486)
@@ -144,7 +144,7 @@ Partial Class ManageUser
         btnNext.AutoRoundedCorners = True
         btnNext.BorderRadius = 21
         btnNext.Cursor = Cursors.Hand
-        btnNext.CustomizableEdges = CustomizableEdges11
+        btnNext.CustomizableEdges = CustomizableEdges1
         btnNext.DisabledState.BorderColor = Color.DarkGray
         btnNext.DisabledState.CustomBorderColor = Color.DarkGray
         btnNext.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -153,7 +153,7 @@ Partial Class ManageUser
         btnNext.ForeColor = Color.White
         btnNext.Location = New Point(518, 437)
         btnNext.Name = "btnNext"
-        btnNext.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnNext.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnNext.Size = New Size(180, 45)
         btnNext.TabIndex = 16
         btnNext.Text = "Next"
@@ -176,7 +176,7 @@ Partial Class ManageUser
         btnPrev.AutoRoundedCorners = True
         btnPrev.BorderRadius = 21
         btnPrev.Cursor = Cursors.Hand
-        btnPrev.CustomizableEdges = CustomizableEdges13
+        btnPrev.CustomizableEdges = CustomizableEdges3
         btnPrev.DisabledState.BorderColor = Color.DarkGray
         btnPrev.DisabledState.CustomBorderColor = Color.DarkGray
         btnPrev.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -185,7 +185,7 @@ Partial Class ManageUser
         btnPrev.ForeColor = Color.White
         btnPrev.Location = New Point(257, 437)
         btnPrev.Name = "btnPrev"
-        btnPrev.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnPrev.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnPrev.Size = New Size(180, 45)
         btnPrev.TabIndex = 14
         btnPrev.Text = "Previous"
@@ -195,7 +195,7 @@ Partial Class ManageUser
         lblFav.BackColor = Color.Transparent
         lblFav.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblFav.ForeColor = SystemColors.ControlDarkDark
-        lblFav.Location = New Point(17, 9)
+        lblFav.Location = New Point(17, 6)
         lblFav.Name = "lblFav"
         lblFav.Size = New Size(179, 40)
         lblFav.TabIndex = 8
@@ -205,9 +205,9 @@ Partial Class ManageUser
         ' 
         btnUserSearch.Animated = True
         btnUserSearch.BorderRadius = 8
-        CustomizableEdges17.BottomLeft = False
-        CustomizableEdges17.TopLeft = False
-        btnUserSearch.CustomizableEdges = CustomizableEdges17
+        CustomizableEdges7.BottomLeft = False
+        CustomizableEdges7.TopLeft = False
+        btnUserSearch.CustomizableEdges = CustomizableEdges7
         btnUserSearch.DisabledState.BorderColor = Color.DarkGray
         btnUserSearch.DisabledState.CustomBorderColor = Color.DarkGray
         btnUserSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -215,19 +215,19 @@ Partial Class ManageUser
         btnUserSearch.Font = New Font("Segoe UI", 9F)
         btnUserSearch.ForeColor = Color.White
         btnUserSearch.Image = My.Resources.Resources.search_white
-        btnUserSearch.Location = New Point(752, 9)
+        btnUserSearch.Location = New Point(916, 6)
         btnUserSearch.Name = "btnUserSearch"
-        btnUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        btnUserSearch.Size = New Size(82, 36)
+        btnUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnUserSearch.Size = New Size(82, 41)
         btnUserSearch.TabIndex = 9
         ' 
         ' txtUserSearch
         ' 
         txtUserSearch.Animated = True
         txtUserSearch.BorderRadius = 8
-        CustomizableEdges19.BottomRight = False
-        CustomizableEdges19.TopRight = False
-        txtUserSearch.CustomizableEdges = CustomizableEdges19
+        CustomizableEdges9.BottomRight = False
+        CustomizableEdges9.TopRight = False
+        txtUserSearch.CustomizableEdges = CustomizableEdges9
         txtUserSearch.DefaultText = ""
         txtUserSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtUserSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -235,14 +235,15 @@ Partial Class ManageUser
         txtUserSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtUserSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUserSearch.Font = New Font("Segoe UI", 9F)
+        txtUserSearch.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtUserSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUserSearch.Location = New Point(545, 9)
+        txtUserSearch.Location = New Point(684, 6)
         txtUserSearch.Name = "txtUserSearch"
         txtUserSearch.PasswordChar = ChrW(0)
         txtUserSearch.PlaceholderText = "Search user...."
         txtUserSearch.SelectedText = ""
-        txtUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        txtUserSearch.Size = New Size(208, 36)
+        txtUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtUserSearch.Size = New Size(233, 41)
         txtUserSearch.TabIndex = 10
         ' 
         ' ManageUser
