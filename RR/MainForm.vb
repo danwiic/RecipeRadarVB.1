@@ -20,15 +20,27 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim userControlSize As Size = Me.Size
         'MessageBox.Show($"User Control Size: {userControlSize.Width} x {userControlSize.Height}")
-        displayPanel.Controls.Clear()
-        Dim home As New Home
-        displayPanel.Controls.Add(home)
-        home.Dock = DockStyle.Fill
 
         favoritesControl = New Favorites()
         displayPanel.Controls.Add(favoritesControl)
+        CheckUserRole()
+
     End Sub
 
+    Private Sub CheckUserRole()
+        If currentUserRole = "admin" Then
+            displayPanel.Controls.Clear()
+            Dim dash As New Dashboard
+            displayPanel.Controls.Add(dash)
+            dash.Dock = DockStyle.Fill
+        Else
+            btnDashboard.Hide()
+            displayPanel.Controls.Clear()
+            Dim home As New Home
+            displayPanel.Controls.Add(home)
+            home.Dock = DockStyle.Fill
+        End If
+    End Sub
     Public Sub RefreshFavorites()
         favoritesControl.LoadFavoriteMeals()
     End Sub

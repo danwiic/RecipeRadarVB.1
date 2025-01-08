@@ -45,6 +45,7 @@ Partial Class ManageUser
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnUserSearch = New Guna.UI2.WinForms.Guna2Button()
         txtUserSearch = New Guna.UI2.WinForms.Guna2TextBox()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -52,9 +53,9 @@ Partial Class ManageUser
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         FlowLayoutPanel1.BackColor = Color.White
-        FlowLayoutPanel1.Location = New Point(69, 97)
+        FlowLayoutPanel1.Location = New Point(69, 94)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(903, 387)
+        FlowLayoutPanel1.Size = New Size(903, 390)
         FlowLayoutPanel1.TabIndex = 0
         ' 
         ' Guna2HtmlLabel1
@@ -117,6 +118,7 @@ Partial Class ManageUser
         Guna2GradientPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2GradientPanel1.BackColor = Color.Transparent
         Guna2GradientPanel1.BorderRadius = 12
+        Guna2GradientPanel1.Controls.Add(lblStatus)
         Guna2GradientPanel1.Controls.Add(btnNext)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel5)
         Guna2GradientPanel1.Controls.Add(lblPages)
@@ -246,6 +248,17 @@ Partial Class ManageUser
         txtUserSearch.Size = New Size(233, 41)
         txtUserSearch.TabIndex = 10
         ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(34, 147)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 15
+        lblStatus.Text = "Reported Users"
+        ' 
         ' ManageUser
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -276,5 +289,6 @@ Partial Class ManageUser
     Friend WithEvents btnPrev As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnUserSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtUserSearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lblStatus As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class

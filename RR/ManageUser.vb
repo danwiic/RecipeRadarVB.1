@@ -8,7 +8,7 @@ Public Class ManageUser
     Private currentPage As Integer = 1
     Private usersPerPage As Integer = 10
     Private totalUsers As Integer = 0
-    Private totalPages As Integer = 0
+    Private totalPages As Integer = 1
     Private searchTerm As String = String.Empty ' Variable to hold the search term
 
     Private Sub ManageUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -60,7 +60,12 @@ Public Class ManageUser
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
+            If Not reader.HasRows Then
+                lblStatus.Text = "No users found."
+                lblStatus.Visible = True
+            Else
+                lblStatus.Visible = False
+            End If
             FlowLayoutPanel1.Controls.Clear()
 
             While reader.Read()

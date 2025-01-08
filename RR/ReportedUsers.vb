@@ -8,6 +8,7 @@ Public Class ReportedUsers
     End Sub
 
     Private Sub LoadReportedUsers()
+        FlowLayoutPanel1.Controls.Clear()
         Dim query As String = "SELECT ru.*, u.username FROM reported_users ru JOIN users u ON ru.reported_user_id = u.user_id"
 
         Try
@@ -15,17 +16,21 @@ Public Class ReportedUsers
             Using cmd As New MySqlCommand(query, conn)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     If Not reader.HasRows Then
-                        MessageBox.Show("No reported users found.")
+                        lblStatus.Text = "No reported users found."
+                        lblStatus.Visible = True
                     End If
 
                     While reader.Read()
+                        lblStatus.Visible = False
                         Dim reportedUserCard As New ReportedUserCard()
                         Dim report_id As Integer = reader.GetInt32("report_id")
                         Dim userId As Integer = reader.GetInt32("reported_user_id")
                         Dim username As String = reader.GetString("username")
                         Dim comment As String = reader.GetString("comment")
                         Dim reason As String = reader.GetString("reason")
-                        reportedUserCard.SetReportedUser(report_id, userId, username, comment, reason)
+                        reportedUserCard.getReportID(report_id)
+                        reportedUserCard.SetReportedUser(userId, username, comment, reason)
+                        AddHandler reportedUserCard.ReportDeleted, AddressOf OnReportDeleted
                         FlowLayoutPanel1.Controls.Add(reportedUserCard)
                     End While
                 End Using
@@ -37,11 +42,19 @@ Public Class ReportedUsers
         End Try
     End Sub
 
+    Private Sub OnReportDeleted(sender As Object, e As EventArgs)
+        LoadReportedUsers()
+    End Sub
+
     Private Sub btnPrev_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
+
+    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
 
     End Sub
 End Class

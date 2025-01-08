@@ -38,6 +38,7 @@ Partial Class ReportedUsers
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -90,6 +91,7 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2GradientPanel1.BackColor = Color.Transparent
         Guna2GradientPanel1.BorderRadius = 12
+        Guna2GradientPanel1.Controls.Add(lblStatus)
         Guna2GradientPanel1.Controls.Add(FlowLayoutPanel1)
         Guna2GradientPanel1.Controls.Add(btnNext)
         Guna2GradientPanel1.Controls.Add(lblPages)
@@ -182,6 +184,17 @@ Partial Class ReportedUsers
         lblFav.TabIndex = 13
         lblFav.Text = "Reported Users"
         ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(50, 127)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 14
+        lblStatus.Text = "Reported Users"
+        ' 
         ' ReportedUsers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -205,5 +218,6 @@ Partial Class ReportedUsers
     Friend WithEvents lblPages As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnPrev As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents lblStatus As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class
