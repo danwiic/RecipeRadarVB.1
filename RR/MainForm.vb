@@ -21,10 +21,12 @@ Public Class MainForm
         'Dim userControlSize As Size = Me.Size
         'MessageBox.Show($"User Control Size: {userControlSize.Width} x {userControlSize.Height}")
 
-        favoritesControl = New Favorites()
-        displayPanel.Controls.Add(favoritesControl)
         CheckUserRole()
 
+        displayPanel.Controls.Clear()
+        Dim home As New Home
+        displayPanel.Controls.Add(home)
+        home.Dock = DockStyle.Fill
     End Sub
 
     Private Sub CheckUserRole()
@@ -35,10 +37,6 @@ Public Class MainForm
             dash.Dock = DockStyle.Fill
         Else
             btnDashboard.Hide()
-            displayPanel.Controls.Clear()
-            Dim home As New Home
-            displayPanel.Controls.Add(home)
-            home.Dock = DockStyle.Fill
         End If
     End Sub
     Public Sub RefreshFavorites()

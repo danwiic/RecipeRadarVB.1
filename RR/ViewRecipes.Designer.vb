@@ -36,6 +36,8 @@ Partial Class ViewRecipe
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         flowPanelVideo = New FlowLayoutPanel()
         btnBack = New Guna.UI2.WinForms.Guna2Button()
         lblMealName = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -50,9 +52,9 @@ Partial Class ViewRecipe
         Ingredients = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtIngredients = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        CommentPanel = New FlowLayoutPanel()
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
         lblCategory = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        CommentPanel = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -210,7 +212,7 @@ Partial Class ViewRecipe
         txtInstructions.Enabled = False
         txtInstructions.FillColor = SystemColors.Control
         txtInstructions.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Font = New Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtInstructions.Font = New Font("Arial Narrow", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtInstructions.ForeColor = Color.Black
         txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtInstructions.Location = New Point(17, 349)
@@ -251,7 +253,7 @@ Partial Class ViewRecipe
         txtIngredients.Enabled = False
         txtIngredients.FillColor = SystemColors.Control
         txtIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Font = New Font("Arial Narrow", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        txtIngredients.Font = New Font("Arial Narrow", 12.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         txtIngredients.ForeColor = Color.Black
         txtIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtIngredients.Location = New Point(458, 349)
@@ -276,15 +278,6 @@ Partial Class ViewRecipe
         Guna2HtmlLabel1.Size = New Size(148, 34)
         Guna2HtmlLabel1.TabIndex = 28
         Guna2HtmlLabel1.Text = "Comments"
-        ' 
-        ' CommentPanel
-        ' 
-        CommentPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        CommentPanel.FlowDirection = FlowDirection.TopDown
-        CommentPanel.Location = New Point(663, 349)
-        CommentPanel.Name = "CommentPanel"
-        CommentPanel.Size = New Size(372, 495)
-        CommentPanel.TabIndex = 29
         ' 
         ' btnDelete
         ' 
@@ -318,14 +311,29 @@ Partial Class ViewRecipe
         lblCategory.TabIndex = 31
         lblCategory.Text = "Category: "
         ' 
+        ' CommentPanel
+        ' 
+        CommentPanel.BackColor = Color.Transparent
+        CommentPanel.BorderRadius = 12
+        CommentPanel.CustomizableEdges = CustomizableEdges15
+        CommentPanel.FillColor = Color.White
+        CommentPanel.Location = New Point(663, 359)
+        CommentPanel.Name = "CommentPanel"
+        CommentPanel.ShadowDecoration.BorderRadius = 12
+        CommentPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        CommentPanel.ShadowDecoration.Depth = 8
+        CommentPanel.ShadowDecoration.Enabled = True
+        CommentPanel.Size = New Size(349, 400)
+        CommentPanel.TabIndex = 32
+        ' 
         ' ViewRecipe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
+        Controls.Add(CommentPanel)
         Controls.Add(lblCategory)
         Controls.Add(btnDelete)
-        Controls.Add(CommentPanel)
         Controls.Add(Guna2HtmlLabel1)
         Controls.Add(txtIngredients)
         Controls.Add(Ingredients)
@@ -359,10 +367,10 @@ Partial Class ViewRecipe
     Friend WithEvents txtInstructions As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Ingredients As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtIngredients As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents CommentPanel As FlowLayoutPanel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblCategory As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents CommentPanel As Guna.UI2.WinForms.Guna2Panel
 
 
 End Class

@@ -51,7 +51,7 @@ Partial Class CommentLayout
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2Panel1.Size = New Size(351, 390)
+        Guna2Panel1.Size = New Size(351, 400)
         Guna2Panel1.TabIndex = 0
         ' 
         ' commentPanel
@@ -61,7 +61,7 @@ Partial Class CommentLayout
         commentPanel.Dock = DockStyle.Fill
         commentPanel.Location = New Point(0, 0)
         commentPanel.Name = "commentPanel"
-        commentPanel.Size = New Size(351, 339)
+        commentPanel.Size = New Size(351, 349)
         commentPanel.TabIndex = 3
         ' 
         ' lblNoComment
@@ -80,7 +80,7 @@ Partial Class CommentLayout
         Guna2Panel3.Controls.Add(txtInputComment)
         Guna2Panel3.CustomizableEdges = CustomizableEdges5
         Guna2Panel3.Dock = DockStyle.Bottom
-        Guna2Panel3.Location = New Point(0, 339)
+        Guna2Panel3.Location = New Point(0, 349)
         Guna2Panel3.Name = "Guna2Panel3"
         Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Panel3.Size = New Size(351, 51)

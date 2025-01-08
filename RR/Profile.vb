@@ -20,7 +20,6 @@ Public Class Profile
                         txtUsername.Text = reader("username").ToString()
                         txtEmail.Text = reader("email").ToString()
 
-                        ' Retrieve the image data
                         Dim imageData As Byte() = If(reader("profile_image") IsNot DBNull.Value, CType(reader("profile_image"), Byte()), Nothing)
 
                         If imageData IsNot Nothing AndAlso imageData.Length > 0 Then
@@ -46,17 +45,25 @@ Public Class Profile
 
     Private Sub Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FetchUserInfo()
+        btnDelete.Hide()
     End Sub
 
     Private Sub btnAction_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         btnEdit.Visible = False
+        btnSave.Visible = True
+
         txtUsername.BorderThickness = 1
         txtUsername.ReadOnly = False
-        btnSave.Visible = True
+
+        txtEmail.BorderThickness = 1
+        txtEmail.ReadOnly = False
+
+        btnDelete.Show()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim newUsername As String = txtUsername.Text.Trim()
+        Dim newEmail As String = txtEmail.Text.Trim()
         lblError.Text = String.Empty
 
         If String.IsNullOrEmpty(newUsername) OrElse newUsername.Length < 5 Then
@@ -69,12 +76,23 @@ Public Class Profile
             Return
         End If
 
+        If Not IsValidEmail(newEmail) Then
+            lblErrorEmail.Text = "Please enter a valid email address."
+            Return
+        End If
+
+        If EmailExists(newEmail) Then
+            lblErrorEmail.Text = "Email already exists. Please choose a different email."
+            Return
+        End If
+
         Try
             conn.Open()
-            Dim query As String = "UPDATE users SET username = @newUsername WHERE user_id = @userID"
+            Dim query As String = "UPDATE users SET username = @newUsername, email = @newEmail WHERE user_id = @userID"
 
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@newUsername", newUsername)
+                cmd.Parameters.AddWithValue("@newEmail", newEmail)
                 cmd.Parameters.AddWithValue("@userID", userID)
 
                 Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
@@ -82,8 +100,12 @@ Public Class Profile
                 If rowsAffected > 0 Then
                     txtUsername.ReadOnly = True
                     txtUsername.BorderThickness = 0
+                    txtEmail.BorderThickness = 0
+                    txtEmail.ReadOnly = True
+
                     btnSave.Visible = False
                     btnEdit.Visible = True
+                    btnDelete.Hide()
                 Else
                     lblError.Text = "No user found with the specified ID."
                 End If
@@ -96,6 +118,28 @@ Public Class Profile
             conn.Close()
         End Try
     End Sub
+
+    Private Function IsValidEmail(email As String) As Boolean
+        Dim emailPattern As String = "^[^@\s]+@[^@\s]+\.[^@\s]+$"
+        Return System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern)
+    End Function
+
+    Private Function EmailExists(email As String) As Boolean
+        Dim query As String = "SELECT COUNT(*) FROM users WHERE email = @Email"
+        Try
+            conn.Open()
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@Email", email)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Return count > 0
+            End Using
+        Catch ex As Exception
+            lblErrorEmail.Text = $"Error checking email existence: {ex.Message}"
+            Return False
+        Finally
+            conn.Close()
+        End Try
+    End Function
 
     Private Function UsernameExists(username As String) As Boolean
         Dim exists As Boolean = False
@@ -121,7 +165,7 @@ Public Class Profile
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
         Dim openFileDialog As New OpenFileDialog()
-        openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp|All Files|*.*" ' Filter for image files
+        openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp|All Files|*.*"
 
         If openFileDialog.ShowDialog() = DialogResult.OK Then
             Dim filePath As String = openFileDialog.FileName
@@ -134,16 +178,16 @@ Public Class Profile
 
     Private Sub SaveImageToDatabase(filePath As String)
         Try
-            Dim imageData As Byte() = System.IO.File.ReadAllBytes(filePath) ' Read the image file into a byte array
+            Dim imageData As Byte() = System.IO.File.ReadAllBytes(filePath)
 
             Using conn As New MySqlConnection(connStr)
                 conn.Open()
                 Dim query As String = "UPDATE users SET profile_image = @profileImage WHERE user_id = @userID"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@profileImage", imageData)
-                    cmd.Parameters.AddWithValue("@userID", userID) ' Assuming userID is defined
+                    cmd.Parameters.AddWithValue("@userID", userID)
 
-                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery() ' Execute the update command
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
 
                     If rowsAffected > 0 Then
                         MessageBox.Show("Profile picture uploaded successfully.")
@@ -155,5 +199,20 @@ Public Class Profile
         Catch ex As Exception
             MessageBox.Show("Error saving profile picture: " & ex.Message)
         End Try
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        MainForm.displayPanel.Controls.Clear()
+        btnDelete.Hide()
+        txtUsername.ReadOnly = True
+        txtUsername.BorderThickness = 0
+        txtEmail.BorderThickness = 0
+        txtEmail.ReadOnly = True
+
+        btnSave.Visible = False
+        btnEdit.Visible = True
+        Dim prof As New Profile
+        MainForm.displayPanel.Controls.Add(prof)
+        prof.Dock = DockStyle.Fill
     End Sub
 End Class
