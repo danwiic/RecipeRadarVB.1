@@ -166,6 +166,7 @@ Partial Class Dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoScroll = True
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(dashDisplayPanel)
         MinimumSize = New Size(1047, 600)

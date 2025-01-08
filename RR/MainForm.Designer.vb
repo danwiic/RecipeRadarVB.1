@@ -295,6 +295,7 @@ Partial Class MainForm
         ' Guna2Panel2
         ' 
         Guna2Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        Guna2Panel2.BackColor = Color.Transparent
         Guna2Panel2.Controls.Add(Guna2Panel4)
         Guna2Panel2.Controls.Add(btnMeals)
         Guna2Panel2.Controls.Add(btnFav)
@@ -302,6 +303,8 @@ Partial Class MainForm
         Guna2Panel2.Controls.Add(btnProfile)
         Guna2Panel2.Controls.Add(btnDashboard)
         Guna2Panel2.Controls.Add(Guna2Panel3)
+        CustomizableEdges27.BottomLeft = False
+        CustomizableEdges27.TopLeft = False
         Guna2Panel2.CustomizableEdges = CustomizableEdges27
         Guna2Panel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2Panel2.Location = New Point(0, 25)

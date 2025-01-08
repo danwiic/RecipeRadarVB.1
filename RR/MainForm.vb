@@ -18,7 +18,7 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim userControlSize As Size = displayPanel.Size
+        'Dim userControlSize As Size = Me.Size
         'MessageBox.Show($"User Control Size: {userControlSize.Width} x {userControlSize.Height}")
         displayPanel.Controls.Clear()
         Dim home As New Home
