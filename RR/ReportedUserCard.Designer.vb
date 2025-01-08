@@ -28,22 +28,23 @@ Partial Class ReportedUserCard
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        txtUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtComment = New Guna.UI2.WinForms.Guna2TextBox()
         lblReason = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
         btnMute = New Guna.UI2.WinForms.Guna2Button()
+        Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         SuspendLayout()
         ' 
-        ' txtUsername
+        ' lblUsername
         ' 
-        txtUsername.BackColor = Color.Transparent
-        txtUsername.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtUsername.Location = New Point(20, 17)
-        txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(71, 19)
-        txtUsername.TabIndex = 0
-        txtUsername.Text = "Username"
+        lblUsername.BackColor = Color.Transparent
+        lblUsername.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUsername.Location = New Point(20, 17)
+        lblUsername.Name = "lblUsername"
+        lblUsername.Size = New Size(71, 19)
+        lblUsername.TabIndex = 0
+        lblUsername.Text = "Username"
         ' 
         ' txtComment
         ' 
@@ -65,7 +66,7 @@ Partial Class ReportedUserCard
         txtComment.PlaceholderText = ""
         txtComment.SelectedText = ""
         txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        txtComment.Size = New Size(255, 38)
+        txtComment.Size = New Size(266, 38)
         txtComment.TabIndex = 1
         ' 
         ' lblReason
@@ -118,25 +119,35 @@ Partial Class ReportedUserCard
         btnMute.TabIndex = 14
         btnMute.Text = "MUTE"
         ' 
+        ' Guna2Separator1
+        ' 
+        Guna2Separator1.FillThickness = 2
+        Guna2Separator1.Location = New Point(0, 43)
+        Guna2Separator1.Name = "Guna2Separator1"
+        Guna2Separator1.Size = New Size(833, 10)
+        Guna2Separator1.TabIndex = 15
+        ' 
         ' ReportedUserCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(Guna2Separator1)
         Controls.Add(btnMute)
         Controls.Add(btnDelete)
         Controls.Add(lblReason)
         Controls.Add(txtComment)
-        Controls.Add(txtUsername)
+        Controls.Add(lblUsername)
         Name = "ReportedUserCard"
-        Size = New Size(874, 50)
+        Size = New Size(833, 50)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblUsername As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtComment As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblReason As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnMute As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
 
 End Class

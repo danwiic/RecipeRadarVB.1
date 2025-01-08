@@ -13,7 +13,6 @@
     Private Sub DefaultView()
         dashDisplayPanel.Controls.Clear()
         Dim ovr As New Overview
-        ovr.Dock = DockStyle.Fill
         dashDisplayPanel.Controls.Add(ovr)
     End Sub
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -25,5 +24,12 @@
         Dim manage As New ManageUser
         dashDisplayPanel.Controls.Add(manage)
         manage.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub btnViewReported_Click(sender As Object, e As EventArgs) Handles btnViewReported.Click
+        dashDisplayPanel.Controls.Clear()
+        Dim reported As New ReportedUsers
+        dashDisplayPanel.Controls.Add(reported)
+        reported.Dock = DockStyle.Fill
     End Sub
 End Class

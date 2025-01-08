@@ -3,6 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class UserCommentCard
     Dim connStr As String = "Server=localhost; Database=recipe_books; Uid=root; Pwd=;"
+    Dim conn As New MySqlConnection(connStr)
     Dim commentID As Integer
     Dim userRole = LoginForm.currentUserRole
 
@@ -42,8 +43,6 @@ Public Class UserCommentCard
         End Try
     End Sub
 
-
-
     Private Sub CheckUserRole()
         btnDelete.Visible = False
 
@@ -54,8 +53,37 @@ Public Class UserCommentCard
             btnReport.Visible = True
         End If
     End Sub
-    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
 
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        ' Call the SubmitReport method when the report button is clicked
+        SubmitReport()
+    End Sub
+
+    Private Sub SubmitReport()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT comment_text FROM comments WHERE comment_id = @commentID"
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@commentID", commentID)
+                Dim commentText As String = cmd.ExecuteScalar().ToString()
+
+                ' Insert the report into the reported_users table
+                Dim reportQuery As String = "INSERT INTO reported_users (reported_user_id, reason, comment, created_at) VALUES (@reportedUser Id, @reason, @commentText, NOW())"
+                Using reportCmd As New MySqlCommand(reportQuery, conn)
+                    reportCmd.Parameters.AddWithValue("@reportedUser Id", LoginForm.currentUserID) ' Assuming this is the user being reported
+                    reportCmd.Parameters.AddWithValue("@reason", "Inappropriate Comment") ' You can modify this to get the reason from the user
+                    reportCmd.Parameters.AddWithValue("@commentText", commentText)
+                    reportCmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show("Report submitted successfully.")
+
+        Catch ex As Exception
+            MessageBox.Show("Error submitting report: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub UserCommentCard_Load(sender As Object, e As EventArgs) Handles MyBase.Load

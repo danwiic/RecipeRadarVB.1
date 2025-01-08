@@ -95,11 +95,25 @@ Public Class PendingRecipeCard
         End Try
     End Sub
 
+    Private Sub btnView_MouseEnter(sender As Object, e As EventArgs) Handles btnView.MouseEnter
+        btnView.FillColor = Color.FromArgb(94, 148, 255)
+        btnView.ForeColor = Color.WhiteSmoke
+    End Sub
+
+    Private Sub btnView_MouseLeave(sender As Object, e As EventArgs) Handles btnView.MouseLeave
+        btnView.FillColor = Color.WhiteSmoke
+        btnView.ForeColor = Color.FromArgb(94, 148, 255)
+    End Sub
+
     Private Sub btnAprrove_Click(sender As Object, e As EventArgs) Handles btnAprrove.Click
         InsertRecipe()
     End Sub
 
     Private Sub btnReject_Click(sender As Object, e As EventArgs) Handles btnReject.Click
         RejectRecipe()
+    End Sub
+
+    Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
+
     End Sub
 End Class

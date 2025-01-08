@@ -70,7 +70,10 @@ Partial Class Dashboard
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2GradientPanel1.Location = New Point(162, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.BorderRadius = 12
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.ShadowDecoration.Depth = 8
+        Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(722, 51)
         Guna2GradientPanel1.TabIndex = 2
         ' 

@@ -77,6 +77,8 @@ Partial Class Overview
         btnTotalUsers.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnTotalUsers.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnTotalUsers.Dock = DockStyle.Fill
+        btnTotalUsers.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        btnTotalUsers.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         btnTotalUsers.Font = New Font("Comic Sans MS", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnTotalUsers.ForeColor = Color.White
         btnTotalUsers.Location = New Point(0, 0)
@@ -97,6 +99,8 @@ Partial Class Overview
         btnPendingRecipe.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnPendingRecipe.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnPendingRecipe.Dock = DockStyle.Fill
+        btnPendingRecipe.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        btnPendingRecipe.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         btnPendingRecipe.Font = New Font("Comic Sans MS", 36F)
         btnPendingRecipe.ForeColor = Color.White
         btnPendingRecipe.Location = New Point(0, 0)
@@ -117,6 +121,8 @@ Partial Class Overview
         btnTotalCategory.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnTotalCategory.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnTotalCategory.Dock = DockStyle.Fill
+        btnTotalCategory.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        btnTotalCategory.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         btnTotalCategory.Font = New Font("Comic Sans MS", 36F)
         btnTotalCategory.ForeColor = Color.White
         btnTotalCategory.Location = New Point(0, 0)
@@ -144,8 +150,8 @@ Partial Class Overview
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel1)
         Guna2GradientPanel1.Controls.Add(btnTotalUsers)
         Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
-        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
+        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         Guna2GradientPanel1.Location = New Point(3, 14)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 14
@@ -166,6 +172,8 @@ Partial Class Overview
         btnTotalRecipes.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnTotalRecipes.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnTotalRecipes.Dock = DockStyle.Fill
+        btnTotalRecipes.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        btnTotalRecipes.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         btnTotalRecipes.Font = New Font("Comic Sans MS", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnTotalRecipes.ForeColor = Color.White
         btnTotalRecipes.Location = New Point(0, 0)
@@ -183,8 +191,8 @@ Partial Class Overview
         Guna2GradientPanel2.Controls.Add(Guna2HtmlLabel2)
         Guna2GradientPanel2.Controls.Add(btnTotalRecipes)
         Guna2GradientPanel2.CustomizableEdges = CustomizableEdges11
-        Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
+        Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         Guna2GradientPanel2.Location = New Point(258, 14)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Guna2GradientPanel2.ShadowDecoration.BorderRadius = 14
@@ -212,8 +220,8 @@ Partial Class Overview
         Guna2GradientPanel3.Controls.Add(Guna2HtmlLabel3)
         Guna2GradientPanel3.Controls.Add(btnPendingRecipe)
         Guna2GradientPanel3.CustomizableEdges = CustomizableEdges13
-        Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2GradientPanel3.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
+        Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        Guna2GradientPanel3.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         Guna2GradientPanel3.Location = New Point(513, 14)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
         Guna2GradientPanel3.ShadowDecoration.BorderRadius = 14
@@ -241,8 +249,8 @@ Partial Class Overview
         Guna2GradientPanel4.Controls.Add(Guna2HtmlLabel4)
         Guna2GradientPanel4.Controls.Add(btnTotalCategory)
         Guna2GradientPanel4.CustomizableEdges = CustomizableEdges15
-        Guna2GradientPanel4.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2GradientPanel4.FillColor2 = Color.FromArgb(CByte(255), CByte(77), CByte(165))
+        Guna2GradientPanel4.FillColor = Color.FromArgb(CByte(121), CByte(215), CByte(190))
+        Guna2GradientPanel4.FillColor2 = Color.FromArgb(CByte(77), CByte(161), CByte(169))
         Guna2GradientPanel4.Location = New Point(768, 14)
         Guna2GradientPanel4.Name = "Guna2GradientPanel4"
         Guna2GradientPanel4.ShadowDecoration.BorderRadius = 14
@@ -324,7 +332,7 @@ Partial Class Overview
         Controls.Add(Guna2GradientPanel2)
         Controls.Add(Guna2GradientPanel1)
         Name = "Overview"
-        Size = New Size(1014, 1043)
+        Size = New Size(1014, 800)
         Guna2GradientPanel1.ResumeLayout(False)
         Guna2GradientPanel1.PerformLayout()
         Guna2GradientPanel2.ResumeLayout(False)
