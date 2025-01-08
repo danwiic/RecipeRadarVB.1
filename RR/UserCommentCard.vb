@@ -68,9 +68,9 @@ Public Class UserCommentCard
                 Dim commentText As String = cmd.ExecuteScalar().ToString()
 
                 ' Insert the report into the reported_users table
-                Dim reportQuery As String = "INSERT INTO reported_users (reported_user_id, reason, comment, created_at) VALUES (@reportedUser Id, @reason, @commentText, NOW())"
+                Dim reportQuery As String = "INSERT INTO reported_users (reported_user_id, reason, comment, created_at) VALUES (@reportedUserId, @reason, @commentText, NOW())"
                 Using reportCmd As New MySqlCommand(reportQuery, conn)
-                    reportCmd.Parameters.AddWithValue("@reportedUser Id", LoginForm.currentUserID) ' Assuming this is the user being reported
+                    reportCmd.Parameters.AddWithValue("@reportedUserId", commentID) ' Assuming this is the user being reported
                     reportCmd.Parameters.AddWithValue("@reason", "Inappropriate Comment") ' You can modify this to get the reason from the user
                     reportCmd.Parameters.AddWithValue("@commentText", commentText)
                     reportCmd.ExecuteNonQuery()
