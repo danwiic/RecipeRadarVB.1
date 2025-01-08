@@ -22,8 +22,15 @@ Partial Class ReportedUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        SuspendLayout()
+        ' 
+        ' ReportedUsers
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        Name = "ReportedUsers"
+        Size = New Size(1014, 1043)
+        ResumeLayout(False)
     End Sub
 
 End Class

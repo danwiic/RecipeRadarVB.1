@@ -22,8 +22,16 @@ Partial Class ManageUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -31,18 +39,22 @@ Partial Class ManageUser
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        btnNext = New Guna.UI2.WinForms.Guna2Button()
+        lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        btnUserSearch = New Guna.UI2.WinForms.Guna2Button()
+        txtUserSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' FlowLayoutPanel1
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.AutoScroll = True
         FlowLayoutPanel1.BackColor = Color.White
-        FlowLayoutPanel1.Location = New Point(69, 105)
+        FlowLayoutPanel1.Location = New Point(69, 97)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(903, 406)
+        FlowLayoutPanel1.Size = New Size(903, 387)
         FlowLayoutPanel1.TabIndex = 0
         ' 
         ' Guna2HtmlLabel1
@@ -50,7 +62,7 @@ Partial Class ManageUser
         Guna2HtmlLabel1.BackColor = Color.White
         Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel1.Location = New Point(34, 21)
+        Guna2HtmlLabel1.Location = New Point(34, 16)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(44, 19)
         Guna2HtmlLabel1.TabIndex = 0
@@ -61,7 +73,7 @@ Partial Class ManageUser
         Guna2HtmlLabel2.BackColor = Color.White
         Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel2.Location = New Point(100, 21)
+        Guna2HtmlLabel2.Location = New Point(100, 16)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(71, 19)
         Guna2HtmlLabel2.TabIndex = 1
@@ -72,7 +84,7 @@ Partial Class ManageUser
         Guna2HtmlLabel3.BackColor = Color.White
         Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel3.Location = New Point(310, 21)
+        Guna2HtmlLabel3.Location = New Point(310, 16)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(40, 19)
         Guna2HtmlLabel3.TabIndex = 2
@@ -83,7 +95,7 @@ Partial Class ManageUser
         Guna2HtmlLabel4.BackColor = Color.White
         Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel4.Location = New Point(530, 21)
+        Guna2HtmlLabel4.Location = New Point(530, 16)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(69, 19)
         Guna2HtmlLabel4.TabIndex = 3
@@ -94,7 +106,7 @@ Partial Class ManageUser
         Guna2HtmlLabel5.BackColor = Color.White
         Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel5.Location = New Point(795, 21)
+        Guna2HtmlLabel5.Location = New Point(795, 16)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(43, 19)
         Guna2HtmlLabel5.TabIndex = 4
@@ -105,40 +117,142 @@ Partial Class ManageUser
         Guna2GradientPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2GradientPanel1.BackColor = Color.Transparent
         Guna2GradientPanel1.BorderRadius = 12
+        Guna2GradientPanel1.Controls.Add(btnNext)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel5)
+        Guna2GradientPanel1.Controls.Add(lblPages)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel1)
+        Guna2GradientPanel1.Controls.Add(btnPrev)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel4)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel2)
         Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel3)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges15
         Guna2GradientPanel1.FillColor = Color.White
         Guna2GradientPanel1.FillColor2 = Color.White
-        Guna2GradientPanel1.Location = New Point(43, 57)
+        Guna2GradientPanel1.Location = New Point(43, 53)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.BorderRadius = 12
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2GradientPanel1.ShadowDecoration.Depth = 8
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
-        Guna2GradientPanel1.Size = New Size(955, 477)
+        Guna2GradientPanel1.Size = New Size(955, 486)
         Guna2GradientPanel1.TabIndex = 5
+        ' 
+        ' btnNext
+        ' 
+        btnNext.Anchor = AnchorStyles.Bottom
+        btnNext.Animated = True
+        btnNext.AutoRoundedCorners = True
+        btnNext.BorderRadius = 21
+        btnNext.Cursor = Cursors.Hand
+        btnNext.CustomizableEdges = CustomizableEdges11
+        btnNext.DisabledState.BorderColor = Color.DarkGray
+        btnNext.DisabledState.CustomBorderColor = Color.DarkGray
+        btnNext.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnNext.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnNext.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
+        btnNext.ForeColor = Color.White
+        btnNext.Location = New Point(518, 437)
+        btnNext.Name = "btnNext"
+        btnNext.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnNext.Size = New Size(180, 45)
+        btnNext.TabIndex = 16
+        btnNext.Text = "Next"
+        ' 
+        ' lblPages
+        ' 
+        lblPages.Anchor = AnchorStyles.Bottom
+        lblPages.BackColor = Color.Transparent
+        lblPages.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPages.Location = New Point(443, 452)
+        lblPages.Name = "lblPages"
+        lblPages.Size = New Size(69, 18)
+        lblPages.TabIndex = 15
+        lblPages.Text = "Page 1 of 1"
+        ' 
+        ' btnPrev
+        ' 
+        btnPrev.Anchor = AnchorStyles.Bottom
+        btnPrev.Animated = True
+        btnPrev.AutoRoundedCorners = True
+        btnPrev.BorderRadius = 21
+        btnPrev.Cursor = Cursors.Hand
+        btnPrev.CustomizableEdges = CustomizableEdges13
+        btnPrev.DisabledState.BorderColor = Color.DarkGray
+        btnPrev.DisabledState.CustomBorderColor = Color.DarkGray
+        btnPrev.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnPrev.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnPrev.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold)
+        btnPrev.ForeColor = Color.White
+        btnPrev.Location = New Point(257, 437)
+        btnPrev.Name = "btnPrev"
+        btnPrev.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnPrev.Size = New Size(180, 45)
+        btnPrev.TabIndex = 14
+        btnPrev.Text = "Previous"
         ' 
         ' lblFav
         ' 
         lblFav.BackColor = Color.Transparent
         lblFav.Font = New Font("Comic Sans MS", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblFav.ForeColor = SystemColors.ControlDarkDark
-        lblFav.Location = New Point(17, 11)
+        lblFav.Location = New Point(17, 9)
         lblFav.Name = "lblFav"
         lblFav.Size = New Size(179, 40)
         lblFav.TabIndex = 8
         lblFav.Text = "Manage Users"
         ' 
+        ' btnUserSearch
+        ' 
+        btnUserSearch.Animated = True
+        btnUserSearch.BorderRadius = 8
+        CustomizableEdges17.BottomLeft = False
+        CustomizableEdges17.TopLeft = False
+        btnUserSearch.CustomizableEdges = CustomizableEdges17
+        btnUserSearch.DisabledState.BorderColor = Color.DarkGray
+        btnUserSearch.DisabledState.CustomBorderColor = Color.DarkGray
+        btnUserSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnUserSearch.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUserSearch.Font = New Font("Segoe UI", 9F)
+        btnUserSearch.ForeColor = Color.White
+        btnUserSearch.Image = My.Resources.Resources.search_white
+        btnUserSearch.Location = New Point(752, 9)
+        btnUserSearch.Name = "btnUserSearch"
+        btnUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        btnUserSearch.Size = New Size(82, 36)
+        btnUserSearch.TabIndex = 9
+        ' 
+        ' txtUserSearch
+        ' 
+        txtUserSearch.Animated = True
+        txtUserSearch.BorderRadius = 8
+        CustomizableEdges19.BottomRight = False
+        CustomizableEdges19.TopRight = False
+        txtUserSearch.CustomizableEdges = CustomizableEdges19
+        txtUserSearch.DefaultText = ""
+        txtUserSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtUserSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtUserSearch.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtUserSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtUserSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtUserSearch.Font = New Font("Segoe UI", 9F)
+        txtUserSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtUserSearch.Location = New Point(545, 9)
+        txtUserSearch.Name = "txtUserSearch"
+        txtUserSearch.PasswordChar = ChrW(0)
+        txtUserSearch.PlaceholderText = "Search user...."
+        txtUserSearch.SelectedText = ""
+        txtUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        txtUserSearch.Size = New Size(208, 36)
+        txtUserSearch.TabIndex = 10
+        ' 
         ' ManageUser
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(lblFav)
+        Controls.Add(txtUserSearch)
+        Controls.Add(btnUserSearch)
         Controls.Add(FlowLayoutPanel1)
+        Controls.Add(lblFav)
         Controls.Add(Guna2GradientPanel1)
         Name = "ManageUser"
         Size = New Size(1041, 546)
@@ -156,5 +270,10 @@ Partial Class ManageUser
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents lblFav As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnNext As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblPages As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnPrev As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnUserSearch As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtUserSearch As Guna.UI2.WinForms.Guna2TextBox
 
 End Class
