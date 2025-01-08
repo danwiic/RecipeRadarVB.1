@@ -86,7 +86,7 @@ Public Class Verify
     End Sub
 
     Private Sub VerifyOTP_Load(sender As Object, e As EventArgs) Handles Me.Load
-        lblNotif.Text = "The 6-Digit code has been sent to " & SendOTP.currentEmail
+        lblNotif.Text = SendOTP.currentEmail
         lblNotif.Visible = True
         ShadowForm.setShadowForm(Me)
     End Sub
