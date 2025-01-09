@@ -29,18 +29,19 @@ Partial Class Profile
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pbUserImage = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2ContainerControl1 = New Guna.UI2.WinForms.Guna2ContainerControl()
+        btnDelete = New Guna.UI2.WinForms.Guna2Button()
         lblErrorEmail = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblError = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -51,7 +52,6 @@ Partial Class Profile
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        btnDelete = New Guna.UI2.WinForms.Guna2Button()
         CType(pbUserImage, ComponentModel.ISupportInitialize).BeginInit()
         Guna2ContainerControl1.SuspendLayout()
         SuspendLayout()
@@ -147,6 +147,31 @@ Partial Class Profile
         Guna2ContainerControl1.TabIndex = 3
         Guna2ContainerControl1.Text = "Guna2ContainerControl1"
         ' 
+        ' btnDelete
+        ' 
+        btnDelete.Animated = True
+        btnDelete.BackColor = Color.Transparent
+        btnDelete.BorderRadius = 6
+        btnDelete.Cursor = Cursors.Hand
+        btnDelete.CustomizableEdges = CustomizableEdges6
+        btnDelete.DisabledState.BorderColor = Color.DarkGray
+        btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
+        btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnDelete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnDelete.FillColor = Color.Tomato
+        btnDelete.Font = New Font("Arial Narrow", 12F, FontStyle.Bold)
+        btnDelete.ForeColor = Color.White
+        btnDelete.Location = New Point(523, 364)
+        btnDelete.Name = "btnDelete"
+        btnDelete.ShadowDecoration.BorderRadius = 12
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        btnDelete.ShadowDecoration.Depth = 8
+        btnDelete.ShadowDecoration.Enabled = True
+        btnDelete.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
+        btnDelete.Size = New Size(180, 45)
+        btnDelete.TabIndex = 12
+        btnDelete.Text = "CANCEL"
+        ' 
         ' lblErrorEmail
         ' 
         lblErrorEmail.BackColor = Color.Transparent
@@ -215,7 +240,7 @@ Partial Class Profile
         btnSave.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnSave.Animated = True
         btnSave.BackColor = Color.Transparent
-        btnSave.BorderRadius = 10
+        btnSave.BorderRadius = 6
         btnSave.CustomizableEdges = CustomizableEdges10
         btnSave.DisabledState.BorderColor = Color.DarkGray
         btnSave.DisabledState.CustomBorderColor = Color.DarkGray
@@ -241,7 +266,7 @@ Partial Class Profile
         btnEdit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnEdit.Animated = True
         btnEdit.BackColor = Color.Transparent
-        btnEdit.BorderRadius = 10
+        btnEdit.BorderRadius = 6
         btnEdit.CustomizableEdges = CustomizableEdges12
         btnEdit.DisabledState.BorderColor = Color.DarkGray
         btnEdit.DisabledState.CustomBorderColor = Color.DarkGray
@@ -293,30 +318,6 @@ Partial Class Profile
         lblFav.Size = New Size(132, 40)
         lblFav.TabIndex = 8
         lblFav.Text = "My Profile"
-        ' 
-        ' btnDelete
-        ' 
-        btnDelete.Animated = True
-        btnDelete.BorderRadius = 6
-        btnDelete.Cursor = Cursors.Hand
-        btnDelete.CustomizableEdges = CustomizableEdges6
-        btnDelete.DisabledState.BorderColor = Color.DarkGray
-        btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
-        btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnDelete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnDelete.FillColor = Color.Tomato
-        btnDelete.Font = New Font("Arial Narrow", 12F, FontStyle.Bold)
-        btnDelete.ForeColor = Color.White
-        btnDelete.Location = New Point(523, 364)
-        btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.BorderRadius = 12
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges7
-        btnDelete.ShadowDecoration.Depth = 8
-        btnDelete.ShadowDecoration.Enabled = True
-        btnDelete.ShadowDecoration.Shadow = New Padding(5, 3, 5, 5)
-        btnDelete.Size = New Size(180, 45)
-        btnDelete.TabIndex = 12
-        btnDelete.Text = "CANCEL"
         ' 
         ' Profile
         ' 
