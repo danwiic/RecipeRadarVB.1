@@ -63,7 +63,7 @@ Partial Class ReportedUserCard
         txtComment.Font = New Font("Arial", 9.75F)
         txtComment.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtComment.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtComment.Location = New Point(123, 7)
+        txtComment.Location = New Point(123, 8)
         txtComment.Name = "txtComment"
         txtComment.PasswordChar = ChrW(0)
         txtComment.PlaceholderText = ""
