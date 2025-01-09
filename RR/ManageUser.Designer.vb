@@ -39,13 +39,13 @@ Partial Class ManageUser
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnUserSearch = New Guna.UI2.WinForms.Guna2Button()
         txtUserSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -85,7 +85,7 @@ Partial Class ManageUser
         Guna2HtmlLabel3.BackColor = Color.White
         Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel3.Location = New Point(310, 16)
+        Guna2HtmlLabel3.Location = New Point(312, 16)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(40, 19)
         Guna2HtmlLabel3.TabIndex = 2
@@ -96,7 +96,7 @@ Partial Class ManageUser
         Guna2HtmlLabel4.BackColor = Color.White
         Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel4.Location = New Point(530, 16)
+        Guna2HtmlLabel4.Location = New Point(533, 16)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(69, 19)
         Guna2HtmlLabel4.TabIndex = 3
@@ -138,6 +138,17 @@ Partial Class ManageUser
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(955, 486)
         Guna2GradientPanel1.TabIndex = 5
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(34, 147)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 15
+        lblStatus.Text = "Reported Users"
         ' 
         ' btnNext
         ' 
@@ -247,17 +258,6 @@ Partial Class ManageUser
         txtUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtUserSearch.Size = New Size(233, 41)
         txtUserSearch.TabIndex = 10
-        ' 
-        ' lblStatus
-        ' 
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblStatus.ForeColor = SystemColors.ControlDarkDark
-        lblStatus.Location = New Point(34, 147)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(157, 31)
-        lblStatus.TabIndex = 15
-        lblStatus.Text = "Reported Users"
         ' 
         ' ManageUser
         ' 

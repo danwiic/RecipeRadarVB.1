@@ -80,6 +80,7 @@ Public Class ManageUser
                 AddHandler userData.UserDeleted, AddressOf RefreshUsers
                 ' Add the UserDataCard to the FlowLayoutPanel
                 FlowLayoutPanel1.Controls.Add(userData)
+                PageCheck()
             End While
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -106,11 +107,16 @@ Public Class ManageUser
         searchTerm = txtUserSearch.Text.Trim() ' Update the search term
         currentPage = 1 ' Reset to the first page
         RefreshUsers() ' Refresh the user list based on the search term
+        PageCheck()
     End Sub
 
     Private Sub btnUserSearch_Click(sender As Object, e As EventArgs) Handles btnUserSearch.Click
         searchTerm = txtUserSearch.Text.Trim() ' Update the search term
         currentPage = 1 ' Reset to the first page
         RefreshUsers() ' Refresh the user list based on the search term
+    End Sub
+
+    Private Sub lblPages_Click(sender As Object, e As EventArgs) Handles lblPages.Click
+
     End Sub
 End Class
