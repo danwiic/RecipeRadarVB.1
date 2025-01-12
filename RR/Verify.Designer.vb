@@ -32,6 +32,7 @@ Partial Class Verify
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         verifyCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblNotif = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblResend = New LinkLabel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -43,7 +44,6 @@ Partial Class Verify
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         verifyCodePanel.SuspendLayout()
         recoverPanel.SuspendLayout()
         SuspendLayout()
@@ -70,6 +70,17 @@ Partial Class Verify
         verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         verifyCodePanel.Size = New Size(589, 450)
         verifyCodePanel.TabIndex = 25
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel2.Location = New Point(132, 167)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(180, 18)
+        Guna2HtmlLabel2.TabIndex = 25
+        Guna2HtmlLabel2.Text = "The 6-Digit code has been sent to"
         ' 
         ' lblNotif
         ' 
@@ -206,17 +217,6 @@ Partial Class Verify
         Guna2Button1.Size = New Size(40, 25)
         Guna2Button1.TabIndex = 10
         Guna2Button1.Text = "✕"
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
-        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel2.Location = New Point(132, 167)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(180, 18)
-        Guna2HtmlLabel2.TabIndex = 25
-        Guna2HtmlLabel2.Text = "The 6-Digit code has been sent to"
         ' 
         ' Verify
         ' 
