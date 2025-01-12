@@ -33,12 +33,12 @@ Partial Class ReportedUsers
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -47,7 +47,7 @@ Partial Class ReportedUsers
         Guna2HtmlLabel5.BackColor = Color.White
         Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel5.Location = New Point(739, 19)
+        Guna2HtmlLabel5.Location = New Point(758, 19)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(43, 19)
         Guna2HtmlLabel5.TabIndex = 4
@@ -112,12 +112,23 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Size = New Size(903, 497)
         Guna2GradientPanel1.TabIndex = 12
         ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(50, 127)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 14
+        lblStatus.Text = "Reported Users"
+        ' 
         ' FlowLayoutPanel1
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.Location = New Point(29, 44)
+        FlowLayoutPanel1.Location = New Point(24, 44)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(848, 395)
+        FlowLayoutPanel1.Size = New Size(855, 395)
         FlowLayoutPanel1.TabIndex = 20
         ' 
         ' btnNext
@@ -183,17 +194,6 @@ Partial Class ReportedUsers
         lblFav.Size = New Size(203, 40)
         lblFav.TabIndex = 13
         lblFav.Text = "Reported Users"
-        ' 
-        ' lblStatus
-        ' 
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblStatus.ForeColor = SystemColors.ControlDarkDark
-        lblStatus.Location = New Point(50, 127)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(157, 31)
-        lblStatus.TabIndex = 14
-        lblStatus.Text = "Reported Users"
         ' 
         ' ReportedUsers
         ' 

@@ -28,12 +28,15 @@ Partial Class ReportedUserCard
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtComment = New Guna.UI2.WinForms.Guna2TextBox()
         lblReason = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
         btnMute = New Guna.UI2.WinForms.Guna2Button()
         Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         SuspendLayout()
         ' 
         ' lblUsername
@@ -98,10 +101,10 @@ Partial Class ReportedUserCard
         btnDelete.Font = New Font("Segoe UI", 9F)
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete_white
-        btnDelete.Location = New Point(736, 7)
+        btnDelete.Location = New Point(814, 7)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnDelete.Size = New Size(75, 36)
+        btnDelete.Size = New Size(52, 36)
         btnDelete.TabIndex = 6
         ' 
         ' btnMute
@@ -117,7 +120,7 @@ Partial Class ReportedUserCard
         btnMute.FillColor = Color.LimeGreen
         btnMute.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMute.ForeColor = Color.White
-        btnMute.Location = New Point(655, 7)
+        btnMute.Location = New Point(636, 7)
         btnMute.Name = "btnMute"
         btnMute.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnMute.Size = New Size(75, 36)
@@ -130,13 +133,34 @@ Partial Class ReportedUserCard
         Guna2Separator1.FillThickness = 2
         Guna2Separator1.Location = New Point(0, 43)
         Guna2Separator1.Name = "Guna2Separator1"
-        Guna2Separator1.Size = New Size(833, 10)
+        Guna2Separator1.Size = New Size(882, 10)
         Guna2Separator1.TabIndex = 15
+        ' 
+        ' Guna2Button1
+        ' 
+        Guna2Button1.Animated = True
+        Guna2Button1.BorderRadius = 6
+        Guna2Button1.Cursor = Cursors.Hand
+        Guna2Button1.CustomizableEdges = CustomizableEdges7
+        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button1.FillColor = Color.LimeGreen
+        Guna2Button1.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2Button1.ForeColor = Color.White
+        Guna2Button1.Location = New Point(717, 7)
+        Guna2Button1.Name = "Guna2Button1"
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button1.Size = New Size(91, 36)
+        Guna2Button1.TabIndex = 16
+        Guna2Button1.Text = "DISMISS"
         ' 
         ' ReportedUserCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(Guna2Button1)
         Controls.Add(Guna2Separator1)
         Controls.Add(btnMute)
         Controls.Add(btnDelete)
@@ -144,7 +168,7 @@ Partial Class ReportedUserCard
         Controls.Add(txtComment)
         Controls.Add(lblUsername)
         Name = "ReportedUserCard"
-        Size = New Size(833, 50)
+        Size = New Size(880, 50)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -155,5 +179,6 @@ Partial Class ReportedUserCard
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnMute As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 
 End Class

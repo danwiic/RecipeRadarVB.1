@@ -96,7 +96,7 @@ Partial Class PendingData
         txtInstructions.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtInstructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Location = New Point(3, 116)
+        txtInstructions.Location = New Point(25, 106)
         txtInstructions.Margin = New Padding(3, 5, 3, 5)
         txtInstructions.Multiline = True
         txtInstructions.Name = "txtInstructions"
@@ -113,7 +113,7 @@ Partial Class PendingData
         Instructions.BackColor = Color.Transparent
         Instructions.Font = New Font("Arial", 15.75F, FontStyle.Bold)
         Instructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Instructions.Location = New Point(3, 93)
+        Instructions.Location = New Point(14, 82)
         Instructions.Name = "Instructions"
         Instructions.Size = New Size(123, 26)
         Instructions.TabIndex = 42
@@ -122,7 +122,7 @@ Partial Class PendingData
         ' flowPanelVideo
         ' 
         flowPanelVideo.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        flowPanelVideo.Location = New Point(461, 9)
+        flowPanelVideo.Location = New Point(461, 3)
         flowPanelVideo.Name = "flowPanelVideo"
         flowPanelVideo.Size = New Size(300, 180)
         flowPanelVideo.TabIndex = 41
@@ -132,7 +132,7 @@ Partial Class PendingData
         lblCategory.BackColor = Color.Transparent
         lblCategory.Font = New Font("Arial", 12F, FontStyle.Bold)
         lblCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblCategory.Location = New Point(3, 41)
+        lblCategory.Location = New Point(14, 41)
         lblCategory.Name = "lblCategory"
         lblCategory.Size = New Size(79, 21)
         lblCategory.TabIndex = 40
@@ -143,7 +143,7 @@ Partial Class PendingData
         lblMealName.BackColor = Color.Transparent
         lblMealName.Font = New Font("Arial", 15.75F, FontStyle.Bold)
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(3, 9)
+        lblMealName.Location = New Point(14, 9)
         lblMealName.Name = "lblMealName"
         lblMealName.Size = New Size(112, 26)
         lblMealName.TabIndex = 39
