@@ -39,11 +39,12 @@ Partial Class ViewInfoPendingRecipe
         recoverPanel.BackColor = Color.Transparent
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
-        recoverPanel.FillColor = Color.WhiteSmoke
+        recoverPanel.FillColor = Color.Transparent
         recoverPanel.Location = New Point(0, 0)
         recoverPanel.Name = "recoverPanel"
         recoverPanel.ShadowColor = Color.Black
         recoverPanel.ShadowShift = 0
+        recoverPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped
         recoverPanel.Size = New Size(790, 25)
         recoverPanel.TabIndex = 16
         ' 
@@ -67,13 +68,13 @@ Partial Class ViewInfoPendingRecipe
         ' 
         ' PanelData
         ' 
+        PanelData.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PanelData.AutoScroll = True
         PanelData.CustomizableEdges = CustomizableEdges3
-        PanelData.Dock = DockStyle.Fill
-        PanelData.Location = New Point(0, 25)
+        PanelData.Location = New Point(0, 31)
         PanelData.Name = "PanelData"
         PanelData.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        PanelData.Size = New Size(790, 434)
+        PanelData.Size = New Size(790, 428)
         PanelData.TabIndex = 17
         ' 
         ' ViewInfoPendingRecipe
