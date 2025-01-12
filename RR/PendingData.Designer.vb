@@ -51,11 +51,11 @@ Partial Class PendingData
         txtIngredients.Enabled = False
         txtIngredients.FillColor = SystemColors.Control
         txtIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Font = New Font("Arial Narrow", 12F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        txtIngredients.ForeColor = Color.Black
+        txtIngredients.Font = New Font("Arial Narrow", 11.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        txtIngredients.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtIngredients.Location = New Point(453, 237)
-        txtIngredients.Margin = New Padding(3, 5, 3, 5)
+        txtIngredients.Location = New Point(520, 221)
+        txtIngredients.Margin = New Padding(3, 7, 3, 7)
         txtIngredients.Multiline = True
         txtIngredients.Name = "txtIngredients"
         txtIngredients.PasswordChar = ChrW(0)
@@ -63,17 +63,17 @@ Partial Class PendingData
         txtIngredients.ReadOnly = True
         txtIngredients.SelectedText = ""
         txtIngredients.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        txtIngredients.Size = New Size(199, 258)
+        txtIngredients.Size = New Size(227, 279)
         txtIngredients.TabIndex = 45
         ' 
         ' Ingredients
         ' 
         Ingredients.BackColor = Color.Transparent
-        Ingredients.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Ingredients.Font = New Font("Arial", 15.75F, FontStyle.Bold)
         Ingredients.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Ingredients.Location = New Point(453, 195)
+        Ingredients.Location = New Point(492, 195)
         Ingredients.Name = "Ingredients"
-        Ingredients.Size = New Size(152, 34)
+        Ingredients.Size = New Size(116, 26)
         Ingredients.TabIndex = 44
         Ingredients.Text = "Ingredients"
         ' 
@@ -93,11 +93,11 @@ Partial Class PendingData
         txtInstructions.Enabled = False
         txtInstructions.FillColor = SystemColors.Control
         txtInstructions.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Font = New Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtInstructions.ForeColor = Color.Black
+        txtInstructions.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtInstructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtInstructions.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtInstructions.Location = New Point(15, 143)
-        txtInstructions.Margin = New Padding(3, 4, 3, 4)
+        txtInstructions.Location = New Point(3, 116)
+        txtInstructions.Margin = New Padding(3, 5, 3, 5)
         txtInstructions.Multiline = True
         txtInstructions.Name = "txtInstructions"
         txtInstructions.PasswordChar = ChrW(0)
@@ -105,24 +105,24 @@ Partial Class PendingData
         txtInstructions.ReadOnly = True
         txtInstructions.SelectedText = ""
         txtInstructions.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        txtInstructions.Size = New Size(423, 326)
+        txtInstructions.Size = New Size(430, 1000)
         txtInstructions.TabIndex = 43
         ' 
         ' Instructions
         ' 
         Instructions.BackColor = Color.Transparent
-        Instructions.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Instructions.Font = New Font("Arial", 15.75F, FontStyle.Bold)
         Instructions.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Instructions.Location = New Point(3, 102)
+        Instructions.Location = New Point(3, 93)
         Instructions.Name = "Instructions"
-        Instructions.Size = New Size(161, 34)
+        Instructions.Size = New Size(123, 26)
         Instructions.TabIndex = 42
         Instructions.Text = "Instructions"
         ' 
         ' flowPanelVideo
         ' 
         flowPanelVideo.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        flowPanelVideo.Location = New Point(478, 9)
+        flowPanelVideo.Location = New Point(461, 9)
         flowPanelVideo.Name = "flowPanelVideo"
         flowPanelVideo.Size = New Size(300, 180)
         flowPanelVideo.TabIndex = 41
@@ -130,33 +130,33 @@ Partial Class PendingData
         ' lblCategory
         ' 
         lblCategory.BackColor = Color.Transparent
-        lblCategory.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCategory.Font = New Font("Arial", 12F, FontStyle.Bold)
         lblCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblCategory.Location = New Point(3, 44)
+        lblCategory.Location = New Point(3, 41)
         lblCategory.Name = "lblCategory"
-        lblCategory.Size = New Size(101, 26)
+        lblCategory.Size = New Size(79, 21)
         lblCategory.TabIndex = 40
         lblCategory.Text = "Category: "
         ' 
         ' lblMealName
         ' 
         lblMealName.BackColor = Color.Transparent
-        lblMealName.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMealName.Font = New Font("Arial", 15.75F, FontStyle.Bold)
         lblMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblMealName.Location = New Point(3, 4)
+        lblMealName.Location = New Point(3, 9)
         lblMealName.Name = "lblMealName"
-        lblMealName.Size = New Size(146, 34)
+        lblMealName.Size = New Size(112, 26)
         lblMealName.TabIndex = 39
         lblMealName.Text = "Meal Name"
         ' 
         ' lblOrigin
         ' 
         lblOrigin.BackColor = Color.Transparent
-        lblOrigin.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblOrigin.Font = New Font("Arial", 12F, FontStyle.Bold)
         lblOrigin.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblOrigin.Location = New Point(3, 76)
+        lblOrigin.Location = New Point(349, 9)
         lblOrigin.Name = "lblOrigin"
-        lblOrigin.Size = New Size(138, 26)
+        lblOrigin.Size = New Size(106, 21)
         lblOrigin.TabIndex = 46
         lblOrigin.Text = "Recipe Origin"
         ' 
@@ -164,7 +164,6 @@ Partial Class PendingData
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        AutoScroll = True
         Controls.Add(lblOrigin)
         Controls.Add(txtIngredients)
         Controls.Add(Ingredients)
@@ -174,7 +173,7 @@ Partial Class PendingData
         Controls.Add(lblCategory)
         Controls.Add(lblMealName)
         Name = "PendingData"
-        Size = New Size(790, 507)
+        Size = New Size(773, 507)
         ResumeLayout(False)
         PerformLayout()
     End Sub

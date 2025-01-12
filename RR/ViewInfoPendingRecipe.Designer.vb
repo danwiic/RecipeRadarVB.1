@@ -67,6 +67,7 @@ Partial Class ViewInfoPendingRecipe
         ' 
         ' PanelData
         ' 
+        PanelData.AutoScroll = True
         PanelData.CustomizableEdges = CustomizableEdges3
         PanelData.Dock = DockStyle.Fill
         PanelData.Location = New Point(0, 25)
