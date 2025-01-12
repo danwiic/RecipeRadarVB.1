@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.RR.LoginForm
+            Me.MainForm = Global.RR.ViewInfoPendingRecipe
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
