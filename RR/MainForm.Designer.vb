@@ -289,7 +289,7 @@ Partial Class MainForm
         btnMeals.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         btnMeals.Size = New Size(224, 45)
         btnMeals.TabIndex = 19
-        btnMeals.Text = "Meals"
+        btnMeals.Text = "Upload Recipe"
         btnMeals.TextAlign = HorizontalAlignment.Left
         ' 
         ' Guna2Panel2

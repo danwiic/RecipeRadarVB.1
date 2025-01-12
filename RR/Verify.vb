@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports System.Text
 Imports Guna.UI2.WinForms.Suite
+Imports System.Configuration
 
 Public Class Verify
     Dim currentEmail As String = SendOTP.currentEmail
@@ -15,7 +16,7 @@ Public Class Verify
     End Function
 
     Public Async Function SendOtpEmail(recipientEmail As String, otp As String) As Task
-        Dim apiKey As String = "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"
+        Dim apiKey As String = ConfigurationManager.AppSettings("ApiKey")
         Dim apiUrl As String = "https://api.brevo.com/v3/smtp/email"
 
         Dim jsonPayload As String = $"{{""sender"":{{""name"":""reciperadar@noreply.com"", ""email"":""danpirante9@gmail.com""}}, ""to"":[{{""email"":""{recipientEmail}""}}], ""subject"":""Your OTP Code"", ""htmlContent"":""<html><body><p>Your OTP code is: {otp}</p><p>Your OTP will only be valid for 5 minutes.</p></body></html>""}}"
@@ -88,7 +89,7 @@ Public Class Verify
     Private Sub VerifyOTP_Load(sender As Object, e As EventArgs) Handles Me.Load
         lblNotif.Text = SendOTP.currentEmail
         lblNotif.Visible = True
-        ShadowForm.setShadowForm(Me)
+        shadowForm.setShadowForm(Me)
     End Sub
 
     Private Sub verifyCodePanel_Paint(sender As Object, e As PaintEventArgs) Handles verifyCodePanel.Paint

@@ -45,44 +45,44 @@ Partial Class ReportedUsers
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.White
-        Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel5.Location = New Point(758, 19)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(43, 19)
+        Guna2HtmlLabel5.Size = New Size(47, 20)
         Guna2HtmlLabel5.TabIndex = 4
         Guna2HtmlLabel5.Text = "Action"
         ' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.White
-        Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel4.Location = New Point(452, 19)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(54, 19)
+        Guna2HtmlLabel4.Size = New Size(57, 20)
         Guna2HtmlLabel4.TabIndex = 3
         Guna2HtmlLabel4.Text = "Reason"
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.White
-        Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel2.Location = New Point(50, 19)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(71, 19)
+        Guna2HtmlLabel2.Size = New Size(75, 20)
         Guna2HtmlLabel2.TabIndex = 1
         Guna2HtmlLabel2.Text = "Username"
         ' 
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.White
-        Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel3.Location = New Point(154, 19)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(76, 19)
+        Guna2HtmlLabel3.Size = New Size(78, 20)
         Guna2HtmlLabel3.TabIndex = 2
         Guna2HtmlLabel3.Text = "Comments"
         ' 

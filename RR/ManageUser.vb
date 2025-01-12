@@ -12,7 +12,7 @@ Public Class ManageUser
     Private searchTerm As String = String.Empty ' Variable to hold the search term
 
     Private Sub ManageUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FetchUsers() ' Load users when the form loads
+        FetchUsers()
         PageCheck()
     End Sub
 
@@ -42,46 +42,45 @@ Public Class ManageUser
     Private Sub FetchUsers()
         Try
             conn.Open()
+            lblStatus.Visible = False
 
-            ' Get total number of users based on search term
             Dim countQuery As String = "SELECT COUNT(*) FROM users WHERE role = 'user' AND (username LIKE @searchTerm OR email LIKE @searchTerm)"
             Dim countCmd As New MySqlCommand(countQuery, conn)
             countCmd.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
             totalUsers = Convert.ToInt32(countCmd.ExecuteScalar())
             totalPages = Math.Ceiling(totalUsers / usersPerPage)
 
-            ' Update the label to show current page
             lblPages.Text = $"Page {currentPage} of {totalPages}"
 
-            ' Calculate the offset
             Dim offset As Integer = (currentPage - 1) * usersPerPage
 
             Dim query As String = $"SELECT * FROM users WHERE role = 'user' AND (username LIKE @searchTerm OR email LIKE @searchTerm) LIMIT {usersPerPage} OFFSET {offset}"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@searchTerm", "%" & searchTerm & "%")
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
-            If Not reader.HasRows Then
-                lblStatus.Text = "No users found."
-                lblStatus.Visible = True
-            Else
-                lblStatus.Visible = False
-            End If
+
             FlowLayoutPanel1.Controls.Clear()
 
-            While reader.Read()
-                Dim id As Integer = reader("user_id")
-                Dim username As String = reader("username")
-                Dim email As String = reader("email")
-                Dim password As String = reader("password")
-                Dim imageData As Byte() = If(reader("profile_image") IsNot DBNull.Value, CType(reader("profile_image"), Byte()), Nothing)
+            If Not reader.HasRows Then
+                lblStatus.Text = "No user found."
+                lblStatus.Visible = True
+                lblStatus.BringToFront()
+            Else
+                While reader.Read()
+                    Dim id As Integer = reader("user_id")
+                    Dim username As String = reader("username")
+                    Dim email As String = reader("email")
+                    Dim password As String = reader("password")
+                    Dim imageData As Byte() = If(reader("profile_image") IsNot DBNull.Value, CType(reader("profile_image"), Byte()), Nothing)
 
-                Dim userData As New UserDataCard
-                userData.SetUserData(id, username, email, password, imageData)
-                AddHandler userData.UserDeleted, AddressOf RefreshUsers
-                ' Add the UserDataCard to the FlowLayoutPanel
-                FlowLayoutPanel1.Controls.Add(userData)
-                PageCheck()
-            End While
+                    Dim userData As New UserDataCard
+                    userData.SetUserData(id, username, email, password, imageData)
+                    AddHandler userData.UserDeleted, AddressOf RefreshUsers
+                    FlowLayoutPanel1.Controls.Add(userData)
+                End While
+            End If
+
+            PageCheck()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
@@ -117,6 +116,10 @@ Public Class ManageUser
     End Sub
 
     Private Sub lblPages_Click(sender As Object, e As EventArgs) Handles lblPages.Click
+
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
     End Sub
 End Class

@@ -139,9 +139,9 @@ Partial Class Meals
         lblMeals.ForeColor = SystemColors.ControlDarkDark
         lblMeals.Location = New Point(13, 14)
         lblMeals.Name = "lblMeals"
-        lblMeals.Size = New Size(75, 40)
+        lblMeals.Size = New Size(210, 40)
         lblMeals.TabIndex = 10
-        lblMeals.Text = "Meals"
+        lblMeals.Text = "Uploaded Recipe"
         ' 
         ' btnAdd
         ' 

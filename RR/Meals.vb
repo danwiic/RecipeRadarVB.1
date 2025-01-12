@@ -13,6 +13,7 @@ Public Class Meals
         LoadAddedMeals() ' Load meals for the current page
         UpdateCurrentPageLabel() ' Update the current page label
         checkRole() ' Check user role for button text
+        checkButton()
     End Sub
 
     Private Sub LoadTotalMealsCount()
@@ -30,6 +31,20 @@ Public Class Meals
         Finally
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub checkButton()
+        If totalMeals <= currentPage * pageSize Then
+            btnNext.Enabled = False
+        Else
+            btnNext.Enabled = True
+        End If
+
+        If currentPage = 1 Then
+            btnPrev.Enabled = False
+        Else
+            btnPrev.Enabled = True
+        End If
     End Sub
 
     Public Sub LoadAddedMeals()
@@ -70,8 +85,9 @@ Public Class Meals
                         End While
                     Else
                         lblMessage.Visible = True
-                        lblMessage.Text = "No posted recipes yet."
+                        lblMessage.Text = "No uploaded recipes yet."
                     End If
+                    checkButton()
                 End Using
             End Using
         Catch ex As MySqlException

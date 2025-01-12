@@ -39,13 +39,13 @@ Partial Class ManageUser
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnUserSearch = New Guna.UI2.WinForms.Guna2Button()
         txtUserSearch = New Guna.UI2.WinForms.Guna2TextBox()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -53,7 +53,7 @@ Partial Class ManageUser
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         FlowLayoutPanel1.BackColor = Color.White
-        FlowLayoutPanel1.Location = New Point(69, 94)
+        FlowLayoutPanel1.Location = New Point(67, 94)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Size = New Size(903, 390)
         FlowLayoutPanel1.TabIndex = 0
@@ -61,55 +61,55 @@ Partial Class ManageUser
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.White
-        Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel1.Location = New Point(34, 16)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(44, 19)
+        Guna2HtmlLabel1.Size = New Size(50, 20)
         Guna2HtmlLabel1.TabIndex = 0
         Guna2HtmlLabel1.Text = "Profile"
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.White
-        Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel2.Location = New Point(100, 16)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(71, 19)
+        Guna2HtmlLabel2.Size = New Size(75, 20)
         Guna2HtmlLabel2.TabIndex = 1
         Guna2HtmlLabel2.Text = "Username"
         ' 
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.White
-        Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel3.Location = New Point(312, 16)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(40, 19)
+        Guna2HtmlLabel3.Size = New Size(41, 20)
         Guna2HtmlLabel3.TabIndex = 2
         Guna2HtmlLabel3.Text = "Email"
         ' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.White
-        Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel4.Location = New Point(533, 16)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(69, 19)
+        Guna2HtmlLabel4.Size = New Size(72, 20)
         Guna2HtmlLabel4.TabIndex = 3
         Guna2HtmlLabel4.Text = "Password"
         ' 
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.White
-        Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Bold)
         Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel5.Location = New Point(795, 16)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(43, 19)
+        Guna2HtmlLabel5.Size = New Size(47, 20)
         Guna2HtmlLabel5.TabIndex = 4
         Guna2HtmlLabel5.Text = "Action"
         ' 
@@ -138,17 +138,6 @@ Partial Class ManageUser
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(955, 486)
         Guna2GradientPanel1.TabIndex = 5
-        ' 
-        ' lblStatus
-        ' 
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblStatus.ForeColor = SystemColors.ControlDarkDark
-        lblStatus.Location = New Point(34, 147)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(157, 31)
-        lblStatus.TabIndex = 15
-        lblStatus.Text = "Reported Users"
         ' 
         ' btnNext
         ' 
@@ -258,6 +247,17 @@ Partial Class ManageUser
         txtUserSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtUserSearch.Size = New Size(233, 41)
         txtUserSearch.TabIndex = 10
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(34, 112)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 16
+        lblStatus.Text = "Reported Users"
         ' 
         ' ManageUser
         ' 
