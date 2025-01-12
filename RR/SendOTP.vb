@@ -36,9 +36,10 @@ Public Class SendOTP
 
     Public Async Function SendOtpEmail(recipientEmail As String, otp As String) As Task
         Dim apiKey As String = ConfigurationManager.AppSettings("ApiKey")
+        Dim email As String = ConfigurationManager.AppSettings("email")
         Dim apiUrl As String = "https://api.brevo.com/v3/smtp/email"
 
-        Dim jsonPayload As String = $"{{""sender"":{{""name"":""reciperadar@noreply.com"", ""email"":""danpirante9@gmail.com""}}, ""to"":[{{""email"":""{recipientEmail}""}}], ""subject"":""Your OTP Code"", ""htmlContent"":""<html><body><p>Your OTP code is: {otp}</p><br/><p>Your OTP will only be valid for 5 minutes.</p></body></html>""}}"
+        Dim jsonPayload As String = $"{{""sender"":{{""name"":""reciperadar@noreply.com"", ""email"":""{email}""}}, ""to"":[{{""email"":""{recipientEmail}""}}], ""subject"":""Your OTP Code"", ""htmlContent"":""<html><body><p>Your OTP code is: {otp}</p><br/><p>Your OTP will only be valid for 5 minutes.</p></body></html>""}}"
 
         Using client As New HttpClient()
             client.DefaultRequestHeaders.Add("api-key", apiKey)
