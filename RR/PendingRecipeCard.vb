@@ -114,6 +114,7 @@ Public Class PendingRecipeCard
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-
+        Dim viewPendingRecipe As New ViewInfoPendingRecipe(mealID)
+        viewPendingRecipe.Show()
     End Sub
 End Class
