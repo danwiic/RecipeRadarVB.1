@@ -23,7 +23,7 @@ Public Class PendingRecipe
     Public Sub FetchPendingRecipes()
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM pending_recipes"
+            Dim query As String = "SELECT * FROM pending_recipes WHERE status = 'pending' "
 
             Using cmd As New MySqlCommand(query, conn)
                 Using reader As MySqlDataReader = cmd.ExecuteReader()

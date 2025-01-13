@@ -40,16 +40,33 @@ Public Class ViewPending
                 cmd.Parameters.AddWithValue("@currentUserID", currentUserID)
 
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
-                    While reader.Read()
-                        Dim pendingID As Integer = reader("id")
-                        Dim mealName As String = reader("strMeal")
-                        Dim status As String = reader("status")
-                        Dim pendingCard As New PendingStatusCard
-                        pendingCard.SetData(pendingID, mealName, status)
-                        AddHandler pendingCard.RecipeDeleted, AddressOf RefreshPendingList
-                        pendingCard.Dock = DockStyle.Top
-                        ViewPendingPanel.Controls.Add(pendingCard)
-                    End While
+
+
+                    If reader.HasRows Then
+                        lblStatus.Visible = False
+                        lblRecipeHeader.Visible = True
+                        lblStatusHeader.Visible = True
+                        lblActionHeader.Visible = True
+
+                        While reader.Read()
+                            Dim pendingID As Integer = reader("id")
+                            Dim mealName As String = reader("strMeal")
+                            Dim status As String = reader("status")
+                            Dim pendingCard As New PendingStatusCard
+                            pendingCard.SetData(pendingID, mealName, status)
+                            AddHandler pendingCard.RecipeDeleted, AddressOf RefreshPendingList
+                            pendingCard.Dock = DockStyle.Top
+                            ViewPendingPanel.Controls.Add(pendingCard)
+                        End While
+
+                    Else
+                        lblRecipeHeader.Visible = False
+                        lblStatusHeader.Visible = False
+                        lblActionHeader.Visible = False
+                        lblStatus.Visible = True
+                        lblStatus.Text = "No record of pending recipes."
+                    End If
+
                 End Using
             End Using
         Catch ex As Exception
@@ -62,6 +79,7 @@ Public Class ViewPending
     Private Sub ViewPending_Load(sender As Object, e As EventArgs) Handles Me.Load
         FetchPendingOfUser()
         ShadowForm.SetShadowForm(Me)
+
     End Sub
 
     Public Sub RefreshPendingList()

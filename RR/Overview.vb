@@ -55,7 +55,7 @@ Public Class Overview
     Private Sub FetchTotalPending()
         Try
             conn.Open()
-            Dim query As String = "SELECT COUNT(*) FROM pending_recipes"
+            Dim query As String = "SELECT COUNT(*) FROM pending_recipes WHERE status = 'pending'"
             Dim cmd As New MySqlCommand(query, conn)
             Dim totalPending As Integer = cmd.ExecuteScalar()
             btnPendingRecipe.Text = totalPending.ToString()

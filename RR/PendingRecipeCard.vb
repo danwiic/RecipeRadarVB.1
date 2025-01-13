@@ -59,7 +59,7 @@ Public Class PendingRecipeCard
             End Using
 
             ' Delete from pending_recipes after successful insertion
-            Dim deleteQuery As String = "DELETE FROM pending_recipes WHERE id = @mealID"
+            Dim deleteQuery As String = "UPDATE pending_recipes SET status = 'approved' WHERE id = @mealID"
             Using cmdDelete As New MySqlCommand(deleteQuery, conn)
                 cmdDelete.Parameters.AddWithValue("@mealID", mealID)
                 cmdDelete.ExecuteNonQuery() ' Execute the delete command
@@ -79,7 +79,7 @@ Public Class PendingRecipeCard
         Try
             conn.Open()
 
-            Dim query As String = "DELETE FROM pending_recipes WHERE id = @mealID"
+            Dim query As String = "UPDATE pending_recipes SET status = 'rejected' WHERE id = @mealID"
 
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@mealID", mealID)

@@ -119,6 +119,7 @@ Public Class Meals
 
         If userRole = "admin" Then
             btnAdd.Text = "ADD NEW RECIPE"
+            btnPending.Hide()
         Else
             btnAdd.Text = "SUBMIT NEW RECIPE"
         End If
