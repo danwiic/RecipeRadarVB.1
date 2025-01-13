@@ -142,4 +142,9 @@ Public Class Meals
         AddRecipe.Show()
         AddRecipe.StartPosition = FormStartPosition.CenterScreen
     End Sub
+
+    Private Sub btnPending_Click(sender As Object, e As EventArgs) Handles btnPending.Click
+        Dim viewPending As New ViewPending()
+        viewPending.Show()
+    End Sub
 End Class

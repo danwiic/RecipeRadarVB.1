@@ -61,7 +61,6 @@ Public Class AddRecipe
         Dim areaID As Integer
 
         Try
-            Dim userID As Integer = 16
             conn.Open()
             Try
                 Dim categoryQuery As String = "SELECT id FROM categories WHERE category_name = @categoryName"
@@ -244,9 +243,6 @@ Public Class AddRecipe
         Finally
             conn.Close()
         End Try
-    End Sub
-    Private Sub talk()
-
     End Sub
     Private Sub FetchMealOrigin()
         cbRecipeOrigin.Items.Add("--SELECT ORIGIN--")
