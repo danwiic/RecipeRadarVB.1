@@ -23,12 +23,16 @@ Public Class UpdateRecipe
                         txtMealName.Text = reader("strMeal")
                         txtRecipeImageLink.Text = reader("strMealThumb")
                         txtRecipeYoutubeLink.Text = reader("strYoutube")
-                        Dim ingredients As String = reader("ingredients")
                         txtRecipeInstruction.Text = reader("strInstructions")
 
+                        Dim ingredients As String = reader("ingredients")
                         DisplayIngredients(ingredients)
-                        Dim category_id As Integer = reader("category_id")
-                        Dim area_id As Integer = reader("area_id")
+
+                        Dim categoryID As Integer = Convert.ToInt32(reader("category_id"))
+                        SetSelectedCategory(categoryID)
+
+                        Dim areaID As Integer = Convert.ToInt32(reader("area_id"))
+                        SetSelectedOrigin(areaID)
                     End If
                 End Using
             End Using
@@ -39,17 +43,21 @@ Public Class UpdateRecipe
         End Try
     End Sub
 
+
+    Private categoryDictionary As New Dictionary(Of Integer, String)()
     Private Sub FetchCategory()
+        cbRecipeCategory.Items.Clear()
         cbRecipeCategory.Items.Add("--SELECT CATEGORY--")
-        cbRecipeCategory.StartIndex = 0
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM categories"
+            Dim query As String = "SELECT id, category_name FROM categories"
             Using cmd As New MySqlCommand(query, conn)
                 Using dr As MySqlDataReader = cmd.ExecuteReader()
                     While dr.Read()
-                        Dim category As String = dr("category_name").ToString()
-                        cbRecipeCategory.Items.Add(category)
+                        Dim categoryID As Integer = Convert.ToInt32(dr("id"))
+                        Dim categoryName As String = dr("category_name").ToString()
+                        cbRecipeCategory.Items.Add(categoryName)
+                        categoryDictionary(categoryID) = categoryName ' Store the ID and name in the dictionary
                     End While
                 End Using
             End Using
@@ -61,18 +69,26 @@ Public Class UpdateRecipe
             conn.Close()
         End Try
     End Sub
+    Private Sub SetSelectedCategory(categoryID As Integer)
+        If categoryDictionary.ContainsKey(categoryID) Then
+            cbRecipeCategory.SelectedItem = categoryDictionary(categoryID)
+        End If
+    End Sub
 
+    Private areaDictionary As New Dictionary(Of Integer, String)()
     Private Sub FetchMealOrigin()
+        cbRecipeOrigin.Items.Clear()
         cbRecipeOrigin.Items.Add("--SELECT ORIGIN--")
-        cbRecipeOrigin.StartIndex = 0
         Try
             conn.Open()
-            Dim query As String = "SELECT * from recipe_origin"
+            Dim query As String = "SELECT area_id, area_origin FROM recipe_origin"
             Using cmd As New MySqlCommand(query, conn)
                 Using dr As MySqlDataReader = cmd.ExecuteReader()
                     While dr.Read()
-                        Dim origin As String = dr("area_origin").ToString()
-                        cbRecipeOrigin.Items.Add(origin)
+                        Dim areaID As Integer = Convert.ToInt32(dr("area_id"))
+                        Dim areaName As String = dr("area_origin").ToString()
+                        cbRecipeOrigin.Items.Add(areaName)
+                        areaDictionary(areaID) = areaName ' Store the ID and name in the dictionary
                     End While
                 End Using
             End Using
@@ -83,7 +99,12 @@ Public Class UpdateRecipe
         Finally
             conn.Close()
         End Try
+    End Sub
 
+    Private Sub SetSelectedOrigin(areaID As Integer)
+        If areaDictionary.ContainsKey(areaID) Then
+            cbRecipeOrigin.SelectedItem = areaDictionary(areaID)
+        End If
     End Sub
 
     Private Sub DisplayIngredients(ingredientsJson As String)
@@ -99,8 +120,6 @@ Public Class UpdateRecipe
             MessageBox.Show("Error parsing ingredients: " & ex.Message)
         End Try
     End Sub
-
-
 
     Private Sub UpdatePending()
         Dim recipeIngredients As String = txtRecipeIngredients.Text
@@ -151,7 +170,7 @@ Public Class UpdateRecipe
                 cmd.Parameters.AddWithValue("@recipeID", recipeID)
                 cmd.ExecuteNonQuery()
 
-                MessageBox.Show("Recipe updated successfully.")
+                MessageBox.Show("Recipe updated successfully.", "Succeess", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Hide()
             End Using
         Catch ex As Exception

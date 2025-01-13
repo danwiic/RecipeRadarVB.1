@@ -32,12 +32,14 @@ Partial Class RecoverAccount
         countdownTimer = New Timer(components)
         displayPanel = New Guna.UI2.WinForms.Guna2Panel()
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' recoverPanel
         ' 
         recoverPanel.BackColor = Color.Transparent
+        recoverPanel.Controls.Add(Guna2HtmlLabel8)
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
         recoverPanel.FillColor = Color.WhiteSmoke
@@ -80,6 +82,17 @@ Partial Class RecoverAccount
         displayPanel.Size = New Size(589, 425)
         displayPanel.TabIndex = 0
         ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(108, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Recover Account"
+        ' 
         ' RecoverAccount
         ' 
         AutoScaleDimensions = New SizeF(7F, 16F)
@@ -96,6 +109,7 @@ Partial Class RecoverAccount
         StartPosition = FormStartPosition.CenterScreen
         Text = "RecoverAccount"
         recoverPanel.ResumeLayout(False)
+        recoverPanel.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -104,4 +118,5 @@ Partial Class RecoverAccount
     Friend WithEvents countdownTimer As Timer
     Friend WithEvents displayPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

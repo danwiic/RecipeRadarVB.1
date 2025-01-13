@@ -22,9 +22,49 @@ Public Class ReportedUserCard
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If MessageBox.Show("Are you sure you want to delete this report?", "Confirm Delete", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            DeleteReport()
+            DeleteComment()
             RaiseEvent ReportDeleted(Me, EventArgs.Empty)
         End If
+    End Sub
+
+    Private Sub DeleteComment()
+        Try
+            conn.Open()
+            Dim selectQuery As String = "SELECT comment_id from reported_users WHERE report_id = @reportID"
+            Dim commentID As Integer
+            Using selectCMD As New MySqlCommand(selectQuery, conn)
+                selectCMD.Parameters.AddWithValue("@reportID", reportid)
+                Using SelectReader As MySqlDataReader = selectCMD.ExecuteReader
+                    While SelectReader.Read()
+                        commentID = SelectReader("comment_id")
+                    End While
+                End Using
+            End Using
+
+            Try
+                Dim deleteQuery As String = "DELETE FROM comments where comment_id = @commentID"
+                Using deleteCMD As New MySqlCommand(deleteQuery, conn)
+                    deleteCMD.Parameters.AddWithValue("@commentID", commentID)
+                    deleteCMD.ExecuteNonQuery()
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+
+            Try
+                Dim deleteReportQuery As String = "DELETE FROM reported_users WHERE comment_id = @commentID"
+                Using deleteReportCMD As New MySqlCommand(deleteReportQuery, conn)
+                    deleteReportCMD.Parameters.AddWithValue("@commentID", commentID)
+                    deleteReportCMD.ExecuteNonQuery()
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub DeleteReport()
@@ -45,5 +85,12 @@ Public Class ReportedUserCard
         Finally
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub btnDismiss_Click(sender As Object, e As EventArgs) Handles btnDismiss.Click
+        If MessageBox.Show("Are you sure you want to delete this report?", "Confirm Delete", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            DeleteReport()
+            RaiseEvent ReportDeleted(Me, EventArgs.Empty)
+        End If
     End Sub
 End Class

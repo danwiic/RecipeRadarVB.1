@@ -22,14 +22,14 @@ Partial Class ReportedUserCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtComment = New Guna.UI2.WinForms.Guna2TextBox()
         lblReason = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -55,7 +55,7 @@ Partial Class ReportedUserCard
         txtComment.Animated = True
         txtComment.AutoScroll = True
         txtComment.BorderRadius = 6
-        txtComment.CustomizableEdges = CustomizableEdges9
+        txtComment.CustomizableEdges = CustomizableEdges1
         txtComment.DefaultText = ""
         txtComment.DisabledState.BorderColor = Color.White
         txtComment.DisabledState.FillColor = Color.White
@@ -72,7 +72,7 @@ Partial Class ReportedUserCard
         txtComment.PlaceholderText = ""
         txtComment.ReadOnly = True
         txtComment.SelectedText = ""
-        txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtComment.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtComment.Size = New Size(266, 36)
         txtComment.TabIndex = 1
         ' 
@@ -92,7 +92,7 @@ Partial Class ReportedUserCard
         btnDelete.Animated = True
         btnDelete.BorderRadius = 6
         btnDelete.Cursor = Cursors.Hand
-        btnDelete.CustomizableEdges = CustomizableEdges11
+        btnDelete.CustomizableEdges = CustomizableEdges3
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -103,7 +103,7 @@ Partial Class ReportedUserCard
         btnDelete.Image = My.Resources.Resources.delete_white
         btnDelete.Location = New Point(814, 7)
         btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnDelete.Size = New Size(52, 36)
         btnDelete.TabIndex = 6
         ' 
@@ -112,7 +112,7 @@ Partial Class ReportedUserCard
         btnMute.Animated = True
         btnMute.BorderRadius = 6
         btnMute.Cursor = Cursors.Hand
-        btnMute.CustomizableEdges = CustomizableEdges13
+        btnMute.CustomizableEdges = CustomizableEdges5
         btnMute.DisabledState.BorderColor = Color.DarkGray
         btnMute.DisabledState.CustomBorderColor = Color.DarkGray
         btnMute.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -122,7 +122,7 @@ Partial Class ReportedUserCard
         btnMute.ForeColor = Color.White
         btnMute.Location = New Point(636, 7)
         btnMute.Name = "btnMute"
-        btnMute.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnMute.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnMute.Size = New Size(75, 36)
         btnMute.TabIndex = 14
         btnMute.Text = "MUTE"
@@ -141,7 +141,7 @@ Partial Class ReportedUserCard
         btnDismiss.Animated = True
         btnDismiss.BorderRadius = 6
         btnDismiss.Cursor = Cursors.Hand
-        btnDismiss.CustomizableEdges = CustomizableEdges15
+        btnDismiss.CustomizableEdges = CustomizableEdges7
         btnDismiss.DisabledState.BorderColor = Color.DarkGray
         btnDismiss.DisabledState.CustomBorderColor = Color.DarkGray
         btnDismiss.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -150,7 +150,7 @@ Partial Class ReportedUserCard
         btnDismiss.ForeColor = Color.White
         btnDismiss.Location = New Point(717, 7)
         btnDismiss.Name = "btnDismiss"
-        btnDismiss.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        btnDismiss.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnDismiss.Size = New Size(91, 36)
         btnDismiss.TabIndex = 16
         btnDismiss.Text = "DISMISS"

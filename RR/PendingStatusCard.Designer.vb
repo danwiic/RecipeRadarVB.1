@@ -22,10 +22,10 @@ Partial Class PendingStatusCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblRecipeName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -58,7 +58,7 @@ Partial Class PendingStatusCard
         ' 
         Guna2Button1.Animated = True
         Guna2Button1.BorderRadius = 8
-        Guna2Button1.CustomizableEdges = CustomizableEdges5
+        Guna2Button1.CustomizableEdges = CustomizableEdges1
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -67,7 +67,7 @@ Partial Class PendingStatusCard
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Location = New Point(301, 8)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button1.Size = New Size(72, 35)
         Guna2Button1.TabIndex = 2
         Guna2Button1.Text = "UPDATE"
@@ -76,7 +76,7 @@ Partial Class PendingStatusCard
         ' 
         Guna2Button2.Animated = True
         Guna2Button2.BorderRadius = 8
-        Guna2Button2.CustomizableEdges = CustomizableEdges7
+        Guna2Button2.CustomizableEdges = CustomizableEdges3
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -86,7 +86,7 @@ Partial Class PendingStatusCard
         Guna2Button2.ForeColor = Color.White
         Guna2Button2.Location = New Point(379, 8)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button2.Size = New Size(72, 35)
         Guna2Button2.TabIndex = 3
         Guna2Button2.Text = "DELETE"

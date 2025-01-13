@@ -46,6 +46,7 @@ Public Class ViewPending
                         Dim status As String = reader("status")
                         Dim pendingCard As New PendingStatusCard
                         pendingCard.SetData(pendingID, mealName, status)
+                        AddHandler pendingCard.RecipeDeleted, AddressOf RefreshPendingList
                         pendingCard.Dock = DockStyle.Top
                         ViewPendingPanel.Controls.Add(pendingCard)
                     End While
@@ -61,6 +62,11 @@ Public Class ViewPending
     Private Sub ViewPending_Load(sender As Object, e As EventArgs) Handles Me.Load
         FetchPendingOfUser()
         ShadowForm.SetShadowForm(Me)
+    End Sub
+
+    Public Sub RefreshPendingList()
+        ViewPendingPanel.Controls.Clear()
+        FetchPendingOfUser()
     End Sub
 
     Private Sub ViewPendingPanel_Paint(sender As Object, e As PaintEventArgs) Handles ViewPendingPanel.Paint

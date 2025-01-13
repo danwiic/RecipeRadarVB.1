@@ -59,12 +59,14 @@ Partial Class UpdateRecipe
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' cbRecipeOrigin
         ' 
         cbRecipeOrigin.BackColor = Color.Transparent
+        cbRecipeOrigin.BorderRadius = 8
         cbRecipeOrigin.CustomizableEdges = CustomizableEdges1
         cbRecipeOrigin.DrawMode = DrawMode.OwnerDrawFixed
         cbRecipeOrigin.DropDownHeight = 150
@@ -72,7 +74,7 @@ Partial Class UpdateRecipe
         cbRecipeOrigin.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbRecipeOrigin.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbRecipeOrigin.Font = New Font("Segoe UI", 10F)
-        cbRecipeOrigin.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cbRecipeOrigin.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         cbRecipeOrigin.IntegralHeight = False
         cbRecipeOrigin.ItemHeight = 30
         cbRecipeOrigin.Location = New Point(83, 237)
@@ -105,6 +107,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel7
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
+        Guna2HtmlLabel7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel7.Location = New Point(355, 214)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Guna2HtmlLabel7.Size = New Size(100, 17)
@@ -113,6 +116,7 @@ Partial Class UpdateRecipe
         ' 
         ' txtRecipeIngredients
         ' 
+        txtRecipeIngredients.BorderRadius = 8
         txtRecipeIngredients.CustomizableEdges = CustomizableEdges5
         txtRecipeIngredients.DefaultText = ""
         txtRecipeIngredients.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -121,6 +125,7 @@ Partial Class UpdateRecipe
         txtRecipeIngredients.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRecipeIngredients.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeIngredients.Font = New Font("Segoe UI", 9F)
+        txtRecipeIngredients.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtRecipeIngredients.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeIngredients.Location = New Point(355, 237)
         txtRecipeIngredients.Multiline = True
@@ -135,6 +140,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
+        Guna2HtmlLabel6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel6.Location = New Point(83, 376)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Guna2HtmlLabel6.Size = New Size(160, 17)
@@ -143,6 +149,7 @@ Partial Class UpdateRecipe
         ' 
         ' txtRecipeYoutubeLink
         ' 
+        txtRecipeYoutubeLink.BorderRadius = 8
         txtRecipeYoutubeLink.CustomizableEdges = CustomizableEdges7
         txtRecipeYoutubeLink.DefaultText = ""
         txtRecipeYoutubeLink.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -151,6 +158,7 @@ Partial Class UpdateRecipe
         txtRecipeYoutubeLink.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRecipeYoutubeLink.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeYoutubeLink.Font = New Font("Segoe UI", 9F)
+        txtRecipeYoutubeLink.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtRecipeYoutubeLink.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeYoutubeLink.Location = New Point(83, 399)
         txtRecipeYoutubeLink.Name = "txtRecipeYoutubeLink"
@@ -164,6 +172,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
+        Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel5.Location = New Point(83, 296)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Guna2HtmlLabel5.Size = New Size(119, 17)
@@ -172,6 +181,7 @@ Partial Class UpdateRecipe
         ' 
         ' txtRecipeImageLink
         ' 
+        txtRecipeImageLink.BorderRadius = 8
         txtRecipeImageLink.CustomizableEdges = CustomizableEdges9
         txtRecipeImageLink.DefaultText = ""
         txtRecipeImageLink.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -180,6 +190,7 @@ Partial Class UpdateRecipe
         txtRecipeImageLink.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRecipeImageLink.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeImageLink.Font = New Font("Segoe UI", 9F)
+        txtRecipeImageLink.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtRecipeImageLink.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeImageLink.Location = New Point(83, 319)
         txtRecipeImageLink.Name = "txtRecipeImageLink"
@@ -193,6 +204,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
+        Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel4.Location = New Point(355, 53)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(103, 17)
@@ -201,6 +213,7 @@ Partial Class UpdateRecipe
         ' 
         ' txtRecipeInstruction
         ' 
+        txtRecipeInstruction.BorderRadius = 8
         txtRecipeInstruction.CustomizableEdges = CustomizableEdges11
         txtRecipeInstruction.DefaultText = ""
         txtRecipeInstruction.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -209,6 +222,7 @@ Partial Class UpdateRecipe
         txtRecipeInstruction.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRecipeInstruction.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeInstruction.Font = New Font("Segoe UI", 9F)
+        txtRecipeInstruction.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtRecipeInstruction.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRecipeInstruction.Location = New Point(355, 76)
         txtRecipeInstruction.Multiline = True
@@ -223,6 +237,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel2.Location = New Point(83, 131)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(89, 17)
@@ -232,6 +247,7 @@ Partial Class UpdateRecipe
         ' cbRecipeCategory
         ' 
         cbRecipeCategory.BackColor = Color.Transparent
+        cbRecipeCategory.BorderRadius = 8
         cbRecipeCategory.CustomizableEdges = CustomizableEdges13
         cbRecipeCategory.DrawMode = DrawMode.OwnerDrawFixed
         cbRecipeCategory.DropDownHeight = 150
@@ -239,7 +255,7 @@ Partial Class UpdateRecipe
         cbRecipeCategory.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbRecipeCategory.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbRecipeCategory.Font = New Font("Segoe UI", 10F)
-        cbRecipeCategory.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cbRecipeCategory.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         cbRecipeCategory.IntegralHeight = False
         cbRecipeCategory.ItemHeight = 30
         cbRecipeCategory.Location = New Point(83, 154)
@@ -252,6 +268,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel1.Location = New Point(83, 53)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(73, 17)
@@ -260,6 +277,7 @@ Partial Class UpdateRecipe
         ' 
         ' txtMealName
         ' 
+        txtMealName.BorderRadius = 8
         txtMealName.CustomizableEdges = CustomizableEdges15
         txtMealName.DefaultText = ""
         txtMealName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -268,6 +286,7 @@ Partial Class UpdateRecipe
         txtMealName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtMealName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtMealName.Font = New Font("Segoe UI", 9F)
+        txtMealName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtMealName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtMealName.Location = New Point(83, 76)
         txtMealName.Name = "txtMealName"
@@ -299,6 +318,7 @@ Partial Class UpdateRecipe
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
+        Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2HtmlLabel3.Location = New Point(83, 214)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(74, 17)
@@ -308,15 +328,28 @@ Partial Class UpdateRecipe
         ' recoverPanel
         ' 
         recoverPanel.BackColor = Color.Transparent
+        recoverPanel.Controls.Add(Guna2HtmlLabel8)
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
         recoverPanel.FillColor = Color.WhiteSmoke
+        recoverPanel.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         recoverPanel.Location = New Point(0, 0)
         recoverPanel.Name = "recoverPanel"
         recoverPanel.ShadowColor = Color.Black
         recoverPanel.ShadowShift = 0
         recoverPanel.Size = New Size(800, 25)
         recoverPanel.TabIndex = 34
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(94, 21)
+        Guna2HtmlLabel8.TabIndex = 50
+        Guna2HtmlLabel8.Text = "Update Recipe"
         ' 
         ' UpdateRecipe
         ' 
@@ -344,6 +377,7 @@ Partial Class UpdateRecipe
         StartPosition = FormStartPosition.CenterScreen
         Text = "UpdateRecipe"
         recoverPanel.ResumeLayout(False)
+        recoverPanel.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -366,4 +400,5 @@ Partial Class UpdateRecipe
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents recoverPanel As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

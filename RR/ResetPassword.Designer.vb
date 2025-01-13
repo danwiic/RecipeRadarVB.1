@@ -47,6 +47,7 @@ Partial Class ResetPassword
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         verifyCodePanel.SuspendLayout()
         recoverPanel.SuspendLayout()
         SuspendLayout()
@@ -199,6 +200,7 @@ Partial Class ResetPassword
         ' recoverPanel
         ' 
         recoverPanel.BackColor = Color.Transparent
+        recoverPanel.Controls.Add(Guna2HtmlLabel8)
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
         recoverPanel.FillColor = Color.WhiteSmoke
@@ -233,6 +235,17 @@ Partial Class ResetPassword
         ' 
         countdownTimer.Interval = 1000
         ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(99, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Reset Password"
+        ' 
         ' ResetPassword
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -249,6 +262,7 @@ Partial Class ResetPassword
         verifyCodePanel.ResumeLayout(False)
         verifyCodePanel.PerformLayout()
         recoverPanel.ResumeLayout(False)
+        recoverPanel.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -264,4 +278,5 @@ Partial Class ResetPassword
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents countdownTimer As Timer
     Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

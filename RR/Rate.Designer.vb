@@ -32,6 +32,7 @@ Partial Class Rate
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         ratingStar = New Guna.UI2.WinForms.Guna2RatingStar()
         btnSubmitRate = New Guna.UI2.WinForms.Guna2Button()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         signupPanel.SuspendLayout()
         SuspendLayout()
@@ -39,6 +40,7 @@ Partial Class Rate
         ' signupPanel
         ' 
         signupPanel.BackColor = Color.Transparent
+        signupPanel.Controls.Add(Guna2HtmlLabel8)
         signupPanel.Controls.Add(Guna2Button1)
         signupPanel.Dock = DockStyle.Top
         signupPanel.FillColor = Color.WhiteSmoke
@@ -73,7 +75,7 @@ Partial Class Rate
         ' 
         ' ratingStar
         ' 
-        ratingStar.Location = New Point(51, 90)
+        ratingStar.Location = New Point(51, 77)
         ratingStar.Name = "ratingStar"
         ratingStar.RatingColor = Color.Gold
         ratingStar.Size = New Size(249, 45)
@@ -90,29 +92,40 @@ Partial Class Rate
         btnSubmitRate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnSubmitRate.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSubmitRate.ForeColor = Color.White
-        btnSubmitRate.Location = New Point(51, 162)
+        btnSubmitRate.Location = New Point(47, 128)
         btnSubmitRate.Name = "btnSubmitRate"
         btnSubmitRate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnSubmitRate.Size = New Size(249, 45)
         btnSubmitRate.TabIndex = 17
         btnSubmitRate.Text = "SUBMIT RATE"
         ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 5)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(31, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Rate"
+        ' 
         ' lblFav
         ' 
         lblFav.BackColor = Color.Transparent
         lblFav.Font = New Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblFav.ForeColor = SystemColors.ControlDarkDark
-        lblFav.Location = New Point(12, 36)
+        lblFav.Location = New Point(54, 36)
         lblFav.Name = "lblFav"
-        lblFav.Size = New Size(133, 35)
+        lblFav.Size = New Size(242, 35)
         lblFav.TabIndex = 18
-        lblFav.Text = "Rate Recipe"
+        lblFav.Text = "Click the star to rate!"
         ' 
         ' Rate
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(351, 232)
+        ClientSize = New Size(351, 202)
         Controls.Add(lblFav)
         Controls.Add(btnSubmitRate)
         Controls.Add(ratingStar)
@@ -122,6 +135,7 @@ Partial Class Rate
         StartPosition = FormStartPosition.CenterScreen
         Text = "Rate"
         signupPanel.ResumeLayout(False)
+        signupPanel.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -131,5 +145,6 @@ Partial Class Rate
     Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents btnSubmitRate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ratingStar As Guna.UI2.WinForms.Guna2RatingStar
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblFav As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

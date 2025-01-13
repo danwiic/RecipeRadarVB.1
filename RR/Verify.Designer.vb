@@ -23,14 +23,14 @@ Partial Class Verify
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         verifyCodePanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblNotif = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -44,6 +44,7 @@ Partial Class Verify
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         verifyCodePanel.SuspendLayout()
         recoverPanel.SuspendLayout()
         SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class Verify
         verifyCodePanel.Controls.Add(txtOTP)
         verifyCodePanel.Controls.Add(Guna2HtmlLabel7)
         verifyCodePanel.Controls.Add(btnVerify)
-        verifyCodePanel.CustomizableEdges = CustomizableEdges5
+        verifyCodePanel.CustomizableEdges = CustomizableEdges13
         verifyCodePanel.Dock = DockStyle.Fill
         verifyCodePanel.ForeColor = SystemColors.ControlLightLight
         verifyCodePanel.Location = New Point(0, 0)
@@ -67,7 +68,7 @@ Partial Class Verify
         verifyCodePanel.MinimumSize = New Size(589, 450)
         verifyCodePanel.Name = "verifyCodePanel"
         verifyCodePanel.ShadowDecoration.BorderRadius = 4
-        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        verifyCodePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         verifyCodePanel.Size = New Size(589, 450)
         verifyCodePanel.TabIndex = 25
         ' 
@@ -124,7 +125,7 @@ Partial Class Verify
         txtOTP.Animated = True
         txtOTP.BackColor = Color.Transparent
         txtOTP.BorderRadius = 8
-        txtOTP.CustomizableEdges = CustomizableEdges1
+        txtOTP.CustomizableEdges = CustomizableEdges9
         txtOTP.DefaultText = ""
         txtOTP.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtOTP.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -138,7 +139,7 @@ Partial Class Verify
         txtOTP.PasswordChar = ChrW(0)
         txtOTP.PlaceholderText = "Enter 6-Digit Code"
         txtOTP.SelectedText = ""
-        txtOTP.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtOTP.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtOTP.ShadowDecoration.Depth = 10
         txtOTP.Size = New Size(232, 45)
         txtOTP.TabIndex = 19
@@ -160,7 +161,7 @@ Partial Class Verify
         btnVerify.BackColor = Color.Transparent
         btnVerify.BorderRadius = 8
         btnVerify.Cursor = Cursors.Hand
-        btnVerify.CustomizableEdges = CustomizableEdges3
+        btnVerify.CustomizableEdges = CustomizableEdges11
         btnVerify.DisabledState.BorderColor = Color.Transparent
         btnVerify.DisabledState.CustomBorderColor = Color.Transparent
         btnVerify.DisabledState.FillColor = Color.FromArgb(CByte(122), CByte(156), CByte(223))
@@ -170,7 +171,7 @@ Partial Class Verify
         btnVerify.Location = New Point(183, 242)
         btnVerify.Name = "btnVerify"
         btnVerify.ShadowDecoration.BorderRadius = 8
-        btnVerify.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnVerify.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnVerify.ShadowDecoration.Depth = 10
         btnVerify.Size = New Size(232, 45)
         btnVerify.TabIndex = 17
@@ -188,6 +189,7 @@ Partial Class Verify
         ' recoverPanel
         ' 
         recoverPanel.BackColor = Color.Transparent
+        recoverPanel.Controls.Add(Guna2HtmlLabel8)
         recoverPanel.Controls.Add(Guna2Button1)
         recoverPanel.Dock = DockStyle.Top
         recoverPanel.FillColor = Color.WhiteSmoke
@@ -202,7 +204,7 @@ Partial Class Verify
         ' 
         ' Guna2Button1
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges7
+        Guna2Button1.CustomizableEdges = CustomizableEdges15
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -213,10 +215,21 @@ Partial Class Verify
         Guna2Button1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         Guna2Button1.Location = New Point(549, 0)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2Button1.Size = New Size(40, 25)
         Guna2Button1.TabIndex = 10
         Guna2Button1.Text = "✕"
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(75, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Verify OTP"
         ' 
         ' Verify
         ' 
@@ -234,6 +247,7 @@ Partial Class Verify
         verifyCodePanel.ResumeLayout(False)
         verifyCodePanel.PerformLayout()
         recoverPanel.ResumeLayout(False)
+        recoverPanel.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -250,4 +264,5 @@ Partial Class Verify
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents shadowForm As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
