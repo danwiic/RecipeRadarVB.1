@@ -28,13 +28,13 @@ Partial Class ReportedUsers
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblAction = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblReason = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblComments = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         FlowLayoutPanel1 = New FlowLayoutPanel()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
@@ -42,49 +42,49 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Guna2HtmlLabel5
+        ' lblAction
         ' 
-        Guna2HtmlLabel5.BackColor = Color.White
-        Guna2HtmlLabel5.Font = New Font("Arial", 11.25F, FontStyle.Bold)
-        Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel5.Location = New Point(758, 19)
-        Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(47, 20)
-        Guna2HtmlLabel5.TabIndex = 4
-        Guna2HtmlLabel5.Text = "Action"
+        lblAction.BackColor = Color.White
+        lblAction.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        lblAction.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblAction.Location = New Point(758, 19)
+        lblAction.Name = "lblAction"
+        lblAction.Size = New Size(47, 20)
+        lblAction.TabIndex = 4
+        lblAction.Text = "Action"
         ' 
-        ' Guna2HtmlLabel4
+        ' lblReason
         ' 
-        Guna2HtmlLabel4.BackColor = Color.White
-        Guna2HtmlLabel4.Font = New Font("Arial", 11.25F, FontStyle.Bold)
-        Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel4.Location = New Point(452, 19)
-        Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(57, 20)
-        Guna2HtmlLabel4.TabIndex = 3
-        Guna2HtmlLabel4.Text = "Reason"
+        lblReason.BackColor = Color.White
+        lblReason.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        lblReason.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblReason.Location = New Point(452, 19)
+        lblReason.Name = "lblReason"
+        lblReason.Size = New Size(57, 20)
+        lblReason.TabIndex = 3
+        lblReason.Text = "Reason"
         ' 
-        ' Guna2HtmlLabel2
+        ' lblUsername
         ' 
-        Guna2HtmlLabel2.BackColor = Color.White
-        Guna2HtmlLabel2.Font = New Font("Arial", 11.25F, FontStyle.Bold)
-        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel2.Location = New Point(50, 19)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(75, 20)
-        Guna2HtmlLabel2.TabIndex = 1
-        Guna2HtmlLabel2.Text = "Username"
+        lblUsername.BackColor = Color.White
+        lblUsername.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        lblUsername.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblUsername.Location = New Point(50, 19)
+        lblUsername.Name = "lblUsername"
+        lblUsername.Size = New Size(75, 20)
+        lblUsername.TabIndex = 1
+        lblUsername.Text = "Username"
         ' 
-        ' Guna2HtmlLabel3
+        ' lblComments
         ' 
-        Guna2HtmlLabel3.BackColor = Color.White
-        Guna2HtmlLabel3.Font = New Font("Arial", 11.25F, FontStyle.Bold)
-        Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel3.Location = New Point(154, 19)
-        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(78, 20)
-        Guna2HtmlLabel3.TabIndex = 2
-        Guna2HtmlLabel3.Text = "Comments"
+        lblComments.BackColor = Color.White
+        lblComments.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        lblComments.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        lblComments.Location = New Point(154, 19)
+        lblComments.Name = "lblComments"
+        lblComments.Size = New Size(78, 20)
+        lblComments.TabIndex = 2
+        lblComments.Text = "Comments"
         ' 
         ' Guna2GradientPanel1
         ' 
@@ -96,10 +96,10 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Controls.Add(btnNext)
         Guna2GradientPanel1.Controls.Add(lblPages)
         Guna2GradientPanel1.Controls.Add(btnPrev)
-        Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel5)
-        Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel4)
-        Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel2)
-        Guna2GradientPanel1.Controls.Add(Guna2HtmlLabel3)
+        Guna2GradientPanel1.Controls.Add(lblAction)
+        Guna2GradientPanel1.Controls.Add(lblReason)
+        Guna2GradientPanel1.Controls.Add(lblUsername)
+        Guna2GradientPanel1.Controls.Add(lblComments)
         Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.FillColor = Color.White
         Guna2GradientPanel1.FillColor2 = Color.White
@@ -112,17 +112,6 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Size = New Size(903, 497)
         Guna2GradientPanel1.TabIndex = 12
         ' 
-        ' lblStatus
-        ' 
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblStatus.ForeColor = SystemColors.ControlDarkDark
-        lblStatus.Location = New Point(50, 127)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(157, 31)
-        lblStatus.TabIndex = 14
-        lblStatus.Text = "Reported Users"
-        ' 
         ' FlowLayoutPanel1
         ' 
         FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -130,6 +119,17 @@ Partial Class ReportedUsers
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Size = New Size(855, 395)
         FlowLayoutPanel1.TabIndex = 20
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(24, 8)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 14
+        lblStatus.Text = "Reported Users"
         ' 
         ' btnNext
         ' 
@@ -208,10 +208,10 @@ Partial Class ReportedUsers
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblAction As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblReason As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblUsername As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblComments As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents lblFav As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnNext As Guna.UI2.WinForms.Guna2Button

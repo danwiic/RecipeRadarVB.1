@@ -57,7 +57,7 @@ Public Class UpdateRecipe
                         Dim categoryID As Integer = Convert.ToInt32(dr("id"))
                         Dim categoryName As String = dr("category_name").ToString()
                         cbRecipeCategory.Items.Add(categoryName)
-                        categoryDictionary(categoryID) = categoryName ' Store the ID and name in the dictionary
+                        categoryDictionary(categoryID) = categoryName
                     End While
                 End Using
             End Using

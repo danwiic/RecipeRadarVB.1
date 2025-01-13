@@ -131,7 +131,7 @@ Partial Class UpdateRecipe
         txtRecipeIngredients.Multiline = True
         txtRecipeIngredients.Name = "txtRecipeIngredients"
         txtRecipeIngredients.PasswordChar = ChrW(0)
-        txtRecipeIngredients.PlaceholderText = ""
+        txtRecipeIngredients.PlaceholderText = "Recipe Ingredients"
         txtRecipeIngredients.SelectedText = ""
         txtRecipeIngredients.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         txtRecipeIngredients.Size = New Size(362, 118)
@@ -163,7 +163,7 @@ Partial Class UpdateRecipe
         txtRecipeYoutubeLink.Location = New Point(83, 399)
         txtRecipeYoutubeLink.Name = "txtRecipeYoutubeLink"
         txtRecipeYoutubeLink.PasswordChar = ChrW(0)
-        txtRecipeYoutubeLink.PlaceholderText = ""
+        txtRecipeYoutubeLink.PlaceholderText = "Youtube Link"
         txtRecipeYoutubeLink.SelectedText = ""
         txtRecipeYoutubeLink.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         txtRecipeYoutubeLink.Size = New Size(213, 36)
@@ -195,7 +195,7 @@ Partial Class UpdateRecipe
         txtRecipeImageLink.Location = New Point(83, 319)
         txtRecipeImageLink.Name = "txtRecipeImageLink"
         txtRecipeImageLink.PasswordChar = ChrW(0)
-        txtRecipeImageLink.PlaceholderText = ""
+        txtRecipeImageLink.PlaceholderText = "Image Link"
         txtRecipeImageLink.SelectedText = ""
         txtRecipeImageLink.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtRecipeImageLink.Size = New Size(213, 36)
@@ -228,7 +228,7 @@ Partial Class UpdateRecipe
         txtRecipeInstruction.Multiline = True
         txtRecipeInstruction.Name = "txtRecipeInstruction"
         txtRecipeInstruction.PasswordChar = ChrW(0)
-        txtRecipeInstruction.PlaceholderText = ""
+        txtRecipeInstruction.PlaceholderText = "Recipe Instructions"
         txtRecipeInstruction.SelectedText = ""
         txtRecipeInstruction.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtRecipeInstruction.Size = New Size(362, 114)
@@ -291,7 +291,7 @@ Partial Class UpdateRecipe
         txtMealName.Location = New Point(83, 76)
         txtMealName.Name = "txtMealName"
         txtMealName.PasswordChar = ChrW(0)
-        txtMealName.PlaceholderText = ""
+        txtMealName.PlaceholderText = "Recipe Name"
         txtMealName.SelectedText = ""
         txtMealName.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         txtMealName.Size = New Size(213, 36)

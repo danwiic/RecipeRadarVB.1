@@ -93,4 +93,5 @@ Public Class ReportedUserCard
             RaiseEvent ReportDeleted(Me, EventArgs.Empty)
         End If
     End Sub
+
 End Class

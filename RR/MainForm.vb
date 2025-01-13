@@ -21,11 +21,11 @@ Public Class MainForm
         'Dim userControlSize As Size = Me.Size
         'MessageBox.Show($"User Control Size: {userControlSize.Width} x {userControlSize.Height}")
 
-        'CheckUserRole()
-        displayPanel.Controls.Clear()
-        Dim dash As New Dashboard
-        displayPanel.Controls.Add(dash)
-        dash.Dock = DockStyle.Fill
+        CheckUserRole()
+        'displayPanel.Controls.Clear()
+        'Dim dash As New Dashboard
+        'displayPanel.Controls.Add(dash)
+        'dash.Dock = DockStyle.Fill
 
     End Sub
 

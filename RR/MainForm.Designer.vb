@@ -338,6 +338,7 @@ Partial Class MainForm
         Controls.Add(displayPanel)
         Controls.Add(Guna2Panel2)
         FormBorderStyle = FormBorderStyle.None
+        MaximumSize = New Size(1280, 800)
         MinimumSize = New Size(1000, 600)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen

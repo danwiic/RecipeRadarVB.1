@@ -26,9 +26,11 @@ Public Class PendingStatusCard
             lblStatus.ForeColor = Color.Green
         ElseIf status = "rejected" Then
             lblStatus.ForeColor = Color.Tomato
+            btnUpdate.Hide()
+            btnDelete.Location = New Point(344, 8)
         End If
     End Sub
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim updateRecipe As New UpdateRecipe(pendingID)
         updateRecipe.Show()
     End Sub
@@ -50,7 +52,7 @@ Public Class PendingStatusCard
         End Try
     End Sub
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         DeleteFromPending()
     End Sub
 End Class
