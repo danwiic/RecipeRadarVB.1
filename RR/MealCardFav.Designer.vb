@@ -61,14 +61,14 @@ Partial Class MealCardFav
         ' 
         Guna2Panel1.BackColor = Color.Transparent
         Guna2Panel1.BorderRadius = 14
+        Guna2Panel1.Controls.Add(picMealImage)
         Guna2Panel1.Controls.Add(lblRates)
         Guna2Panel1.Controls.Add(mealRatings)
         Guna2Panel1.Controls.Add(chkFav)
         Guna2Panel1.Controls.Add(btnView)
         Guna2Panel1.Controls.Add(lblMealName)
-        Guna2Panel1.Controls.Add(picMealImage)
         Guna2Panel1.CustomizableEdges = CustomizableEdges7
-        Guna2Panel1.FillColor = Color.WhiteSmoke
+        Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.BorderRadius = 24
@@ -133,7 +133,7 @@ Partial Class MealCardFav
         btnView.DisabledState.CustomBorderColor = Color.DarkGray
         btnView.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnView.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnView.FillColor = Color.WhiteSmoke
+        btnView.FillColor = Color.White
         btnView.Font = New Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnView.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         btnView.Location = New Point(7, 227)

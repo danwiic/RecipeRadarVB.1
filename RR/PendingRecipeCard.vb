@@ -97,11 +97,11 @@ Public Class PendingRecipeCard
 
     Private Sub btnView_MouseEnter(sender As Object, e As EventArgs) Handles btnView.MouseEnter
         btnView.FillColor = Color.FromArgb(94, 148, 255)
-        btnView.ForeColor = Color.WhiteSmoke
+        btnView.ForeColor = Color.White
     End Sub
 
     Private Sub btnView_MouseLeave(sender As Object, e As EventArgs) Handles btnView.MouseLeave
-        btnView.FillColor = Color.WhiteSmoke
+        btnView.FillColor = Color.White
         btnView.ForeColor = Color.FromArgb(94, 148, 255)
     End Sub
 
@@ -116,5 +116,9 @@ Public Class PendingRecipeCard
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         Dim viewPendingRecipe As New ViewInfoPendingRecipe(mealID)
         viewPendingRecipe.Show()
+    End Sub
+
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
     End Sub
 End Class

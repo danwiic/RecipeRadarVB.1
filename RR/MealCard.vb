@@ -26,11 +26,11 @@
 
     Private Sub btnView_MouseEnter(sender As Object, e As EventArgs) Handles btnView.MouseEnter
         btnView.FillColor = Color.FromArgb(94, 148, 255)
-        btnView.ForeColor = Color.WhiteSmoke
+        btnView.ForeColor = Color.White
     End Sub
 
     Private Sub btnView_MouseLeave(sender As Object, e As EventArgs) Handles btnView.MouseLeave
-        btnView.FillColor = Color.WhiteSmoke
+        btnView.FillColor = Color.White
         btnView.ForeColor = Color.FromArgb(94, 148, 255)
     End Sub
 
