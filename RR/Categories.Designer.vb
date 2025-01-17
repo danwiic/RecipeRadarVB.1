@@ -120,11 +120,13 @@ Partial Class Categories
         cbCategories.BackColor = Color.Transparent
         cbCategories.CustomizableEdges = CustomizableEdges7
         cbCategories.DrawMode = DrawMode.OwnerDrawFixed
+        cbCategories.DropDownHeight = 150
         cbCategories.DropDownStyle = ComboBoxStyle.DropDownList
         cbCategories.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbCategories.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cbCategories.Font = New Font("Segoe UI", 10F)
         cbCategories.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cbCategories.IntegralHeight = False
         cbCategories.ItemHeight = 30
         cbCategories.Location = New Point(226, 38)
         cbCategories.Name = "cbCategories"

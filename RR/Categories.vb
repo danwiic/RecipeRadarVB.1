@@ -1,4 +1,5 @@
-﻿Imports Guna.UI2.WinForms
+﻿Imports System.ComponentModel.Design.ObjectSelectorEditor
+Imports Guna.UI2.WinForms
 Imports MySql.Data.MySqlClient
 
 Public Class Categories
@@ -9,6 +10,7 @@ Public Class Categories
     Private mealsPerPage As Integer = 10
     Private totalMeals As Integer = 0
     Private totalPages As Integer = 1
+    Private selectedCategoryId As Integer = 0
     Public Class Category
         Public Property Id As Integer
         Public Property Name As String
@@ -59,6 +61,8 @@ Public Class Categories
         Dim selectedCategory As Category = CType(cbCategories.SelectedItem, Category)
 
         If selectedCategory IsNot Nothing Then
+            selectedCategoryId = selectedCategory.Id ' Store the selected category ID
+
             If selectedCategory.Id = 0 Then
                 currentPage = 1 ' Reset to the first page
                 LoadMeals() ' Load all meals
@@ -72,11 +76,16 @@ Public Class Categories
     Private Sub LoadMeals(Optional categoryId As Integer = 0, Optional searchText As String = "")
         FlowLayoutPanelMeals.Controls.Clear()
 
+        ' Use the selectedCategoryId if categoryId is not provided
+        If categoryId = 0 Then
+            categoryId = selectedCategoryId
+        End If
+
         ' Define the base query with joins and necessary fields
         Dim query As String = "SELECT COUNT(*) FROM meals m " &
-                              "LEFT JOIN ratings r ON m.idMeal = r.meal_id " &
-                              "LEFT JOIN categories c ON m.category_id = c.id " &
-                              "LEFT JOIN favorites f ON m.idMeal = f.idMeal AND f.user_id = @currentUserID "
+                          "LEFT JOIN ratings r ON m.idMeal = r.meal_id " &
+                          "LEFT JOIN categories c ON m.category_id = c.id " &
+                          "LEFT JOIN favorites f ON m.idMeal = f.idMeal AND f.user_id = @currentUserID "
 
         ' Add filtering for category
         If categoryId > 0 Then
@@ -103,16 +112,16 @@ Public Class Categories
 
         ' Define the query to load meals for the current page
         query = "SELECT m.idMeal, " &
-                "m.strMeal, " &
-                "m.strMealThumb, " &
-                "COALESCE(AVG(r.rating), 0) AS averageRating, " &
-                "COALESCE(COUNT(r.rating), 0) AS ratingCount, " &
-                "c.category_name, " &
-                "CASE WHEN f.idMeal IS NOT NULL THEN 1 ELSE 0 END AS isFavorite " &
-                "FROM meals m " &
-                "LEFT JOIN ratings r ON m.idMeal = r.meal_id " &
-                "LEFT JOIN categories c ON m.category_id = c.id " &
-                "LEFT JOIN favorites f ON m.idMeal = f.idMeal AND f.user_id = @currentUserID "
+            "m.strMeal, " &
+            "m.strMealThumb, " &
+            "COALESCE(AVG(r.rating), 0) AS averageRating, " &
+            "COALESCE(COUNT(r.rating), 0) AS ratingCount, " &
+            "c.category_name, " &
+            "CASE WHEN f.idMeal IS NOT NULL THEN 1 ELSE 0 END AS isFavorite " &
+            "FROM meals m " &
+            "LEFT JOIN ratings r ON m.idMeal = r.meal_id " &
+            "LEFT JOIN categories c ON m.category_id = c.id " &
+            "LEFT JOIN favorites f ON m.idMeal = f.idMeal AND f.user_id = @currentUserID "
 
         ' Add filtering for category and search text
         If categoryId > 0 Then
@@ -128,8 +137,8 @@ Public Class Categories
         End If
 
         query &= "GROUP BY m.idMeal, m.strMeal, m.strMealThumb, c.category_name " &
-                 "ORDER BY averageRating DESC, ratingCount DESC " &
-                 "LIMIT @limit OFFSET @offset"
+             "ORDER BY averageRating DESC, ratingCount DESC " &
+             "LIMIT @limit OFFSET @offset"
 
         Try
             conn.Open()
@@ -170,7 +179,6 @@ Public Class Categories
 
         UpdatePaginationButtons()
     End Sub
-
     Private Sub UpdatePaginationButtons()
         btnPrev.Enabled = currentPage > 1
         btnNext.Enabled = currentPage < totalPages
