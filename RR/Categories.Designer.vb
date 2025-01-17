@@ -22,15 +22,26 @@ Partial Class Categories
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        FlowLayoutPanel1 = New FlowLayoutPanel()
         SuspendLayout()
+        ' 
+        ' FlowLayoutPanel1
+        ' 
+        FlowLayoutPanel1.Location = New Point(3, 3)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        FlowLayoutPanel1.Size = New Size(1041, 100)
+        FlowLayoutPanel1.TabIndex = 0
         ' 
         ' Categories
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(FlowLayoutPanel1)
         Name = "Categories"
         Size = New Size(1047, 600)
         ResumeLayout(False)
     End Sub
+
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 
 End Class
