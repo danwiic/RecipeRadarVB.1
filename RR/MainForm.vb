@@ -78,7 +78,7 @@ Public Class MainForm
     End Sub
 
     Private Sub btnMeals_Click(sender As Object, e As EventArgs) Handles btnMeals.Click
-        displayPanel.Controls.Clear()
+        displayPanel.Controls.Clear
         Dim meal As New Meals
         displayPanel.Controls.Add(meal)
         meal.Dock = DockStyle.Fill
@@ -105,5 +105,12 @@ Public Class MainForm
         Dim dash As New Dashboard
         displayPanel.Controls.Add(dash)
         dash.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub btnCategories_Click(sender As Object, e As EventArgs) Handles btnCategories.Click
+        displayPanel.Controls.Clear()
+        Dim cat As New Categories
+        displayPanel.Controls.Add(cat)
+        cat.Dock = DockStyle.Fill
     End Sub
 End Class

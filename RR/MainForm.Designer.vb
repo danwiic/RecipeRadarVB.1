@@ -46,6 +46,8 @@ Partial Class MainForm
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -64,6 +66,7 @@ Partial Class MainForm
         btnMeals = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        btnCategories = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1.SuspendLayout()
         Guna2Panel3.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -296,6 +299,7 @@ Partial Class MainForm
         ' 
         Guna2Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Guna2Panel2.BackColor = Color.Transparent
+        Guna2Panel2.Controls.Add(btnCategories)
         Guna2Panel2.Controls.Add(Guna2Panel4)
         Guna2Panel2.Controls.Add(btnMeals)
         Guna2Panel2.Controls.Add(btnFav)
@@ -303,16 +307,16 @@ Partial Class MainForm
         Guna2Panel2.Controls.Add(btnProfile)
         Guna2Panel2.Controls.Add(btnDashboard)
         Guna2Panel2.Controls.Add(Guna2Panel3)
-        CustomizableEdges27.BottomLeft = False
-        CustomizableEdges27.TopLeft = False
-        Guna2Panel2.CustomizableEdges = CustomizableEdges27
+        CustomizableEdges29.BottomLeft = False
+        CustomizableEdges29.TopLeft = False
+        Guna2Panel2.CustomizableEdges = CustomizableEdges29
         Guna2Panel2.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2Panel2.Location = New Point(0, 25)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.ShadowDecoration.BorderRadius = 10
-        CustomizableEdges28.BottomLeft = False
-        CustomizableEdges28.TopLeft = False
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        CustomizableEdges30.BottomLeft = False
+        CustomizableEdges30.TopLeft = False
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         Guna2Panel2.ShadowDecoration.Enabled = True
         Guna2Panel2.Size = New Size(224, 575)
         Guna2Panel2.TabIndex = 12
@@ -321,13 +325,35 @@ Partial Class MainForm
         ' 
         Guna2Panel4.BackColor = Color.Transparent
         Guna2Panel4.Controls.Add(btnLogout)
-        Guna2Panel4.CustomizableEdges = CustomizableEdges25
+        Guna2Panel4.CustomizableEdges = CustomizableEdges27
         Guna2Panel4.Dock = DockStyle.Bottom
         Guna2Panel4.Location = New Point(0, 496)
         Guna2Panel4.Name = "Guna2Panel4"
-        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2Panel4.Size = New Size(224, 79)
         Guna2Panel4.TabIndex = 21
+        ' 
+        ' btnCategories
+        ' 
+        btnCategories.Animated = True
+        btnCategories.Cursor = Cursors.Hand
+        btnCategories.CustomizableEdges = CustomizableEdges25
+        btnCategories.DisabledState.BorderColor = Color.DarkGray
+        btnCategories.DisabledState.CustomBorderColor = Color.DarkGray
+        btnCategories.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnCategories.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnCategories.Dock = DockStyle.Top
+        btnCategories.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnCategories.ForeColor = Color.White
+        btnCategories.Image = My.Resources.Resources.dinner
+        btnCategories.ImageAlign = HorizontalAlignment.Left
+        btnCategories.Location = New Point(0, 419)
+        btnCategories.Name = "btnCategories"
+        btnCategories.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        btnCategories.Size = New Size(224, 45)
+        btnCategories.TabIndex = 22
+        btnCategories.Text = "Categories"
+        btnCategories.TextAlign = HorizontalAlignment.Left
         ' 
         ' MainForm
         ' 
@@ -366,4 +392,5 @@ Partial Class MainForm
     Friend WithEvents btnMeals As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents btnCategories As Guna.UI2.WinForms.Guna2Button
 End Class
