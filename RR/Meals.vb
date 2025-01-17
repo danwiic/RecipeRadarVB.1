@@ -9,11 +9,15 @@ Public Class Meals
     Private pageSize As Integer = 10
     Private totalMeals As Integer = 0
     Private Sub Meals_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadTotalMealsCount() ' Load the total number of meals first
-        LoadAddedMeals() ' Load meals for the current page
-        UpdateCurrentPageLabel() ' Update the current page label
+
         checkRole() ' Check user role for button text
         checkButton()
+        UpdateCurrentPageLabel() ' Update the current page label
+        LoadAddedMeals() ' Load meals for the current page
+        LoadTotalMealsCount() ' Load the total number of meals first
+
+
+
     End Sub
 
     Private Sub LoadTotalMealsCount()

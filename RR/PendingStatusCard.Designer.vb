@@ -22,15 +22,18 @@ Partial Class PendingStatusCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblRecipeName = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnUpdate = New Guna.UI2.WinForms.Guna2Button()
         btnDelete = New Guna.UI2.WinForms.Guna2Button()
         Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        btnView = New Guna.UI2.WinForms.Guna2Button()
         SuspendLayout()
         ' 
         ' lblRecipeName
@@ -58,16 +61,17 @@ Partial Class PendingStatusCard
         ' 
         btnUpdate.Animated = True
         btnUpdate.BorderRadius = 8
-        btnUpdate.CustomizableEdges = CustomizableEdges5
+        btnUpdate.CustomizableEdges = CustomizableEdges1
         btnUpdate.DisabledState.BorderColor = Color.DarkGray
         btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnUpdate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUpdate.FillColor = Color.LimeGreen
         btnUpdate.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
         btnUpdate.ForeColor = Color.White
         btnUpdate.Location = New Point(301, 8)
         btnUpdate.Name = "btnUpdate"
-        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnUpdate.Size = New Size(72, 35)
         btnUpdate.TabIndex = 2
         btnUpdate.Text = "UPDATE"
@@ -76,7 +80,7 @@ Partial Class PendingStatusCard
         ' 
         btnDelete.Animated = True
         btnDelete.BorderRadius = 8
-        btnDelete.CustomizableEdges = CustomizableEdges7
+        btnDelete.CustomizableEdges = CustomizableEdges3
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -86,7 +90,7 @@ Partial Class PendingStatusCard
         btnDelete.ForeColor = Color.White
         btnDelete.Location = New Point(379, 8)
         btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnDelete.Size = New Size(72, 35)
         btnDelete.TabIndex = 3
         btnDelete.Text = "DELETE"
@@ -98,10 +102,30 @@ Partial Class PendingStatusCard
         Guna2Separator1.Size = New Size(452, 10)
         Guna2Separator1.TabIndex = 4
         ' 
+        ' btnView
+        ' 
+        btnView.Animated = True
+        btnView.BackColor = Color.Transparent
+        btnView.BorderRadius = 8
+        btnView.CustomizableEdges = CustomizableEdges5
+        btnView.DisabledState.BorderColor = Color.DarkGray
+        btnView.DisabledState.CustomBorderColor = Color.DarkGray
+        btnView.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnView.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnView.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold)
+        btnView.ForeColor = Color.White
+        btnView.Location = New Point(342, 8)
+        btnView.Name = "btnView"
+        btnView.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnView.Size = New Size(72, 35)
+        btnView.TabIndex = 5
+        btnView.Text = "VIEW"
+        ' 
         ' PendingStatusCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(btnView)
         Controls.Add(btnUpdate)
         Controls.Add(btnDelete)
         Controls.Add(Guna2Separator1)
@@ -118,5 +142,6 @@ Partial Class PendingStatusCard
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents btnView As Guna.UI2.WinForms.Guna2Button
 
 End Class
