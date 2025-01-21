@@ -122,7 +122,7 @@ Partial Class PendingData
         ' flowPanelVideo
         ' 
         flowPanelVideo.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        flowPanelVideo.Location = New Point(461, 3)
+        flowPanelVideo.Location = New Point(461, 4)
         flowPanelVideo.Name = "flowPanelVideo"
         flowPanelVideo.Size = New Size(300, 180)
         flowPanelVideo.TabIndex = 41
