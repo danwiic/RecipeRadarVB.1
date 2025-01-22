@@ -101,8 +101,8 @@ Public Class Verify
 
     End Sub
 
-    Private Sub btnVerify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
-        verifyOTP()
+    Private Sub btnVerify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click, Guna2Button2.Click
+        verifyOTP
     End Sub
 
     Private Sub verifyOTP()

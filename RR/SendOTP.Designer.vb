@@ -90,17 +90,18 @@ Partial Class SendOTP
         txtEmail.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtEmail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtEmail.Font = New Font("Segoe UI", 9F)
+        txtEmail.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEmail.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtEmail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtEmail.IconLeft = My.Resources.Resources.mail
-        txtEmail.Location = New Point(179, 189)
+        txtEmail.Location = New Point(179, 186)
         txtEmail.Name = "txtEmail"
         txtEmail.PasswordChar = ChrW(0)
         txtEmail.PlaceholderText = "Enter email"
         txtEmail.SelectedText = ""
         txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtEmail.ShadowDecoration.Depth = 10
-        txtEmail.Size = New Size(232, 45)
+        txtEmail.Size = New Size(232, 48)
         txtEmail.TabIndex = 19
         ' 
         ' Guna2HtmlLabel2

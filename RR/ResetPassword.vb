@@ -52,13 +52,45 @@ Public Class ResetPassword
 
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Hide()
-        Dim ver As New VerifyOTP
-        ver.Show()
-    End Sub
-
     Private Sub ResetPassword_Load(sender As Object, e As EventArgs) Handles Me.Load
         ShadowForm.setShadowForm(Me)
+    End Sub
+
+    Private Sub chkSeePass_Click(sender As Object, e As EventArgs) Handles chkSeePass.Click
+        If chkSeePass.Checked Then
+            chkSeePass.BackgroundImage = My.Resources.eye
+            txtNewPass.PasswordChar = ""
+        Else
+            txtNewPass.PasswordChar = "*"
+            chkSeePass.BackgroundImage = My.Resources.hidden
+        End If
+    End Sub
+
+    Private Sub chkConfirmPass_Click(sender As Object, e As EventArgs) Handles chkConfirmPass.Click
+        If chkSeePass.Checked Then
+            chkSeePass.BackgroundImage = My.Resources.eye
+            txtConfirmPass.PasswordChar = ""
+        Else
+            txtConfirmPass.PasswordChar = "*"
+            chkSeePass.BackgroundImage = My.Resources.hidden
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtNewPass.TextChanged
+        If txtNewPass.Focused Then
+            chkSeePass.Show()
+            chkSeePass.BackgroundImage = My.Resources.hidden
+        Else
+            chkSeePass.Hide()
+        End If
+    End Sub
+
+    Private Sub txtConfirmPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmPass.TextChanged
+        If txtConfirmPass.Focused Then
+            chkConfirmPass.Show()
+            chkConfirmPass.BackgroundImage = My.Resources.hidden
+        Else
+            chkConfirmPass.Hide()
+        End If
     End Sub
 End Class

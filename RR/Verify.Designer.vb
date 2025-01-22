@@ -132,16 +132,17 @@ Partial Class Verify
         txtOTP.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtOTP.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtOTP.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtOTP.Font = New Font("Segoe UI", 9F)
+        txtOTP.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtOTP.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         txtOTP.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtOTP.Location = New Point(183, 191)
+        txtOTP.Location = New Point(183, 188)
         txtOTP.Name = "txtOTP"
         txtOTP.PasswordChar = ChrW(0)
         txtOTP.PlaceholderText = "Enter 6-Digit Code"
         txtOTP.SelectedText = ""
         txtOTP.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtOTP.ShadowDecoration.Depth = 10
-        txtOTP.Size = New Size(232, 45)
+        txtOTP.Size = New Size(232, 48)
         txtOTP.TabIndex = 19
         ' 
         ' Guna2HtmlLabel7
