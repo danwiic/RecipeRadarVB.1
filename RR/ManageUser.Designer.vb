@@ -39,13 +39,13 @@ Partial Class ManageUser
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnUserSearch = New Guna.UI2.WinForms.Guna2Button()
         txtUserSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -138,6 +138,17 @@ Partial Class ManageUser
         Guna2GradientPanel1.ShadowDecoration.Enabled = True
         Guna2GradientPanel1.Size = New Size(955, 486)
         Guna2GradientPanel1.TabIndex = 5
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblStatus.ForeColor = SystemColors.ControlDarkDark
+        lblStatus.Location = New Point(34, 112)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(157, 31)
+        lblStatus.TabIndex = 16
+        lblStatus.Text = "Reported Users"
         ' 
         ' btnNext
         ' 
@@ -248,17 +259,6 @@ Partial Class ManageUser
         txtUserSearch.Size = New Size(233, 41)
         txtUserSearch.TabIndex = 10
         ' 
-        ' lblStatus
-        ' 
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblStatus.ForeColor = SystemColors.ControlDarkDark
-        lblStatus.Location = New Point(34, 112)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(157, 31)
-        lblStatus.TabIndex = 16
-        lblStatus.Text = "Reported Users"
-        ' 
         ' ManageUser
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -268,6 +268,7 @@ Partial Class ManageUser
         Controls.Add(FlowLayoutPanel1)
         Controls.Add(lblFav)
         Controls.Add(Guna2GradientPanel1)
+        DoubleBuffered = True
         Name = "ManageUser"
         Size = New Size(1041, 546)
         Guna2GradientPanel1.ResumeLayout(False)

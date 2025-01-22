@@ -146,6 +146,7 @@ Partial Class MealCardStar
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
+        DoubleBuffered = True
         Name = "MealCardStar"
         Size = New Size(197, 319)
         CType(picMealImage, ComponentModel.ISupportInitialize).EndInit()

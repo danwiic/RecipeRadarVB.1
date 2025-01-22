@@ -195,6 +195,7 @@ Partial Class Meals
         Controls.Add(Guna2Panel1)
         Controls.Add(panelAddedMeals)
         Controls.Add(lblMeals)
+        DoubleBuffered = True
         MinimumSize = New Size(1047, 0)
         Name = "Meals"
         Size = New Size(1047, 600)

@@ -325,6 +325,7 @@ Partial Class Profile
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(lblFav)
         Controls.Add(Guna2ContainerControl1)
+        DoubleBuffered = True
         Name = "Profile"
         Size = New Size(1047, 600)
         CType(pbUserImage, ComponentModel.ISupportInitialize).EndInit()

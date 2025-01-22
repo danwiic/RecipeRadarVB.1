@@ -145,6 +145,7 @@ Partial Class SendOTP
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(sendCodePanel)
+        DoubleBuffered = True
         MaximumSize = New Size(590, 425)
         MinimumSize = New Size(590, 425)
         Name = "SendOTP"

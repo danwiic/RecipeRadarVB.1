@@ -146,6 +146,7 @@ Partial Class ViewPending
         Controls.Add(ViewPendingPanel)
         Controls.Add(recoverPanel)
         Controls.Add(lblStatus)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "ViewPending"
         StartPosition = FormStartPosition.CenterScreen

@@ -240,6 +240,7 @@ Partial Class UserDataCard
         Controls.Add(txtUsername)
         Controls.Add(profImage)
         Controls.Add(btnSave)
+        DoubleBuffered = True
         Name = "UserDataCard"
         Size = New Size(874, 50)
         CType(profImage, ComponentModel.ISupportInitialize).EndInit()

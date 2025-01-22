@@ -28,10 +28,10 @@ Partial Class ViewInfoPendingRecipe
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         ShadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         PanelData = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
@@ -49,6 +49,17 @@ Partial Class ViewInfoPendingRecipe
         recoverPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped
         recoverPanel.Size = New Size(790, 25)
         recoverPanel.TabIndex = 16
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(131, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Pending Recipe Data"
         ' 
         ' Guna2Button1
         ' 
@@ -79,17 +90,6 @@ Partial Class ViewInfoPendingRecipe
         PanelData.Size = New Size(790, 428)
         PanelData.TabIndex = 17
         ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel8.Location = New Point(3, 2)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(131, 21)
-        Guna2HtmlLabel8.TabIndex = 51
-        Guna2HtmlLabel8.Text = "Pending Recipe Data"
-        ' 
         ' ViewInfoPendingRecipe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -97,6 +97,7 @@ Partial Class ViewInfoPendingRecipe
         ClientSize = New Size(790, 459)
         Controls.Add(PanelData)
         Controls.Add(recoverPanel)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "ViewInfoPendingRecipe"
         StartPosition = FormStartPosition.CenterScreen

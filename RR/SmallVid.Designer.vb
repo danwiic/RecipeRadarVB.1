@@ -28,6 +28,7 @@ Partial Class SmallVid
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        DoubleBuffered = True
         Name = "SmallVid"
         Size = New Size(300, 180)
         ResumeLayout(False)

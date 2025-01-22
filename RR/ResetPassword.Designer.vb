@@ -44,10 +44,10 @@ Partial Class ResetPassword
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnChange = New Guna.UI2.WinForms.Guna2Button()
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         verifyCodePanel.SuspendLayout()
         recoverPanel.SuspendLayout()
         SuspendLayout()
@@ -213,6 +213,17 @@ Partial Class ResetPassword
         recoverPanel.Size = New Size(589, 25)
         recoverPanel.TabIndex = 27
         ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(99, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Reset Password"
+        ' 
         ' Guna2Button1
         ' 
         Guna2Button1.CustomizableEdges = CustomizableEdges11
@@ -235,17 +246,6 @@ Partial Class ResetPassword
         ' 
         countdownTimer.Interval = 1000
         ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel8.Location = New Point(3, 2)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(99, 21)
-        Guna2HtmlLabel8.TabIndex = 51
-        Guna2HtmlLabel8.Text = "Reset Password"
-        ' 
         ' ResetPassword
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -253,6 +253,7 @@ Partial Class ResetPassword
         ClientSize = New Size(589, 450)
         Controls.Add(recoverPanel)
         Controls.Add(verifyCodePanel)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         MaximumSize = New Size(589, 450)
         MinimumSize = New Size(589, 450)

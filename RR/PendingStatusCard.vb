@@ -65,6 +65,8 @@ Public Class PendingStatusCard
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
+        Me.Hide()
+
         Try
             conn.Open()
             Dim query As String = "SELECT idMeal FROM meals where strMeal = @MealName"

@@ -40,8 +40,8 @@ Partial Class PieCategory
         Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        GunaChart = New Guna.Charts.WinForms.GunaChart()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        GunaChart = New Guna.Charts.WinForms.GunaChart()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -60,6 +60,17 @@ Partial Class PieCategory
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2GradientPanel1.Size = New Size(495, 281)
         Guna2GradientPanel1.TabIndex = 0
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel1.Location = New Point(132, 10)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(230, 19)
+        Guna2HtmlLabel1.TabIndex = 9
+        Guna2HtmlLabel1.Text = "TOTAL RECIPE PER CATEGORY"
         ' 
         ' GunaChart
         ' 
@@ -95,23 +106,13 @@ Partial Class PieCategory
         Tick3.Font = ChartFont8
         GunaChart.ZAxes.Ticks = Tick3
         ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel1.Location = New Point(132, 10)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(230, 19)
-        Guna2HtmlLabel1.TabIndex = 9
-        Guna2HtmlLabel1.Text = "TOTAL RECIPE PER CATEGORY"
-        ' 
         ' PieCategory
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2GradientPanel1)
+        DoubleBuffered = True
         Name = "PieCategory"
         Size = New Size(495, 281)
         Guna2GradientPanel1.ResumeLayout(False)

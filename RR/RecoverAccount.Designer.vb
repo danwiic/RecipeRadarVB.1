@@ -28,11 +28,11 @@ Partial Class RecoverAccount
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         recoverPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         countdownTimer = New Timer(components)
         displayPanel = New Guna.UI2.WinForms.Guna2Panel()
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         recoverPanel.SuspendLayout()
         SuspendLayout()
         ' 
@@ -49,6 +49,17 @@ Partial Class RecoverAccount
         recoverPanel.ShadowShift = 0
         recoverPanel.Size = New Size(589, 25)
         recoverPanel.TabIndex = 15
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 2)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(108, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Recover Account"
         ' 
         ' Guna2Button1
         ' 
@@ -82,17 +93,6 @@ Partial Class RecoverAccount
         displayPanel.Size = New Size(589, 425)
         displayPanel.TabIndex = 0
         ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel8.Location = New Point(3, 2)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(108, 21)
-        Guna2HtmlLabel8.TabIndex = 51
-        Guna2HtmlLabel8.Text = "Recover Account"
-        ' 
         ' RecoverAccount
         ' 
         AutoScaleDimensions = New SizeF(7F, 16F)
@@ -101,6 +101,7 @@ Partial Class RecoverAccount
         ClientSize = New Size(589, 450)
         Controls.Add(displayPanel)
         Controls.Add(recoverPanel)
+        DoubleBuffered = True
         Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.None
         MaximumSize = New Size(589, 450)

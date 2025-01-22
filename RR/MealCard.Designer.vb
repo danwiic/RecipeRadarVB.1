@@ -145,6 +145,7 @@ Partial Class MealCard
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
+        DoubleBuffered = True
         Name = "MealCard"
         Size = New Size(197, 319)
         Guna2Panel1.ResumeLayout(False)

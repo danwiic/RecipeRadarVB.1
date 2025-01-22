@@ -28,6 +28,7 @@ Partial Class Video
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        DoubleBuffered = True
         Name = "Video"
         Size = New Size(423, 300)
         ResumeLayout(False)

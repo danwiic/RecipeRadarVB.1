@@ -28,11 +28,11 @@ Partial Class Rate
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         signupPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         shadowForm = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         ratingStar = New Guna.UI2.WinForms.Guna2RatingStar()
         btnSubmitRate = New Guna.UI2.WinForms.Guna2Button()
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblFav = New Guna.UI2.WinForms.Guna2HtmlLabel()
         signupPanel.SuspendLayout()
         SuspendLayout()
@@ -50,6 +50,17 @@ Partial Class Rate
         signupPanel.ShadowShift = 0
         signupPanel.Size = New Size(351, 30)
         signupPanel.TabIndex = 15
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Guna2HtmlLabel8.Location = New Point(3, 5)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(31, 21)
+        Guna2HtmlLabel8.TabIndex = 51
+        Guna2HtmlLabel8.Text = "Rate"
         ' 
         ' Guna2Button1
         ' 
@@ -99,17 +110,6 @@ Partial Class Rate
         btnSubmitRate.TabIndex = 17
         btnSubmitRate.Text = "SUBMIT RATE"
         ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Guna2HtmlLabel8.Location = New Point(3, 5)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(31, 21)
-        Guna2HtmlLabel8.TabIndex = 51
-        Guna2HtmlLabel8.Text = "Rate"
-        ' 
         ' lblFav
         ' 
         lblFav.BackColor = Color.Transparent
@@ -130,6 +130,7 @@ Partial Class Rate
         Controls.Add(btnSubmitRate)
         Controls.Add(ratingStar)
         Controls.Add(signupPanel)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "Rate"
         StartPosition = FormStartPosition.CenterScreen

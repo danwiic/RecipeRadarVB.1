@@ -139,6 +139,7 @@ Partial Class UserCommentCard
         Controls.Add(txtComment)
         Controls.Add(picUser)
         Controls.Add(lblUser)
+        DoubleBuffered = True
         Name = "UserCommentCard"
         Size = New Size(313, 107)
         CType(picUser, ComponentModel.ISupportInitialize).EndInit()

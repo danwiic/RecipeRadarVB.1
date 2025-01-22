@@ -169,6 +169,7 @@ Partial Class RecipeChart
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2GradientPanel1)
+        DoubleBuffered = True
         Name = "RecipeChart"
         Size = New Size(938, 281)
         Guna2GradientPanel1.ResumeLayout(False)

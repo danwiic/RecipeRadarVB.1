@@ -8,10 +8,10 @@ Public Class Favorites
     Private currentPage As Integer = 1
     Private pageSize As Integer = 10
     Private totalMeals As Integer = 0
-    Private Sub Favorites_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Async Sub Favorites_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         panelFav.FlowDirection = FlowDirection.LeftToRight
         panelFav.WrapContents = True
-        LoadFavoriteMeals()
+        Await LoadFavoriteMeals()
         checkButton()
     End Sub
 
@@ -50,20 +50,18 @@ Public Class Favorites
 
     End Sub
 
-    Public Sub LoadFavoriteMeals()
+    Public Async Function LoadFavoriteMeals() As Task
         Dim userId As Integer = LoginForm.currentUserID
-
         Dim countQuery As String = "SELECT COUNT(*) FROM favorites WHERE user_id = @userId"
 
         Try
-            conn.Open()
+            Await conn.OpenAsync()
             Using countCmd As New MySqlCommand(countQuery, conn)
                 countCmd.Parameters.AddWithValue("@userId", userId)
-                totalMeals = Convert.ToInt32(countCmd.ExecuteScalar())
+                totalMeals = Convert.ToInt32(Await countCmd.ExecuteScalarAsync())
             End Using
 
             Dim offset As Integer = (currentPage - 1) * pageSize
-
             Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, AVG(r.rating) AS averageRating " &
                               "FROM favorites f " &
                               "JOIN meals m ON f.idMeal = m.idMeal " &
@@ -77,10 +75,10 @@ Public Class Favorites
                 cmd.Parameters.AddWithValue("@pageSize", pageSize)
                 cmd.Parameters.AddWithValue("@offset", offset)
 
-                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                Using reader As MySqlDataReader = Await cmd.ExecuteReaderAsync()
                     panelFav.Controls.Clear()
                     If reader.HasRows Then
-                        While reader.Read()
+                        While Await reader.ReadAsync()
                             Dim mealID As Integer = reader.GetInt32("idMeal")
                             Dim mealName As String = reader.GetString("strMeal")
                             Dim mealImage As String = reader.GetString("strMealThumb")
@@ -94,7 +92,7 @@ Public Class Favorites
                         AdjustPanelSizes()
                     Else
                         lblMessage.Visible = True
-                        lblMessage.Text = "No favoite recipes added yet."
+                        lblMessage.Text = "No favorite recipes added yet."
                     End If
                 End Using
             End Using
@@ -112,9 +110,9 @@ Public Class Favorites
         Finally
             conn.Close()
         End Try
-    End Sub
+    End Function
 
-    Public Sub RemoveMealFromFavorites(mealID As Integer)
+    Public Async Sub RemoveMealFromFavorites(mealID As Integer)
         Dim userId As Integer = LoginForm.currentUserID
 
         Dim deleteQuery As String = "DELETE FROM favorites WHERE user_id = @userId AND idMeal = @mealId"
@@ -133,21 +131,21 @@ Public Class Favorites
         Finally
             conn.Close()
         End Try
-        LoadFavoriteMeals()
+        Await LoadFavoriteMeals()
     End Sub
 
-    Private Sub btnNext_Click_1(sender As Object, e As EventArgs) Handles btnNext.Click
+    Private Async Sub btnNext_Click_1(sender As Object, e As EventArgs) Handles btnNext.Click
         If currentPage < Math.Ceiling(totalMeals / pageSize) Then
             currentPage += 1
-            LoadFavoriteMeals()
+            Await LoadFavoriteMeals()
             checkButton()
         End If
     End Sub
 
-    Private Sub btnPrev_Click_1(sender As Object, e As EventArgs) Handles btnPrev.Click
+    Private Async Sub btnPrev_Click_1(sender As Object, e As EventArgs) Handles btnPrev.Click
         If currentPage > 1 Then
             currentPage -= 1
-            LoadFavoriteMeals()
+            Await LoadFavoriteMeals()
             checkButton()
         End If
     End Sub

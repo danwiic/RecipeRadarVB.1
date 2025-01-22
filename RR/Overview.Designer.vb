@@ -331,6 +331,7 @@ Partial Class Overview
         Controls.Add(Guna2GradientPanel3)
         Controls.Add(Guna2GradientPanel2)
         Controls.Add(Guna2GradientPanel1)
+        DoubleBuffered = True
         Name = "Overview"
         Size = New Size(1014, 800)
         Guna2GradientPanel1.ResumeLayout(False)

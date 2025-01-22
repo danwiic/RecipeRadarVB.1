@@ -161,6 +161,7 @@ Partial Class MealCardFavorites
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
+        DoubleBuffered = True
         Name = "MealCardFavorites"
         Size = New Size(197, 295)
         CType(picMealImage, ComponentModel.ISupportInitialize).EndInit()

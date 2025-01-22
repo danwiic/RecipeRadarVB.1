@@ -169,6 +169,7 @@ Partial Class BarGraph
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2GradientPanel1)
+        DoubleBuffered = True
         Name = "BarGraph"
         Size = New Size(495, 281)
         Guna2GradientPanel1.ResumeLayout(False)

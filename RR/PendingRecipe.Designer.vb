@@ -64,6 +64,7 @@ Partial Class PendingRecipe
         Controls.Add(lblMessage)
         Controls.Add(displayPendingRecipes)
         Controls.Add(lblFav)
+        DoubleBuffered = True
         Name = "PendingRecipe"
         Size = New Size(1041, 500)
         ResumeLayout(False)

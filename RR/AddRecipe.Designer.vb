@@ -372,6 +372,7 @@ Partial Class AddRecipe
         Controls.Add(Guna2HtmlLabel1)
         Controls.Add(txtMealName)
         Controls.Add(recoverPanel)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "AddRecipe"
         StartPosition = FormStartPosition.CenterScreen

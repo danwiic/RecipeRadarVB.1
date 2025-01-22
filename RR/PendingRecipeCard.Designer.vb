@@ -171,6 +171,7 @@ Partial Class PendingRecipeCard
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
+        DoubleBuffered = True
         Name = "PendingRecipeCard"
         Size = New Size(198, 295)
         CType(picMealImage, ComponentModel.ISupportInitialize).EndInit()

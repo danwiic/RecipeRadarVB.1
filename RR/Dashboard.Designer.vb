@@ -172,6 +172,7 @@ Partial Class Dashboard
         AutoScroll = True
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(dashDisplayPanel)
+        DoubleBuffered = True
         MinimumSize = New Size(1047, 600)
         Name = "Dashboard"
         Size = New Size(1047, 600)

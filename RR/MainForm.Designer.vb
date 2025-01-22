@@ -48,10 +48,10 @@ Partial Class MainForm
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -65,8 +65,8 @@ Partial Class MainForm
         btnFav = New Guna.UI2.WinForms.Guna2Button()
         btnMeals = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         btnCategories = New Guna.UI2.WinForms.Guna2Button()
+        Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel1.SuspendLayout()
         Guna2Panel3.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -321,18 +321,6 @@ Partial Class MainForm
         Guna2Panel2.Size = New Size(224, 575)
         Guna2Panel2.TabIndex = 12
         ' 
-        ' Guna2Panel4
-        ' 
-        Guna2Panel4.BackColor = Color.Transparent
-        Guna2Panel4.Controls.Add(btnLogout)
-        Guna2Panel4.CustomizableEdges = CustomizableEdges27
-        Guna2Panel4.Dock = DockStyle.Bottom
-        Guna2Panel4.Location = New Point(0, 496)
-        Guna2Panel4.Name = "Guna2Panel4"
-        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
-        Guna2Panel4.Size = New Size(224, 79)
-        Guna2Panel4.TabIndex = 21
-        ' 
         ' btnCategories
         ' 
         btnCategories.Animated = True
@@ -355,6 +343,18 @@ Partial Class MainForm
         btnCategories.Text = "Categories"
         btnCategories.TextAlign = HorizontalAlignment.Left
         ' 
+        ' Guna2Panel4
+        ' 
+        Guna2Panel4.BackColor = Color.Transparent
+        Guna2Panel4.Controls.Add(btnLogout)
+        Guna2Panel4.CustomizableEdges = CustomizableEdges27
+        Guna2Panel4.Dock = DockStyle.Bottom
+        Guna2Panel4.Location = New Point(0, 496)
+        Guna2Panel4.Name = "Guna2Panel4"
+        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        Guna2Panel4.Size = New Size(224, 79)
+        Guna2Panel4.TabIndex = 21
+        ' 
         ' MainForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -363,6 +363,7 @@ Partial Class MainForm
         Controls.Add(Guna2Panel1)
         Controls.Add(displayPanel)
         Controls.Add(Guna2Panel2)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         MaximumSize = New Size(1280, 800)
         MinimumSize = New Size(1000, 600)

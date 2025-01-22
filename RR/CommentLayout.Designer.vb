@@ -139,6 +139,7 @@ Partial Class CommentLayout
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Transparent
         Controls.Add(Guna2Panel1)
+        DoubleBuffered = True
         Name = "CommentLayout"
         Size = New Size(351, 445)
         Guna2Panel1.ResumeLayout(False)

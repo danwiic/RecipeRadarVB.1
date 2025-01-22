@@ -142,6 +142,7 @@ Partial Class ReportedUserCard
         Controls.Add(Guna2Separator1)
         Controls.Add(lblReason)
         Controls.Add(lblUsername)
+        DoubleBuffered = True
         Name = "ReportedUserCard"
         Size = New Size(880, 50)
         ResumeLayout(False)

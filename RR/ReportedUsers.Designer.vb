@@ -33,8 +33,8 @@ Partial Class ReportedUsers
         lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblComments = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        FlowLayoutPanel1 = New FlowLayoutPanel()
         lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        FlowLayoutPanel1 = New FlowLayoutPanel()
         btnNext = New Guna.UI2.WinForms.Guna2Button()
         lblPages = New Guna.UI2.WinForms.Guna2HtmlLabel()
         btnPrev = New Guna.UI2.WinForms.Guna2Button()
@@ -112,14 +112,6 @@ Partial Class ReportedUsers
         Guna2GradientPanel1.Size = New Size(903, 497)
         Guna2GradientPanel1.TabIndex = 12
         ' 
-        ' FlowLayoutPanel1
-        ' 
-        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        FlowLayoutPanel1.Location = New Point(24, 44)
-        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(855, 395)
-        FlowLayoutPanel1.TabIndex = 20
-        ' 
         ' lblStatus
         ' 
         lblStatus.BackColor = Color.Transparent
@@ -130,6 +122,14 @@ Partial Class ReportedUsers
         lblStatus.Size = New Size(157, 31)
         lblStatus.TabIndex = 14
         lblStatus.Text = "Reported Users"
+        ' 
+        ' FlowLayoutPanel1
+        ' 
+        FlowLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        FlowLayoutPanel1.Location = New Point(24, 44)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        FlowLayoutPanel1.Size = New Size(855, 395)
+        FlowLayoutPanel1.TabIndex = 20
         ' 
         ' btnNext
         ' 
@@ -201,6 +201,7 @@ Partial Class ReportedUsers
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(lblFav)
+        DoubleBuffered = True
         Name = "ReportedUsers"
         Size = New Size(1014, 554)
         Guna2GradientPanel1.ResumeLayout(False)

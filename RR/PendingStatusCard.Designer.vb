@@ -131,6 +131,7 @@ Partial Class PendingStatusCard
         Controls.Add(Guna2Separator1)
         Controls.Add(lblStatus)
         Controls.Add(lblRecipeName)
+        DoubleBuffered = True
         Name = "PendingStatusCard"
         Size = New Size(470, 50)
         ResumeLayout(False)

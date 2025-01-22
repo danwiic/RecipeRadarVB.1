@@ -345,6 +345,7 @@ Partial Class ViewRecipe
         Controls.Add(lblMealName)
         Controls.Add(btnBack)
         Controls.Add(flowPanelVideo)
+        DoubleBuffered = True
         MinimumSize = New Size(1047, 600)
         Name = "ViewRecipe"
         Size = New Size(1047, 909)

@@ -8,27 +8,26 @@ Public Class Home
     Dim maxColumns As Integer = 5
     Dim currentUserID As Integer = LoginForm.currentUserID
 
-    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Async Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         flowPanelPopular.FlowDirection = FlowDirection.LeftToRight
         flowPanelPopular.WrapContents = True
-        LoadMealsData()
+        Await LoadMealsData()
 
         flowPanelHighRated.FlowDirection = FlowDirection.LeftToRight
         flowPanelHighRated.WrapContents = True
-        LoadRatedMeal()
+        Await LoadRatedMeal()
 
         flowPanelResults.FlowDirection = FlowDirection.LeftToRight
         flowPanelResults.WrapContents = True
 
         flowPanelResults.Visible = False  ' Initially hidden
         lblResults.Visible = False
-
         Dim view As New ViewRecipe(0)
         AddHandler view.RefreshFavorites, AddressOf RefreshFavorite
     End Sub
 
-    Public Sub RefreshFavorite()
-        LoadMealsData()
+    Public Async Sub RefreshFavorite()
+        Await LoadMealsData()
     End Sub
     Private Sub AdjustPanelSizes()
         ' Ensure maxColumns is greater than 0 to avoid division by zero
@@ -78,11 +77,14 @@ Public Class Home
         flowPanelResults.Height = If(resultRowsResult > 0, (resultRowsResult * cardHeight) + (resultRowsResult - 1) * 10, 0)
     End Sub
 
-    Private Sub LoadMealsData()
-        Try
-            conn.Open()
 
-            Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, m.strArea, " &
+    Private Async Function LoadMealsData() As Task
+        ' Create a new connection for this operation
+        Using conn As New MySqlConnection(connStr)
+            Try
+                Await conn.OpenAsync() ' Open the connection asynchronously
+
+                Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, m.strArea, " &
                                   "IFNULL(favorite_count, 0) AS favorite_count, c.category_name " &
                                   "FROM meals m " &
                                   "LEFT JOIN ( " &
@@ -94,36 +96,41 @@ Public Class Home
                                   "ORDER BY favorite_count DESC " &
                                   "LIMIT 5"
 
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim reader As MySqlDataReader = Await cmd.ExecuteReaderAsync() ' Execute the command asynchronously
 
-            flowPanelPopular.Controls.Clear()
+                ' Clear previous controls on the UI thread
+                Invoke(Sub() flowPanelPopular.Controls.Clear())
 
-            While reader.Read()
-                Dim mealCard As New MealCard()
-                Dim mealID As String = reader("idMeal").ToString()
-                Dim mealName As String = reader("strMeal").ToString()
-                Dim mealImage As String = reader("strMealThumb").ToString()
-                Dim mealCategory As String = reader("category_name").ToString()
-                Dim favoriteCount As Integer = Convert.ToInt32(reader("favorite_count"))
+                While Await reader.ReadAsync() ' Read the results asynchronously
+                    Dim mealCard As New MealCard()
+                    Dim mealID As String = reader("idMeal").ToString()
+                    Dim mealName As String = reader("strMeal").ToString()
+                    Dim mealImage As String = reader("strMealThumb").ToString()
+                    Dim mealCategory As String = reader("category_name").ToString()
+                    Dim favoriteCount As Integer = Convert.ToInt32(reader("favorite_count"))
 
-                mealCard.SetMealData(mealID, mealName, mealImage, mealCategory, favoriteCount)
-                flowPanelPopular.Controls.Add(mealCard)
-            End While
+                    mealCard.SetMealData(mealID, mealName, mealImage, mealCategory, favoriteCount)
 
-            AdjustPanelSizes() ' Call to adjust sizes after loading data
+                    ' Add the meal card on the UI thread
+                    Invoke(Sub() flowPanelPopular.Controls.Add(mealCard))
+                End While
 
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        Finally
-            conn.Close()
-        End Try
-    End Sub
+                ' Adjust panel sizes on the UI thread
+                Invoke(Sub() AdjustPanelSizes())
 
-    Private Sub LoadRatedMeal()
-        Try
-            conn.Open()
-            Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, AVG(r.rating) AS averageRating, COUNT(r.rating) AS ratingCount, c.category_name " &
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using ' Automatically closes the connection when done
+    End Function
+    Private Async Function LoadRatedMeal() As Task
+        ' Create a new connection for this operation
+        Using conn As New MySqlConnection(connStr)
+            Try
+                Await conn.OpenAsync() ' Open the connection asynchronously
+
+                Dim query As String = "SELECT m.idMeal, m.strMeal, m.strMealThumb, AVG(r.rating) AS averageRating, COUNT(r.rating) AS ratingCount, c.category_name " &
                                   "FROM meals m " &
                                   "JOIN ratings r ON m.idMeal = r.meal_id " &
                                   "LEFT JOIN categories c ON m.category_id = c.id " &
@@ -132,32 +139,35 @@ Public Class Home
                                   "ORDER BY averageRating DESC, ratingCount DESC " &
                                   "LIMIT 5"
 
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim reader As MySqlDataReader = Await cmd.ExecuteReaderAsync() ' Execute the command asynchronously
 
-            flowPanelHighRated.Controls.Clear()  ' Clear old controls
+                ' Clear previous controls on the UI thread
+                Invoke(Sub() flowPanelHighRated.Controls.Clear())
 
-            While reader.Read()
-                Dim mealCard As New MealCardStar()
-                Dim mealID As Integer = reader("idMeal")
-                Dim mealName As String = reader("strMeal").ToString()
-                Dim mealImage As String = reader("strMealThumb").ToString()
-                Dim averageRating As Single = Convert.ToSingle(reader("averageRating"))
-                Dim ratingCount As Integer = Convert.ToInt32(reader("ratingCount"))
-                Dim mealCategory As String = reader("category_name").ToString()
+                While Await reader.ReadAsync() ' Read the results asynchronously
+                    Dim mealCard As New MealCardStar()
+                    Dim mealID As Integer = reader("idMeal")
+                    Dim mealName As String = reader("strMeal").ToString()
+                    Dim mealImage As String = reader("strMealThumb").ToString()
+                    Dim averageRating As Single = Convert.ToSingle(reader("averageRating"))
+                    Dim ratingCount As Integer = Convert.ToInt32(reader("ratingCount"))
+                    Dim mealCategory As String = reader("category_name").ToString()
 
-                mealCard.SetMealData(mealID, mealName, mealImage, averageRating, ratingCount)
-                flowPanelHighRated.Controls.Add(mealCard)
-            End While
+                    mealCard.SetMealData(mealID, mealName, mealImage, averageRating, ratingCount)
 
-            AdjustPanelSizes() ' Call to adjust sizes after loading rated meals
+                    ' Add the meal card on the UI thread
+                    Invoke(Sub() flowPanelHighRated.Controls.Add(mealCard))
+                End While
 
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        Finally
-            conn.Close()
-        End Try
-    End Sub
+                ' Adjust panel sizes on the UI thread
+                Invoke(Sub() AdjustPanelSizes())
+
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using ' Automatically closes the connection when done
+    End Function
 
     Private Sub LoadSearchResults(searchText As String)
         Try

@@ -198,6 +198,7 @@ Partial Class Home
         Controls.Add(lblResults)
         Controls.Add(txtSearch)
         Controls.Add(Guna2HtmlLabel1)
+        DoubleBuffered = True
         MinimumSize = New Size(1047, 0)
         Name = "Home"
         Size = New Size(1047, 1045)

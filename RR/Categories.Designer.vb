@@ -153,6 +153,7 @@ Partial Class Categories
         Controls.Add(cbCategories)
         Controls.Add(Guna2Panel1)
         Controls.Add(FlowLayoutPanelMeals)
+        DoubleBuffered = True
         Name = "Categories"
         Size = New Size(1047, 600)
         Guna2Panel1.ResumeLayout(False)

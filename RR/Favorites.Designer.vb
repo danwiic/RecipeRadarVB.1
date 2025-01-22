@@ -157,6 +157,7 @@ Partial Class Favorites
         Controls.Add(Guna2Panel1)
         Controls.Add(lblFav)
         Controls.Add(panelFav)
+        DoubleBuffered = True
         MinimumSize = New Size(1047, 600)
         Name = "Favorites"
         Size = New Size(1047, 600)

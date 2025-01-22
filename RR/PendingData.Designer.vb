@@ -172,6 +172,7 @@ Partial Class PendingData
         Controls.Add(flowPanelVideo)
         Controls.Add(lblCategory)
         Controls.Add(lblMealName)
+        DoubleBuffered = True
         Name = "PendingData"
         Size = New Size(773, 507)
         ResumeLayout(False)
